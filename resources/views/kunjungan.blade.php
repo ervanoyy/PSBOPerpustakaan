@@ -124,7 +124,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Siswa</a></li>
+            <li><a href="/datasiswa"><i class="fa fa-circle-o"></i> Siswa</a></li>
             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Pegawai</a></li>
             <li><a href="index2.html"><i class="fa fa-circle-o"></i> Masyarakat</a></li>
           </ul>

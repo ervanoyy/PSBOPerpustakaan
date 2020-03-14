@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Data Buku</title>
+  <title>Data Siswa</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -138,12 +138,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Pendataan Buku
+        Data Siswa
         <small></small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Pendataan Buku</a></li>
+        <li><a href="#">Pendataan Siswa</a></li>
     
       </ol>
     </section>
@@ -156,169 +156,89 @@
           <!-- /.box -->
 
           <div class="box">
-            <div class="box-header">
-              <h3 class="box-title"><button type="button" class="btn btn-block btn-success">+ Tambah Buku</button></h3>
-            </div>
             <!-- /.box-header -->
             <div class="box-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Kode Buku</th>
-                  <th>Judul Buku</th>
-                  <th>Gambar</th>
-                  <th>Kategori</th>
-                  <th>Pengarang</th>
-                  <th>Tanggal Input</th>
-                  <th>Stok</th>
-                  <th>Status Buku</th>
-                  <th>Aksi</th>
+                  <th>NIS</th>
+                  <th>Nama</th>
+                  <th>Kelas</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                   <td>0020099</td>
-                  <td>Ilmu Pengetahuan Alam</td>
-                  <td>No Photo</td>
-                  <td>Pendidikan</td>
-                  <td>Evanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Edit</button><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></td>
+                  <td>Siti Maemunah</td>
+                  <td>9</td>
+                </tr>
+
+                <tr>
+                  <td>0020097</td>
+                  <td>Qotrunnada Syifa</td>
+                  <td>8</td>
+                </tr>
+
+                <tr>
+                  <td>0020098</td>
+                  <td>Firda Suci</td>
+                  <td>7</td>
                 </tr>
 
                 <tr>
                   <td>0020099</td>
-                  <td>Ilmu Pengetahuan Alam</td>
-                  <td>No Photo</td>
-                  <td>Pendidikan</td>
-                  <td>Evanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Edit</button><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></td>
+                  <td>Siti Maemunah</td>
+                  <td>9</td>
+                </tr>
+
+                <tr>
+                  <td>0020097</td>
+                  <td>Qotrunnada Syifa</td>
+                  <td>8</td>
+                </tr>
+
+                <tr>
+                  <td>0020098</td>
+                  <td>Firda Suci</td>
+                  <td>7</td>
                 </tr>
 
                 <tr>
                   <td>0020099</td>
-                  <td>Ilmu Pengetahuan Alam</td>
-                  <td>No Photo</td>
-                  <td>Pendidikan</td>
-                  <td>Evanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Edit</button><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></td>
+                  <td>Siti Maemunah</td>
+                  <td>9</td>
+                </tr>
+
+                <tr>
+                  <td>0020097</td>
+                  <td>Qotrunnada Syifa</td>
+                  <td>8</td>
+                </tr>
+
+                <tr>
+                  <td>0020098</td>
+                  <td>Firda Suci</td>
+                  <td>7</td>
                 </tr>
 
                 <tr>
                   <td>0020099</td>
-                  <td>Ilmu Pengetahuan Alam</td>
-                  <td>No Photo</td>
-                  <td>Pendidikan</td>
-                  <td>Evanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Edit</button><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></td>
+                  <td>Siti Maemunah</td>
+                  <td>9</td>
                 </tr>
 
                 <tr>
-                  <td>0020099</td>
-                  <td>Ilmu Pengetahuan Alam</td>
-                  <td>No Photo</td>
-                  <td>Pendidikan</td>
-                  <td>Evanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Edit</button><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></td>
+                  <td>0020097</td>
+                  <td>Qotrunnada Syifa</td>
+                  <td>8</td>
                 </tr>
 
                 <tr>
-                  <td>0020099</td>
-                  <td>Ilmu Pengetahuan Alam</td>
-                  <td>No Photo</td>
-                  <td>Pendidikan</td>
-                  <td>Evanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Edit</button><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></td>
+                  <td>0020098</td>
+                  <td>Firda Suci</td>
+                  <td>7</td>
                 </tr>
 
-                <tr>
-                  <td>0020099</td>
-                  <td>Ilmu Pengetahuan Alam</td>
-                  <td>No Photo</td>
-                  <td>Pendidikan</td>
-                  <td>Evanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Edit</button><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>Ilmu Pengetahuan Alam</td>
-                  <td>No Photo</td>
-                  <td>Pendidikan</td>
-                  <td>Evanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Edit</button><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>Ilmu Pengetahuan Alam</td>
-                  <td>No Photo</td>
-                  <td>Pendidikan</td>
-                  <td>Evanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Edit</button><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>Ilmu Pengetahuan Alam</td>
-                  <td>No Photo</td>
-                  <td>Pendidikan</td>
-                  <td>Evanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Edit</button><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>Ilmu Pengetahuan Alam</td>
-                  <td>No Photo</td>
-                  <td>Pendidikan</td>
-                  <td>Dina Fadila</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Edit</button><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>Ilmu Pengetahuan Alam</td>
-                  <td></td>
-                  <td>Pendidikan</td>
-                  <td>Evanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Edit</button><button type="button" class="btn btn-block btn-danger btn-xs">Delete</button></td>
-                </tr>
 
                 
             

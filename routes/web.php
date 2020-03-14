@@ -33,3 +33,7 @@ Route::get('/kunjungan', function () {
     return view('kunjungan');
 });
 
+Route::get('/datasiswa', function () {
+    return view('datasiswa');
+});
+
