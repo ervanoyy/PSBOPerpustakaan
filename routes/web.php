@@ -37,3 +37,7 @@ Route::get('/datasiswa', function () {
     return view('datasiswa');
 });
 
+Route::get('/tambahbuku', function () {
+    return view('tambahbuku');
+});
+

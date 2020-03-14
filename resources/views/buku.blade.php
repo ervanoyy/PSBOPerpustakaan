@@ -156,8 +156,10 @@
           <!-- /.box -->
 
           <div class="box">
+            <a href="/tambahbuku">
             <div class="box-header">
               <h3 class="box-title"><button type="button" class="btn btn-block btn-success">+ Tambah Buku</button></h3>
+            </a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
