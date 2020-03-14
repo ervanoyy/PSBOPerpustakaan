@@ -173,7 +173,7 @@
     <!-- lockscreen credentials (contains the form) -->
     <form class="lockscreen-credentials">
       <div class="input-group">
-        <input type="password" class="form-control" placeholder="NIS">
+        <input type="text" class="form-control" placeholder="NIS">
 
         <div class="input-group-btn">
           <button type="button" class="btn"><i class="fa fa-arrow-right text-muted"></i></button>
