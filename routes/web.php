@@ -41,3 +41,22 @@ Route::get('/tambahbuku', function () {
     return view('tambahbuku');
 });
 
+Route::get('/navbar', function () {
+    return view('navbar');
+});
+
+Route::get('/template', function () {
+    return view('template');
+});
+
+Route::get('/datapegawai', function () {
+    return view('datapegawai');
+});
+
+Route::get('/bukutamusiswa', function () {
+    return view('bukutamusiswa');
+});
+
+
+
+

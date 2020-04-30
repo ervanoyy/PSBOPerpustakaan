@@ -1,18 +1,18 @@
 @extends ('navbar')
 
 @section('content')
-<title>Data Kunjungan</title>
+<title>Data Pegawai</title>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Data Kunjungan
+        Data Pegawai
         <small></small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Data Kunjungan</a></li>
+        <li><a href="#">Pendataan Pegawai</a></li>
     
       </ol>
     </section>
@@ -30,85 +30,72 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>NIS</th>
+                  <th>NIP</th>
                   <th>Nama</th>
-                  <th>Tanggal</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr>
                   <td>0020099</td>
                   <td>Siti Maemunah</td>
-                  <td>9</td>
                 </tr>
 
                 <tr>
                   <td>0020097</td>
                   <td>Qotrunnada Syifa</td>
-                  <td>8</td>
                 </tr>
 
                 <tr>
                   <td>0020098</td>
                   <td>Firda Suci</td>
-                  <td>7</td>
                 </tr>
 
                 <tr>
                   <td>0020099</td>
                   <td>Siti Maemunah</td>
-                  <td>9</td>
-                </tr>
-
-                <tr>
-                  <td>0020097</td>
-                  <td>Qotrunnada Syifa</td>
-                  <td>8</td>
-                </tr>
-
-                <tr>
-                  <td>0020098</td>
-                  <td>Firda Suci</td>
-                  <td>7</td>
                 </tr>
 
                 <tr>
                   <td>0020099</td>
                   <td>Siti Maemunah</td>
-                  <td>9</td>
                 </tr>
 
                 <tr>
                   <td>0020097</td>
                   <td>Qotrunnada Syifa</td>
-                  <td>8</td>
                 </tr>
 
                 <tr>
                   <td>0020098</td>
                   <td>Firda Suci</td>
-                  <td>7</td>
                 </tr>
 
                 <tr>
                   <td>0020099</td>
                   <td>Siti Maemunah</td>
-                  <td>9</td>
+                </tr>
+
+                <tr>
+                  <td>0020099</td>
+                  <td>Siti Maemunah</td>
                 </tr>
 
                 <tr>
                   <td>0020097</td>
                   <td>Qotrunnada Syifa</td>
-                  <td>8</td>
                 </tr>
 
                 <tr>
                   <td>0020098</td>
                   <td>Firda Suci</td>
-                  <td>7</td>
                 </tr>
 
+                <tr>
+                  <td>0020099</td>
+                  <td>Siti Maemunah</td>
+                </tr>
 
+               
                 
             
             </tbody>
