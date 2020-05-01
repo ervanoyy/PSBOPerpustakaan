@@ -109,20 +109,11 @@
                 </li>
 
 
-          <li class="dropdown user user-menu">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="dist/img/Logoscb.png" class="user-image" alt="User Image">
-              <span class="hidden-xs">Admin</span>
+          <li class="user user-menu">
+            <a href="/">
+              <span><i class="fa fa-sign-out"></i>    Keluar</a></span>
             </a>
-            <ul class="dropdown-menu">
-
-               <!-- Menu Footer-->
-                <li class="user-footer">
-                                
-                <a class="btn btn-default btn-flat" href=""><i class="fa fa-sign-out"></i>Keluar</a>
-        
-                </li>
-                </ul>
+            
             
           </li>
           <!-- Control Sidebar Toggle Button -->
