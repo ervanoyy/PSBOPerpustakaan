@@ -1,18 +1,18 @@
 @extends ('navbar')
 
 @section('content')
-<title>Tambah Buku</title>
+<title>Edit Buku</title>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Tambah buku
+        Edit buku
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Pendataan Buku</a></li>
-        <li class="active">Tambah Buku</li>
+        <li class="active">Edit Buku</li>
       </ol>
     </section>
 
@@ -72,7 +72,7 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <a type="submit" class="btn btn-primary">Submit</a>
               </div>
             </form>
           </div>

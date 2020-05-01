@@ -2,6 +2,12 @@
 
 @section('content')
 <title>Peminjaman</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -60,7 +66,7 @@
                   <td><?php echo "$kembali"; ?></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs disabled">Sudah dikembalikan</button></td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm disabled">Sudah dikembalikan</button></td>
                 </tr>
 
                 <tr>
@@ -72,7 +78,7 @@
                   <td><?php echo "$kembali"; ?></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Belum dikembalikan</button></td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#pengembalian">Belum dikembalikan</button></td>
                 </tr>
 
                 <tr>
@@ -84,7 +90,7 @@
                   <td><?php echo "$kembali"; ?></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Belum dikembalikan</button></td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm disabled">Sudah dikembalikan</button></td>
                 </tr>
 
                 <tr>
@@ -96,7 +102,7 @@
                   <td><?php echo "$kembali"; ?></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Belum dikembalikan</button></td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#pengembalian">Belum dikembalikan</button></td>
                 </tr>
 
                 <tr>
@@ -108,7 +114,7 @@
                   <td><?php echo "$kembali"; ?></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Belum dikembalikan</button></td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm disabled">Sudah dikembalikan</button></td>
                 </tr>
 
                 <tr>
@@ -120,7 +126,7 @@
                   <td><?php echo "$kembali"; ?></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Belum dikembalikan</button></td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#pengembalian">Belum dikembalikan</button></td>
                 </tr>
 
                 <tr>
@@ -132,7 +138,7 @@
                   <td><?php echo "$kembali"; ?></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Belum dikembalikan</button></td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm disabled">Sudah dikembalikan</button></td>
                 </tr>
 
                 <tr>
@@ -144,7 +150,7 @@
                   <td><?php echo "$kembali"; ?></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Belum dikembalikan</button></td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#pengembalian">Belum dikembalikan</button></td>
                 </tr>
 
                 <tr>
@@ -156,19 +162,7 @@
                   <td><?php echo "$kembali"; ?></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Belum dikembalikan</button></td>
-                </tr>
-
-                <tr>
-                  <td>9987223</td>
-                  <td>Fathiya</td>
-                  <td>002344</td>
-                  <td>Belajar Ngoding</td>
-                  <td><?php echo "$pinjam"; ?></td>
-                  <td><?php echo "$kembali"; ?></td>
-                  <td></td>
-                  <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Belum dikembalikan</button></td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm disabled">Sudah dikembalikan</button></td>
                 </tr>
 
                 <tr>
@@ -180,8 +174,34 @@
                   <td><?php echo "$kembali"; ?></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button" class="btn btn-block btn-primary btn-xs">Belum dikembalikan</button></td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#pengembalian">Belum dikembalikan</button></td>
                 </tr>
+
+                <tr>
+                  <td>9987223</td>
+                  <td>Siti Nurhasanah</td>
+                  <td>002344</td>
+                  <td>Belajar Ngoding</td>
+                  <td><?php echo "$pinjam"; ?></td>
+                  <td><?php echo "$kembali"; ?></td>
+                  <td></td>
+                  <td></td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm disabled">Sudah dikembalikan</button></td>
+                </tr>
+
+                <tr>
+                  <td>9987223</td>
+                  <td>Siti Nurhasanah</td>
+                  <td>002344</td>
+                  <td>Belajar Ngoding</td>
+                  <td><?php echo "$pinjam"; ?></td>
+                  <td><?php echo "$kembali"; ?></td>
+                  <td></td>
+                  <td></td>
+                  <td><button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#pengembalian">Belum dikembalikan</button></td>
+                </tr>
+
+                
 
     
 
@@ -214,6 +234,26 @@
   <div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
+
+<!-- Modal popup -->
+  
+<div class="modal fade" id="pengembalian">
+       <div class="modal-dialog">
+  <!-- Modal Content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button  type="button" data-dismiss="modal" class="close">&times;</button>
+                <h4 class="modal-title">Ubah status buku menjadi sudah dikembalikan?</h4>
+              </div>
+
+              <div class="modal-footer">
+              <a href="/peminjaman" class="btn btn-primary">Ya</a>
+                <button class="btn btn-default"  data-dismiss="modal">Batal</button>
+              </div>
+
+            </div>
+        </div>
+
 
 <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>

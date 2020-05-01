@@ -57,6 +57,10 @@ Route::get('/bukutamusiswa', function () {
     return view('bukutamusiswa');
 });
 
+Route::get('/editbuku', function () {
+    return view('editbuku');
+});
+
 
 
 
