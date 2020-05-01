@@ -1,7 +1,7 @@
 @extends ('navbar')
 
 @section('content')
-  <title>Perpustakaan SCB</title>
+  <title>Dashboard</title>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
