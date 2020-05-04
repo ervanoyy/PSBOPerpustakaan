@@ -159,8 +159,8 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li class="{{Request::path() === 'dashboard' ? 'active' : ''}}"><a href="/dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <li class="{{Request::path() === 'datasiswa' ? 'active treeview' : Request::path() === 'datapegawai' ? 'active treeview' : Request::path() === 'masyarakat' ? 'active treeview' : 'treeview'}}">
-          <a href="#">
+        <li class="{{Request::path() === 'datasiswa' ? 'active treeview' : Request::path() === 'datapegawai' ? 'active treeview' : 'treeview'}}">
+          <a href="">
             <i class="fa fa-user"></i> <span>User</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -169,12 +169,22 @@
           <ul class="treeview-menu">
             <li class="{{Request::path() === 'datasiswa' ? 'active' : ''}}"><a href="/datasiswa"><i class="fa fa-circle-o"></i> Siswa</a></li>
             <li class="{{Request::path() === 'datapegawai' ? 'active' : ''}}"><a href="/datapegawai"><i class="fa fa-circle-o"></i> Pegawai</a></li>
-            <li ><a href="index2.html"><i class="fa fa-circle-o"></i> Masyarakat</a></li>
           </ul>
         </li>
         <li class="{{Request::path() === 'buku' ? 'active' : Request::path() === 'tambahbuku' ? 'active' : ''}}"> <a href="/buku"><i class="fa fa-book"></i> <span>Buku</span></a></li>
         <li class="{{Request::path() === 'peminjaman' ? 'active' : ''}}"><a href="/peminjaman"><i class="fa fa-exchange"></i> <span>Peminjaman</span></a></li>
-        <li class="{{Request::path() === 'kunjungan' ? 'active' : ''}}"><a href="/kunjungan"><i class="fa  fa-calendar-check-o"></i> <span>Data Kunjungan</span></a></li>
+        <li class="{{Request::path() === 'kunjungan' ? 'active treeview' : Request::path() === 'dashboard' ? 'active treeview' : 'treeview'}}">
+          <a href="">
+            <i class="fa  fa-calendar-check-o"></i> <span>Data Kunjungan</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="{{Request::path() === 'kunjungan' ? 'active' : ''}}"><a href="/kunjungan"><i class="fa fa-circle-o"></i> Siswa</a></li>
+            <li class="{{Request::path() === 'dashboard' ? 'active' : ''}}"><a href="/dashboard"><i class="fa fa-circle-o"></i> Masyarakat</a></li>
+          </ul>
+        </li>
         <li class="{{Request::path() === 'bukutamusiswa' ? 'active' : ''}}"><a href="/bukutamusiswa"><i class="fa fa-edit"></i> <span>Isi Buku Tamu</span></a></li>                    
       </ul>
     
