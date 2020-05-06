@@ -60,7 +60,7 @@
                   <td>IPS</td>
                   <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
                   <td>Pendidikan</td>
-                  <td>Evanoyy</td>
+                  <td>Ervanoyy</td>
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
                   <td></td>
@@ -72,7 +72,7 @@
                   <td>IPS</td>
                   <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
                   <td>Pendidikan</td>
-                  <td>Evanoyy</td>
+                  <td>Ervanoyy</td>
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
                   <td></td>
@@ -84,7 +84,7 @@
                   <td>IPS</td>
                   <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
                   <td>Pendidikan</td>
-                  <td>Evanoyy</td>
+                  <td>Ervanoyy</td>
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
                   <td></td>
@@ -96,7 +96,7 @@
                   <td>IPS</td>
                   <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
                   <td>Pendidikan</td>
-                  <td>Evanoyy</td>
+                  <td>Ervanoyy</td>
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
                   <td></td>
@@ -108,7 +108,7 @@
                   <td>IPS</td>
                   <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
                   <td>Pendidikan</td>
-                  <td>Evanoyy</td>
+                  <td>Ervanoyy</td>
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
                   <td></td>
@@ -120,7 +120,7 @@
                   <td>IPS</td>
                   <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
                   <td>Pendidikan</td>
-                  <td>Evanoyy</td>
+                  <td>Ervanoyy</td>
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
                   <td></td>
@@ -132,7 +132,7 @@
                   <td>IPS</td>
                   <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
                   <td>Pendidikan</td>
-                  <td>Evanoyy</td>
+                  <td>Ervanoyy</td>
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
                   <td></td>
@@ -144,7 +144,7 @@
                   <td>IPS</td>
                   <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
                   <td>Pendidikan</td>
-                  <td>Evanoyy</td>
+                  <td>Ervanoyy</td>
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
                   <td></td>
@@ -156,7 +156,7 @@
                   <td>Don't Make Me Think</td>
                   <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
                   <td>Pendidikan</td>
-                  <td>Evanoyy</td>
+                  <td>Ervanoyy</td>
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
                   <td></td>
@@ -168,7 +168,7 @@
                   <td>IPS</td>
                   <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
                   <td>Pendidikan</td>
-                  <td>Evanoyy</td>
+                  <td>Ervanoyy</td>
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
                   <td></td>
@@ -180,7 +180,7 @@
                   <td>IPS</td>
                   <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
                   <td>Pendidikan</td>
-                  <td>Evanoyy</td>
+                  <td>Ervanoyy</td>
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
                   <td></td>

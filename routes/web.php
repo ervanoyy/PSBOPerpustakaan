@@ -29,6 +29,10 @@ Route::get('/peminjaman', function () {
     return view('peminjaman');
 });
 
+Route::get('/pinjambuku', function () {
+    return view('pinjambuku');
+});
+
 Route::get('/kunjungan', function () {
     return view('kunjungan');
 });
@@ -61,6 +65,9 @@ Route::get('/editbuku', function () {
     return view('editbuku');
 });
 
+Route::get('/formtamu', function () {
+    return view('formtamu');
+});
 
 
 

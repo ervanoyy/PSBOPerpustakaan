@@ -54,7 +54,7 @@
   <!-- /.lockscreen-item -->
   <div class="text-center">
     </br>
-    <a href="login.html">atau isi form jika bukan siswa SCB</a>
+    <a href="/formtamu">atau isi form jika bukan siswa SCB</a>
   </div>
 
 
@@ -90,7 +90,7 @@
               </div>
 
               <div class="modal-body">
-                NIS tidak ditemukan. Bukan siswa SCB? <a href=""> Isi form kunjungan</a> 
+                NIS tidak ditemukan. Bukan siswa SCB? <a href="/formtamu"> Isi form kunjungan</a> 
               </div>
 
               <div class="modal-footer">

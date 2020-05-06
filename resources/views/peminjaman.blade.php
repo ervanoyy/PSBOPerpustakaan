@@ -37,8 +37,10 @@
           <!-- /.box -->
 
           <div class="box">
+            <a href="/pinjambuku"
             <div class="box-header">
-              <h3 class="box-title"><button type="button" class="btn btn-block btn-success">+ Peminjaman Buku</button></h3>
+              <h3 class="box-title"><button type="button" class="btn btn-block btn-success" id="tombol">+ Peminjaman Buku</button></h3>
+            </a>
             </div>
             <!-- /.box-header -->
             <div class="box-body">
