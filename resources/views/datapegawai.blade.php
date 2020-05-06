@@ -11,8 +11,8 @@
         <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Pendataan Pegawai</a></li>
+        <li><i class="fa fa-user"></i>  User</li>
+        <li class="active">Data Pegawai</li>
     
       </ol>
     </section>
@@ -26,7 +26,7 @@
 
           <div class="box">
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="box-body table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -94,11 +94,7 @@
                   <td>0020099</td>
                   <td>Siti Maemunah</td>
                 </tr>
-
-               
-                
-            
-            </tbody>
+                </tbody>
                 <tfoot>
                 
                 </tfoot>

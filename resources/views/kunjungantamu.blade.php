@@ -11,8 +11,8 @@
         <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Data Kunjungan Masyarakat</a></li>
+        <li><a><i class="fa  fa-calendar-check-o"></i> Data Kunjungan</a></li>
+        <li clas="active">Non-Siswa</li>
     
       </ol>
     </section>
@@ -26,7 +26,7 @@
 
           <div class="box">
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="box-body table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>

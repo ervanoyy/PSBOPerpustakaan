@@ -1,7 +1,7 @@
 @extends ('navbar')
 
 @section('content')
-<title>Peminjaman</title>
+<title>Peminjaman Buku</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -17,8 +17,7 @@
         <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Data Peminjaman Buku</a></li>
+        <li class="active"><i class="fa fa-exchange"></i>  Peminjaman Buku</a></li>
     
       </ol>
     </section>
@@ -37,13 +36,13 @@
           <!-- /.box -->
 
           <div class="box">
-            <a href="/pinjambuku"
+            <a href="/tambahpeminjaman">
             <div class="box-header">
               <h3 class="box-title"><button type="button" class="btn btn-block btn-success" id="tombol">+ Peminjaman Buku</button></h3>
             </a>
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="box-body table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -202,14 +201,7 @@
                   <td></td>
                   <td><button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#pengembalian">Belum dikembalikan</button></td>
                 </tr>
-
-                
-
-    
-
-                
-                
-            
+          
             </tbody>
                 <tfoot>
                 
@@ -233,7 +225,7 @@
 
     <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
+
 </div>
 <!-- ./wrapper -->
 

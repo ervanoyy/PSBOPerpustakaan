@@ -19,8 +19,7 @@
         <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Pendataan Buku</a></li>
+        <li class="active"><i class="fa fa-book"></i>  Pendataan Buku</li>
     
       </ol>
     </section>
@@ -39,7 +38,7 @@
             </a>
             </div>
             <!-- /.box-header -->
-            <div class="box-body">
+            <div class="box-body table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -54,6 +53,8 @@
                   <th>Aksi</th>
                 </tr>
                 </thead>
+
+
                 <tbody>
                 <tr>
                   <td>0020099</td>
@@ -186,13 +187,8 @@
                   <td></td>
                   <td><a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a><a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
                 </tr>
-
-
-                              
-            
-            </tbody>
-                <tfoot>
-                
+                </tbody>
+                <tfoot>                
                 </tfoot>
               </table>
             </div>
@@ -213,11 +209,12 @@
 
     <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
-  <div class="control-sidebar-bg"></div>
+<div class="control-sidebar-bg"></div>
 </div>
 <!-- ./wrapper -->
 
 
+  <!-- Pop Up for Delete Confirmation -->
   <!-- Modal popup -->
   
   <div class="modal fade" id="deletebuku">

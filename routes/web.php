@@ -29,12 +29,16 @@ Route::get('/peminjaman', function () {
     return view('peminjaman');
 });
 
-Route::get('/pinjambuku', function () {
-    return view('pinjambuku');
+Route::get('/tambahpeminjaman', function () {
+    return view('tambahpeminjaman');
 });
 
-Route::get('/kunjungan', function () {
-    return view('kunjungan');
+Route::get('/kunjungansiswa', function () {
+    return view('kunjungansiswa');
+});
+
+Route::get('/kunjungantamu', function () {
+    return view('kunjungantamu');
 });
 
 Route::get('/datasiswa', function () {
@@ -57,8 +61,8 @@ Route::get('/datapegawai', function () {
     return view('datapegawai');
 });
 
-Route::get('/bukutamusiswa', function () {
-    return view('bukutamusiswa');
+Route::get('/formsiswa', function () {
+    return view('formsiswa');
 });
 
 Route::get('/editbuku', function () {
@@ -69,16 +73,14 @@ Route::get('/formtamu', function () {
     return view('formtamu');
 });
 
-Route::get('/rekappeminjaman', function () {
-    return view('rekappeminjaman');
+Route::get('/confirmpeminjaman', function () {
+    return view('confirmpeminjaman');
 });
 
-Route::get('/opsisiswamasyarakat', function () {
-    return view('opsisiswamasyarakat');
+Route::get('/bukutamu', function () {
+    return view('bukutamu');
 });
 
-Route::get('/datakunjunganmasyarakat', function () {
-    return view('datakunjunganmasyarakat');
-});
+
 
 

@@ -1,18 +1,17 @@
 @extends ('navbar')
 
 @section('content')
-<title>Pinjam Buku</title>
+<title>Form Peminjaman</title>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Pinjam Buku
+        Form Peminjaman
       </h1>
       <ol class="breadcrumb">
-        <li><a href="/dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="/peminjaman">Data Peminjaman Buku</a></li>
-        <li class="active">Pinjam Buku</li>
+        <li><a href="/peminjaman"><i class="fa fa-exchange"></i>  Peminjaman Buku</a></li>
+        <li class="active">Form Peminjaman</li>
       </ol>
     </section>
 
@@ -44,7 +43,7 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Pinjam</button>
+                <a href="/confirmpeminjaman" type="submit" class="btn btn-primary">Pinjam</a>
               
               <a href="/peminjaman"
                 <button type="button" class="btn btn-default">Cancel</button>

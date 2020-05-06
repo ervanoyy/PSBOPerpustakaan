@@ -1,7 +1,7 @@
 @extends ('navbar')
 
 @section('content')
-<title>Opsi Siswa Atau Masyarakat</title>
+<title>Isi Buku Tamu</title>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -16,9 +16,7 @@
         <br>
         SMP Cendekia Baznas</center></h2>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Peminjaman</a></li>
-        <li class="active">rekappeminjaman</li>
+        <li class="active"><i class="fa fa-edit"></i> Buku Tamu</li>
       </ol>
     </section>
 

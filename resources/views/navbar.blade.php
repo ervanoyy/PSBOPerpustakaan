@@ -182,11 +182,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class=""><a href="/kunjungan"><i class="fa fa-circle-o"></i> Siswa</a></li>
-            <li class=""><a href="/datakunjunganmasyarakat"><i class="fa fa-circle-o"></i> Masyarakat</a></li>
+            <li class=""><a href="/kunjungansiswa"><i class="fa fa-circle-o"></i> Siswa</a></li>
+            <li class=""><a href="/kunjungantamu"><i class="fa fa-circle-o"></i> Masyarakat</a></li>
           </ul>
         </li>
-        <li class=""><a href="/bukutamusiswa"><i class="fa fa-edit"></i> <span>Isi Buku Tamu</span></a></li>                    
+        <li class=""><a href="/formsiswa"><i class="fa fa-edit"></i> <span>Isi Buku Tamu</span></a></li>                    
       </ul>
     
     </section>

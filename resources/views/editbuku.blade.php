@@ -10,8 +10,7 @@
         Edit buku
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Pendataan Buku</a></li>
+        <li><a href="/buku"><i class="fa fa-book"></i>  Pendataan Buku</a></li>
         <li class="active">Edit Buku</li>
       </ol>
     </section>

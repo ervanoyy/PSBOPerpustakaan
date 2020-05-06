@@ -13,11 +13,11 @@
     .zoom:focus {
     /**adjust scale to desired size, 
     add browser prefixes**/
-    -ms-transform: scale(5);    
-    -moz-transform: scale(5);  
-    -webkit-transform: scale(5);  
-    -o-transform: scale(5);  
-    transform: scale(5);    
+    -ms-transform: scale(4);    
+    -moz-transform: scale(4);  
+    -webkit-transform: scale(4);  
+    -o-transform: scale(4);  
+    transform: scale(4);    
     position:relative;      
     z-index:100;  
     }

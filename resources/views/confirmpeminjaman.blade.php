@@ -1,15 +1,15 @@
 @extends ('navbar')
 
 @section('content')
-<title>Rekap Peminjaman</title>
+<title>Konfirmasi Peminjaman</title>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Peminjaman</a></li>
-        <li class="active">rekappeminjaman</li>
+        <li><a href="/peminjaman"><i class="fa fa-exchange"></i>  Peminjaman Buku</a></li>
+        <li><a href="/tambahpeminjaman">Form Peminjaman</a></li>
+        <li class="active">Konfirmasi Peminjaman</li>
       </ol>
     </section>
 
@@ -37,7 +37,7 @@
               box-shadow:0 4px 8px 0 rgba(0,0,0,0.6);
               transition:0.4s;
               background : #fff;
-              border-radius : 20px;
+              
             }
             .box-footer{
               margin-top : 140px;
@@ -51,7 +51,7 @@
               <div class = "left">
               <table width="700" border="0" align="left" cellspacing="5">
               <br>
-              <h2><b>Peminjaman</b></h2>
+              <h2><b>Peminjaman Buku</b></h2>
               
                 <tr>
                   <td width="80" align="left" valign="top">NIS / NIP</td>
@@ -90,8 +90,8 @@
               
               <div class="box-footer">
               <div class = "container">
-                <button type="submit" class="btn btn-danger">Cancel</button>
-                <button type="submit" class="btn btn-primary">Simpan</button>
+                <button type="submit" class="btn btn-danger">Batal</button>
+                <a href="/peminjaman" type="submit" class="btn btn-primary">Simpan</a>
               </div>
             </div>
             </div>

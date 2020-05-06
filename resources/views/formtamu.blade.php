@@ -7,9 +7,8 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <ol class="breadcrumb">
-        <li><a href="/dashboard"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="/bukutamusiswa">Buku Tamu</a></li>
-        <li class="active">Buku Tamu Non Siswa</li>
+        <li><i class="fa fa-edit"></i>  Buku Tamu</li>
+        <li class="active"></i>  Non-Siswa</li>
       </ol>
     </section>
     
