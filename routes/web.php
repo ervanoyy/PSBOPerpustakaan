@@ -77,5 +77,8 @@ Route::get('/opsisiswamasyarakat', function () {
     return view('opsisiswamasyarakat');
 });
 
+Route::get('/datakunjunganmasyarakat', function () {
+    return view('datakunjunganmasyarakat');
+});
 
 
