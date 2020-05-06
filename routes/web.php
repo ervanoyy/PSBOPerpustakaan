@@ -61,6 +61,13 @@ Route::get('/editbuku', function () {
     return view('editbuku');
 });
 
+Route::get('/rekappeminjaman', function () {
+    return view('rekappeminjaman');
+});
+
+Route::get('/opsisiswamasyarakat', function () {
+    return view('opsisiswamasyarakat');
+});
 
 
 

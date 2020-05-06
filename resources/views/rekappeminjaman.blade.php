@@ -1,7 +1,7 @@
 @extends ('navbar')
 
 @section('content')
-<title>rekappeminjaman</title>
+<title>Rekap Peminjaman</title>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -37,6 +37,7 @@
               box-shadow:0 4px 8px 0 rgba(0,0,0,0.6);
               transition:0.4s;
               background : #fff;
+              border-radius : 20px;
             }
             .box-footer{
               margin-top : 140px;
