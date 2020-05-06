@@ -1,3 +1,4 @@
+<?php $thisPage="Dashboard"; ?>
 @extends ('navbar')
 
 @section('content')

@@ -1,3 +1,4 @@
+<?php $thisPage="Pegawai"; ?>
 @extends ('navbar')
 
 @section('content')

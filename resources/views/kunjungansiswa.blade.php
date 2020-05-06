@@ -1,3 +1,4 @@
+<?php $thisPage="Kunjungansiswa"; ?>
 @extends ('navbar')
 
 @section('content')

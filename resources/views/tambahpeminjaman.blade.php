@@ -1,3 +1,4 @@
+<?php $thisPage="Peminjaman"; ?>
 @extends ('navbar')
 
 @section('content')

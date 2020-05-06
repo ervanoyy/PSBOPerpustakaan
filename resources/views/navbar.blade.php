@@ -158,8 +158,15 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li class=""><a href="/dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <li class="treeview">
+        <li <?php if($thisPage == "Dashboard") echo "class='active'"; ?>><a href="/dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
+        <li <?php if($thisPage == "Siswa") { 
+                      echo "class='treeview active'"; 
+                  } elseif($thisPage == "Pegawai") { 
+                      echo "class='treeview active'"; 
+                  } else {
+                      echo "class='treeview'";
+                  }      
+        ?>>
        
           <a href="">
             <i class="fa fa-user"></i> <span>User</span>
@@ -168,13 +175,20 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class=""><a href="/datasiswa"><i class="fa fa-circle-o"></i> Siswa</a></li>
-            <li class=""><a href="/datapegawai"><i class="fa fa-circle-o"></i> Pegawai</a></li>
+            <li <?php if($thisPage == "Siswa") echo "class='active'"; ?>><a href="/datasiswa"><i class="fa fa-circle-o"></i> Siswa</a></li>
+            <li <?php if($thisPage == "Pegawai") echo "class='active'"; ?>><a href="/datapegawai"><i class="fa fa-circle-o"></i> Pegawai</a></li>
           </ul>
         </li>
-        <li class=""> <a href="/buku"><i class="fa fa-book"></i> <span>Buku</span></a></li>
-        <li class=""><a href="/peminjaman"><i class="fa fa-exchange"></i> <span>Peminjaman</span></a></li>
-        <li class="treeview">
+        <li <?php if($thisPage == "Buku") echo "class='active'"; ?>> <a href="/buku"><i class="fa fa-book"></i> <span>Buku</span></a></li>
+        <li <?php if($thisPage == "Peminjaman") echo "class='active'"; ?>><a href="/peminjaman"><i class="fa fa-exchange"></i> <span>Peminjaman</span></a></li>
+        <li <?php if($thisPage == "Kunjungansiswa") { 
+                      echo "class='treeview active'"; 
+                  } elseif($thisPage == "Kunjungannonsiswa") { 
+                      echo "class='treeview active'"; 
+                  } else {
+                      echo "class='treeview'";
+                  }      
+        ?>>
           <a href="">
             <i class="fa  fa-calendar-check-o"></i> <span>Data Kunjungan</span>
             <span class="pull-right-container">
@@ -182,11 +196,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class=""><a href="/kunjungansiswa"><i class="fa fa-circle-o"></i> Siswa</a></li>
-            <li class=""><a href="/kunjungantamu"><i class="fa fa-circle-o"></i> Masyarakat</a></li>
+            <li <?php if($thisPage == "Kunjungansiswa") echo "class='active'"; ?>><a href="/kunjungansiswa"><i class="fa fa-circle-o"></i> Siswa</a></li>
+            <li <?php if($thisPage == "Kunjungannonsiswa") echo "class='active'"; ?>><a href="/kunjungantamu"><i class="fa fa-circle-o"></i> Masyarakat</a></li>
           </ul>
         </li>
-        <li class=""><a href="/formsiswa"><i class="fa fa-edit"></i> <span>Isi Buku Tamu</span></a></li>                    
+        <li <?php if($thisPage == "Bukutamu") echo "class='active'"; ?>><a href="/formsiswa"><i class="fa fa-edit"></i> <span>Isi Buku Tamu</span></a></li>                    
       </ul>
     
     </section>

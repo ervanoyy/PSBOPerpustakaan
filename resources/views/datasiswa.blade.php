@@ -1,3 +1,4 @@
+<?php $thisPage="Siswa"; ?>
 @extends ('navbar')
 
 @section('content')

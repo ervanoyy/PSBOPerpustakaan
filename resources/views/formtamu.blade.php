@@ -1,3 +1,4 @@
+<?php $thisPage="Bukutamu"; ?>
 @extends ('navbar')
 
 @section('content')
