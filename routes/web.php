@@ -69,5 +69,13 @@ Route::get('/formtamu', function () {
     return view('formtamu');
 });
 
+Route::get('/rekappeminjaman', function () {
+    return view('rekappeminjaman');
+});
+
+Route::get('/opsisiswamasyarakat', function () {
+    return view('opsisiswamasyarakat');
+});
+
 
 
