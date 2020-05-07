@@ -21,33 +21,70 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('/buku', function () {
-    return view('buku');
-});
-
-Route::get('/peminjaman', function () {
-    return view('peminjaman');
-});
-
-Route::get('/tambahpeminjaman', function () {
-    return view('tambahpeminjaman');
-});
-
-Route::get('/kunjungansiswa', function () {
-    return view('kunjungansiswa');
-});
-
-Route::get('/kunjungantamu', function () {
-    return view('kunjungantamu');
-});
+/* ---------- User --------------  */
 
 Route::get('/datasiswa', function () {
-    return view('datasiswa');
+    return view('User/datasiswa');
+});
+
+Route::get('/datapegawai', function () {
+    return view('User/datapegawai');
+});
+
+
+/* ---------- Buku --------------  */
+
+Route::get('/buku', function () {
+    return view('Buku/buku');
 });
 
 Route::get('/tambahbuku', function () {
-    return view('tambahbuku');
+    return view('Buku/tambahbuku');
 });
+
+Route::get('/editbuku', function () {
+    return view('Buku/editbuku');
+});
+
+/* ---------- Peminjaman --------------  */
+
+Route::get('/peminjaman', function () {
+    return view('Peminjaman/peminjaman');
+});
+
+Route::get('/tambahpeminjaman', function () {
+    return view('Peminjaman/tambahpeminjaman');
+});
+
+Route::get('/confirmpeminjaman', function () {
+    return view('Peminjaman/confirmpeminjaman');
+});
+
+/* ---------- Kunjungan --------------  */
+
+Route::get('/kunjungansiswa', function () {
+    return view('Kunjungan/kunjungansiswa');
+});
+
+Route::get('/kunjungantamu', function () {
+    return view('Kunjungan/kunjungantamu');
+});
+
+/* ---------- Buku Tamu --------------  */
+
+Route::get('/formsiswa', function () {
+    return view('Bukutamu/formsiswa');
+});
+
+Route::get('/formtamu', function () {
+    return view('Bukutamu/formtamu');
+});
+
+Route::get('/bukutamu', function () {
+    return view('Bukutamu/bukutamu');
+});
+
+/* ------------------------------------  */
 
 Route::get('/navbar', function () {
     return view('navbar');
@@ -56,31 +93,5 @@ Route::get('/navbar', function () {
 Route::get('/template', function () {
     return view('template');
 });
-
-Route::get('/datapegawai', function () {
-    return view('datapegawai');
-});
-
-Route::get('/formsiswa', function () {
-    return view('formsiswa');
-});
-
-Route::get('/editbuku', function () {
-    return view('editbuku');
-});
-
-Route::get('/formtamu', function () {
-    return view('formtamu');
-});
-
-Route::get('/confirmpeminjaman', function () {
-    return view('confirmpeminjaman');
-});
-
-Route::get('/bukutamu', function () {
-    return view('bukutamu');
-});
-
-
 
 

@@ -66,8 +66,11 @@
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
                   <td></td>
-                  <td><a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a><a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
-                </tr>
+                  <td>                
+                  <a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
+                  <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a>
+                  </td>
+                  </tr>
 
                 <tr>
                   <td>0020099</td>
