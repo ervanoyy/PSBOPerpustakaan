@@ -5,11 +5,12 @@
 <title>Buku</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
-    <link rel="stylesheet" type="text/css" href="dist/css/imagezoom.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/imagezoom.css')}}">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
   
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -61,7 +62,7 @@
                   <td>0020099</td>
                   <td>IPS</td>
                   <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
-                  <td>Pendidikan</td>
+                  <td>Pendidikan Aye</td>
                   <td>Ervanoyy</td>
                   <td><?php echo date('d-F-Y');?></td>
                   <td>25</td>
@@ -239,24 +240,23 @@
         </div>
 
 
-
-
 <!-- jQuery 3 -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="{{ asset('bower_components/jquery/dist/jquery.min.js')}}"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="{{ asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- DataTables -->
-<script src="bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
-<script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="{{ asset('bower_components/datatables.net/js/jquery.dataTables.min.js')}}"></script>
+<script src="{{ asset('bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js')}}"></script>
 <!-- SlimScroll -->
-<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="{{ asset('bower_components/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
 <!-- FastClick -->
-<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<script src="{{ asset('bower_components/fastclick/lib/fastclick.js')}}"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
+<script src="{{ asset('dist/js/adminlte.min.js')}}"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<script src="{{ asset('dist/js/demo.js')}}"></script>
 <!-- page script -->
+
 
 
 <script>
