@@ -30,13 +30,14 @@
 					<img src="images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" action="/postlogin" method="POST">
+				{{csrf_field()}}
 					<span class="login100-form-title">
 						Admin Masuk
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Masukkan username anda">
-						<input class="input100" type="text" name="user" placeholder="Username">
+						<input class="input100" type="text" name="name" placeholder="Username">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-user" aria-hidden="true"></i>
@@ -44,7 +45,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Masukkan kata sandi">
-						<input class="input100" type="password" name="pass" placeholder="Kata sandi">
+						<input class="input100" type="password" name="password" placeholder="Kata sandi">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -52,9 +53,9 @@
                     </div>
 					
 					<div class="container-login100-form-btn">
-					<a href="/dashboard" class="login100-form-btn">
+					<button type="submit" class="login100-form-btn">
 						Masuk
-					</a>
+					</button>
                     </div>
                   
 

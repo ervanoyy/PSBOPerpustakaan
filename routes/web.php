@@ -13,85 +13,88 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
+Route::get('/', 'AuthController@login')->name('login');
+Route::post('/postlogin', 'AuthController@postlogin');
+Route::get('/logout', 'AuthController@logout');
+
+
+Route::group(['middleware' => 'auth'], function(){
+            Route::get('/dashboard', function () {
+                return view('dashboard');
+            });
+
+            /* ---------- User --------------  */
+
+            Route::get('/datasiswa', function () {
+                return view('User/datasiswa');
+            });
+
+            Route::get('/datapegawai', function () {
+                return view('User/datapegawai');
+            });
+
+
+            /* ---------- Buku --------------  */
+
+            Route::get('/buku', function () {
+                return view('Buku/buku');
+            });
+
+            Route::get('/tambahbuku', function () {
+                return view('Buku/tambahbuku');
+            });
+
+            Route::get('/editbuku', function () {
+                return view('Buku/editbuku');
+            });
+
+            /* ---------- Peminjaman --------------  */
+
+            Route::get('/peminjaman', function () {
+                return view('Peminjaman/peminjaman');
+            });
+
+            Route::get('/tambahpeminjaman', function () {
+                return view('Peminjaman/tambahpeminjaman');
+            });
+
+            Route::get('/confirmpeminjaman', function () {
+                return view('Peminjaman/confirmpeminjaman');
+            });
+
+            /* ---------- Kunjungan --------------  */
+
+            Route::get('/kunjungansiswa', function () {
+                return view('Kunjungan/kunjungansiswa');
+            });
+
+            Route::get('/kunjungantamu', function () {
+                return view('Kunjungan/kunjungantamu');
+            });
+
+            /* ---------- Buku Tamu --------------  */
+
+            Route::get('/formsiswa', function () {
+                return view('Bukutamu/formsiswa');
+            });
+
+            Route::get('/formtamu', function () {
+                return view('Bukutamu/formtamu');
+            });
+
+            Route::get('/bukutamu', function () {
+                return view('Bukutamu/bukutamu');
+            });
+
+            /* ------------------------------------  */
+
+            Route::get('/navbar', function () {
+                return view('navbar');
+            });
+
+            Route::get('/template', function () {
+                return view('template');
+            });
+
 });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-/* ---------- User --------------  */
-
-Route::get('/datasiswa', function () {
-    return view('User/datasiswa');
-});
-
-Route::get('/datapegawai', function () {
-    return view('User/datapegawai');
-});
-
-
-/* ---------- Buku --------------  */
-
-Route::get('/buku', function () {
-    return view('Buku/buku');
-});
-
-Route::get('/tambahbuku', function () {
-    return view('Buku/tambahbuku');
-});
-
-Route::get('/editbuku', function () {
-    return view('Buku/editbuku');
-});
-
-/* ---------- Peminjaman --------------  */
-
-Route::get('/peminjaman', function () {
-    return view('Peminjaman/peminjaman');
-});
-
-Route::get('/tambahpeminjaman', function () {
-    return view('Peminjaman/tambahpeminjaman');
-});
-
-Route::get('/confirmpeminjaman', function () {
-    return view('Peminjaman/confirmpeminjaman');
-});
-
-/* ---------- Kunjungan --------------  */
-
-Route::get('/kunjungansiswa', function () {
-    return view('Kunjungan/kunjungansiswa');
-});
-
-Route::get('/kunjungantamu', function () {
-    return view('Kunjungan/kunjungantamu');
-});
-
-/* ---------- Buku Tamu --------------  */
-
-Route::get('/formsiswa', function () {
-    return view('Bukutamu/formsiswa');
-});
-
-Route::get('/formtamu', function () {
-    return view('Bukutamu/formtamu');
-});
-
-Route::get('/bukutamu', function () {
-    return view('Bukutamu/bukutamu');
-});
-
-/* ------------------------------------  */
-
-Route::get('/navbar', function () {
-    return view('navbar');
-});
-
-Route::get('/template', function () {
-    return view('template');
-});
-
 

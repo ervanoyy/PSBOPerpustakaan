@@ -113,7 +113,7 @@
 
 
           <li class="user user-menu">
-            <a href="/">
+            <a href="/logout">
               <span><i class="fa fa-sign-out"></i>    Keluar</a></span>
             </a>
             
