@@ -23,7 +23,7 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>1,170</h3>
+              <h3>{{$total_buku}}</h3>
 
               <p>Total Buku</p>
             </div>
@@ -51,7 +51,7 @@
           <!-- small box -->
           <div class="small-box bg-yellow">
             <div class="inner">
-              <h3>1,345</h3>
+              <h3>{{$total_kunjungan}}</h3>
 
               <p>Total Kunjungan</p>
             </div>

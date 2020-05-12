@@ -22,6 +22,15 @@
      <!-- START LOCK SCREEN ITEM -->
     <div>
       <!-- lockscreen credentials (contains the form) -->
+      @if (count($errors) > 0)
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>s
+      @endif
       <form action="/formtamu/catat" method="POST" role="form">
 
         {{ csrf_field() }} 

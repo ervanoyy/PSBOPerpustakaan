@@ -22,11 +22,26 @@ class BukuController extends Controller
 
     public function proses_tambah(Request $request){
         
-        $this->validate($request, [
-			'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
-		]);
+        $messages = [
+            'required' => ':attribute wajib diisi ya',
+            'mimes' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
+            'max' => ':attribute maksimal sebesar 2048 ya!',
+            'file' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
+            'image' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
+            'numeric' => ':attribute tolong diisi dengan angka saja ya!',
+            'gte' => ':attribute diisi paling kecil 0 ya!'
+        ];
 
-        $file = $request->file('file');
+        $this->validate($request, [
+            'Kode_Buku' => 'required',
+            'Judul_Buku' => 'required',
+            'Gambar' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+            'Kategori' => 'required',
+            'Pengarang' => 'required',
+            'Jumlah_Buku' => 'required|numeric|gte:0'
+		], $messages);
+
+        $file = $request->file('Gambar');
 
         $nama_file = time()."_".$file->getClientOriginalName();
 

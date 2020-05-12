@@ -49,7 +49,7 @@
 
                 <div class="form-group">
                   <label for="exampleInputFile">Gambar Buku</label>
-                  <input type="file" id="exampleInputFile" name="file">
+                  <input type="file" id="exampleInputFile" name="Gambar">
 
                   <p class="help-block">Format file : PNG,JPG,JPEG</p>
                 </div>

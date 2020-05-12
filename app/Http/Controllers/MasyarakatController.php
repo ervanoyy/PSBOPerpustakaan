@@ -15,6 +15,21 @@ class MasyarakatController extends Controller
 
     public function pencatatan(Request $request){
 
+        $messages = [
+            'required' => ':attribute wajib diisi ya',
+            'numeric' => ':attribute tolong diisi angka saja ya!',
+            'alpha_num' => ':attribute tolong diisi dengan tepat ya!',
+            'gte' => ':attribute tolong diisi lebih besar dari 0 ya!'
+        ];
+
+        $this->validate($request, [
+            'Nama' => 'required',
+            'Alamat' => 'required',
+            'Umur' => 'required|numeric|gte:0',
+            'NoTelp' => 'required|alpha_num',
+            'Tujuan' => 'required'
+		], $messages);
+
         try
         {
             $masyarakat = \App\Masyarakat::where('Nama', $request->Nama)
