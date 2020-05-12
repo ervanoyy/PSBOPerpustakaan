@@ -27,44 +27,56 @@
               <h3 class="box-title">Data Buku</h3>
             </div>
             <!-- /.box-header -->
+
+            @if (count($errors) > 0)
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+            @endif
+
             <!-- form start -->
-            <form role="form">
+            <form action="/buku/tambahbuku/proses" method="POST" enctype="multipart/form-data" role="form">
+             {{ csrf_field() }} 
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Judul Buku</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                  <input name="Judul_Buku" type="text" class="form-control" id="exampleInputEmail1" placeholder="">
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputFile">Gambar Buku</label>
-                  <input type="file" id="exampleInputFile">
+                  <input type="file" id="exampleInputFile" name="file">
 
                   <p class="help-block">Format file : PNG,JPG,JPEG</p>
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputPassword1">Kode Buku</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                  <input name="Kode_Buku" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
                 </div>
 
                 <div class="form-group">
                   <label>Kategori Buku</label>
-                  <select class="form-control">
-                    <option>Pendidikan</option>
-                    <option>Fiksi</option>
-                    <option>Non Fiksi</option>
-                    <option>Agama</option>
+                  <select name="Kategori" class="form-control">
+                    <option value="Pendidikan">Pendidikan</option>
+                    <option value="Fiksi">Fiksi</option>
+                    <option value="Non_Fiksi">Non Fiksi</option>
+                    <option value="Agama">Agama</option>
                   </select>
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputPassword1">Pengarang</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                  <input name="Pengarang" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputPassword1">Jumlah Buku</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                  <input name="Jumlah_Buku" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
                 </div>
                 
                 

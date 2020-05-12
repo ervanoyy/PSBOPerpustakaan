@@ -34,7 +34,7 @@
           <!-- /.box -->
 
           <div class="box">
-            <a href="/tambahbuku">
+            <a href="/buku/tambahbuku">
             <div class="box-header">
               <h3 class="box-title"><button type="button" class="btn btn-block btn-success" id="tombol">+ Tambah Buku</button></h3>
             </a>
@@ -58,140 +58,23 @@
 
 
                 <tbody>
-                <tr>
-                  <td>0020099</td>
-                  <td>IPS</td>
-                  <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
-                  <td>Pendidikan Aye</td>
-                  <td>Ervanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td>                
-                  <a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                  <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a>
-                  </td>
-                  </tr>
 
+                @foreach($buku_buku as $buku)
                 <tr>
-                  <td>0020099</td>
-                  <td>IPS</td>
-                  <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
-                  <td>Pendidikan</td>
-                  <td>Ervanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a><a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
+                  <td>{{$buku->Kode_Buku}}</td>
+                  <td>{{$buku->Judul_Buku}}</td>
+                  <td><img class="zoom" src="{{ url('/dist/img/'.$buku->Gambar) }}" alt="" height=100px></img></td>
+                  <td>{{$buku->Kategori}}</td>
+                  <td>{{$buku->Pengarang}}</td>
+                  <td><?php echo $buku->created_at->format('d-F-Y')?></td>
+                  <td>{{$buku->Stok}}</td>
+                  <td>{{$buku->Status}}</td>
+                  
+                  <td><a href="/buku/editbuku/{{$buku->id}}" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
+                  <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$buku->id}}"data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
                 </tr>
+                @endforeach
 
-                <tr>
-                  <td>0020099</td>
-                  <td>IPS</td>
-                  <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
-                  <td>Pendidikan</td>
-                  <td>Ervanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a><a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>IPS</td>
-                  <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
-                  <td>Pendidikan</td>
-                  <td>Ervanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a><a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>IPS</td>
-                  <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
-                  <td>Pendidikan</td>
-                  <td>Ervanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a><a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>IPS</td>
-                  <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
-                  <td>Pendidikan</td>
-                  <td>Ervanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a><a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>IPS</td>
-                  <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
-                  <td>Pendidikan</td>
-                  <td>Ervanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a><a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>IPS</td>
-                  <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
-                  <td>Pendidikan</td>
-                  <td>Ervanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a><a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>Don't Make Me Think</td>
-                  <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
-                  <td>Pendidikan</td>
-                  <td>Ervanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a><a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>IPS</td>
-                  <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
-                  <td>Pendidikan</td>
-                  <td>Ervanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a><a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>IPS</td>
-                  <td><img class="zoom" src="dist/img/gambarbuku.jpg" alt="" height=100px></img></td>
-                  <td>Pendidikan</td>
-                  <td>Ervanoyy</td>
-                  <td><?php echo date('d-F-Y');?></td>
-                  <td>25</td>
-                  <td></td>
-                  <td><a href="/editbuku" type="button" class="btn btn-block btn-primary btn-sm">Edit</a><a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
-                </tr>
                 </tbody>
                 <tfoot>                
                 </tfoot>

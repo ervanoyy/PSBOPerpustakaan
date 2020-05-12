@@ -40,7 +40,19 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+
+                @foreach($kunjungan as $tamu)
+                  <tr>
+                    <td><?php echo $tamu->created_at->format('d-F-Y')?></td>
+                    <td>{{$tamu->Masyarakat->Nama}}</td>
+                    <td>{{$tamu->Masyarakat->Umur}}</td>
+                    <td>{{$tamu->Masyarakat->Alamat}}</td>
+                    <td>{{$tamu->Masyarakat->NoTelp}}</td>
+                    <td>{{$tamu->Tujuan}}</td>
+                  </tr>
+                @endforeach
+
+                <!-- <tr>
                   <td>11 April 2020</td>
                   <td>Fathiya</td>
                   <td>20</td>
@@ -323,7 +335,7 @@
                   <td>Jl.Babakan</td>
                   <td>081712345678</td>
                   <td>membaca</td>
-                </tr>
+                </tr> -->
 
             
             </tbody>

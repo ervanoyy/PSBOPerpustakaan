@@ -36,17 +36,13 @@ Route::group(['middleware' => 'auth'], function(){
 
             /* ---------- Buku --------------  */
 
-            Route::get('/buku', function () {
-                return view('Buku/buku');
-            });
+            Route::get('/buku', 'BukuController@index');
 
-            Route::get('/tambahbuku', function () {
-                return view('Buku/tambahbuku');
-            });
+            Route::get('/buku/tambahbuku', 'BukuController@tambah');
+            Route::post('/buku/tambahbuku/proses', 'BukuController@proses_tambah');
 
-            Route::get('/editbuku', function () {
-                return view('Buku/editbuku');
-            });
+            Route::get('/buku/editbuku/{buku_id}', 'BukuController@edit');
+            Route::put('/buku/editbuku/{buku_id}/proses', 'BukuController@proses_edit');
 
             /* ---------- Peminjaman --------------  */
 
@@ -68,9 +64,8 @@ Route::group(['middleware' => 'auth'], function(){
                 return view('Kunjungan/kunjungansiswa');
             });
 
-            Route::get('/kunjungantamu', function () {
-                return view('Kunjungan/kunjungantamu');
-            });
+            Route::get('/kunjungantamu', 'KunjunganMasyarakatController@index');
+            Route::get('/kunjungantamu/{tujuan}/{masyarakat_id}', 'KunjunganMasyarakatController@tambah');
 
             /* ---------- Buku Tamu --------------  */
 
@@ -78,10 +73,9 @@ Route::group(['middleware' => 'auth'], function(){
                 return view('Bukutamu/formsiswa');
             });
 
-            Route::get('/formtamu', function () {
-                return view('Bukutamu/formtamu');
-            });
-
+            Route::get('/formtamu', 'MasyarakatController@berkunjung');
+            Route::post('/formtamu/catat', 'MasyarakatController@pencatatan');  
+            
             Route::get('/bukutamu', function () {
                 return view('Bukutamu/bukutamu');
             });

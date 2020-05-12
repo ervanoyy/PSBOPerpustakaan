@@ -22,40 +22,54 @@
      <!-- START LOCK SCREEN ITEM -->
     <div>
       <!-- lockscreen credentials (contains the form) -->
-      <form>
+      <form action="/formtamu/catat" method="POST" role="form">
+
+        {{ csrf_field() }} 
+      
         <div class="center-box">
-	    <div class="center box form-group input-group">
-		    <div class="input-group">
-              <input type="text" class="form-control" placeholder="Nama Lengkap">
-		      <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
-            </div>
-        </div>
+        <!-- Nama Lengkap -->
+          <div class="center box form-group input-group">
+              <div class="input-group">
+              <input name="Nama" class="form-control" placeholder="Nama Lengkap" type="text">
+              <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
+              </div>
+          </div>
             
         </div> <!-- form-group// -->
+
+        <!-- Umur -->
         <div class="center box form-group input-group">
-            <div class="input-group">
-              <input name="" class="form-control" placeholder="Umur" type="text">
-		      <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
-		    </div>
+          <div class="input-group">
+            <input name="Umur" class="form-control" placeholder="Umur" type="text">
+            <span class="input-group-addon"> <i class="fa fa-user"></i> </span>
+          </div>
         </div> <!-- form-group// -->
+
+        <!-- Alamat -->
         <div class="center box form-group input-group">
-            <div class="input-group">
-              <input name="" class="form-control" placeholder="Alamat" type="text">
-		      <span class="input-group-addon"> <i class="fa fa-map marker"></i> </span>
-		    </div>
+          <div class="input-group">
+            <input name="Alamat" class="form-control" placeholder="Alamat" type="text">
+            <span class="input-group-addon"> <i class="fa fa-map marker"></i> </span>
+		      </div>
         </div> <!-- form-group// -->
+
+        <!-- No Telepon -->
         <div class="center box form-group input-group">
-            <div class="input-group">
-              <input name="" class="form-control" placeholder="No Telp" type="text">
-		      <span class="input-group-addon"> <i class="fa fa-phone"></i> </span>
-		    </div>
+          <div class="input-group">
+            <input name="NoTelp" class="form-control" placeholder="No Telp" type="text">
+            <span class="input-group-addon"> <i class="fa fa-phone"></i> </span>
+          </div>
         </div> <!-- form-group// -->
+
+        <!-- Tujuan Kedatangan -->
         <div class="center box form-group input-group">
-            <div class="input-group">
-              <input name="" class="form-control" placeholder="Alasan" type="text">
-		      <span class="input-group-addon"> <i class="fa fa-pencil"></i> </span>
-		    </div>    
+          <div class="input-group">
+            <input name="Tujuan" class="form-control" placeholder="Tujuan Datang" type="text">
+            <span class="input-group-addon"> <i class="fa fa-pencil"></i> </span>
+          </div>    
         </div> <!-- form-group// -->
+
+
         <div class="text-center">
             <button type="submit" class="btn btn-primary"> Simpan  </button>
         </div> <!-- form-group// -->                                                                                                             

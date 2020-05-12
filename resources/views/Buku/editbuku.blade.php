@@ -28,15 +28,21 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form action="/buku/editbuku/{{ $buku->id }}/proses" method="POST" enctype="multipart/form-data" role="form">
+              
+              {{ csrf_field() }}
+              {{ method_field('PUT') }}
+
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Judul Buku</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                  <input type="text" name="Judul_Buku" class="form-control" id="exampleInputEmail1" placeholder="" value="  {{$buku->Judul_Buku}} ">
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputFile">Gambar Buku</label>
+                  <br>
+                  <img class="zoom" src="{{ url('/dist/img/'.$buku->Gambar) }}" alt="" height=100px></img>
                   <input type="file" id="exampleInputFile">
 
                   <p class="help-block">Format file : PNG,JPG,JPEG</p>
@@ -44,27 +50,44 @@
 
                 <div class="form-group">
                   <label for="exampleInputPassword1">Kode Buku</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                  <input type="text" name="Kode_Buku" value="{{$buku->Kode_Buku}}" class="form-control" id="exampleInputPassword1" placeholder="">
                 </div>
 
                 <div class="form-group">
                   <label>Kategori Buku</label>
-                  <select class="form-control">
-                    <option>Pendidikan</option>
-                    <option>Fiksi</option>
-                    <option>Non Fiksi</option>
-                    <option>Agama</option>
+                  <select name="Kategori" class="form-control">
+                    @if($buku->Kategori=='Pendidikan')
+                    <option value="Pendidikan" selected>Pendidikan</option>
+                    @else
+                    <option value="Pendidikan">Pendidikan</option>
+                    @endif
+                    @if($buku->Kategori=='Fiksi')
+                    <option value="Fiksi" selected>Fiksi</option>
+                    @else
+                    <option value="Fiksi">Fiksi</option>
+                    @endif
+                    @if($buku->Kategori=='Non_Fiksi')
+                    <option value="Non_Fiksi" selected>Non Fiksi</option>
+                    @else
+                    <option value="Non_Fiksi">Non Fiksi</option>
+                    @endif
+                    @if($buku->Kategori=='Agama')
+                    <option value="Agama" selected>Agama</option>
+                    @else
+                    <option value="Agama">Agama</option>
+                    @endif
+                    
                   </select>
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputPassword1">Pengarang</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                  <input type="text" name="Pengarang" value="{{$buku->Pengarang}}" class="form-control" id="exampleInputPassword1" placeholder="">
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputPassword1">Jumlah Buku</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                  <input type="text" name="Jumlah_Buku" value="{{$buku->Stok}}" class="form-control" id="exampleInputPassword1" placeholder="">
                 </div>
                 
                 
@@ -72,7 +95,7 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <a type="submit" class="btn btn-primary">Submit</a>
+              <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </form>
           </div>
