@@ -27,8 +27,25 @@ Route::group(['middleware' => 'auth'], function(){
                 return view('User/datasiswa');
             });
 
+            Route::get('/editdatasiswa', function () {
+                return view('User/editdatasiswa');
+            });
+
+            Route::get('/siswa', function () {
+                return view('User/siswa');
+            });
+
+
             Route::get('/datapegawai', function () {
                 return view('User/datapegawai');
+            });
+
+            Route::get('/pegawai', function () {
+                return view('User/pegawai');
+            });
+
+            Route::get('/editdatapegawai', function () {
+                return view('User/editdatapegawai');
             });
 
 

@@ -17,104 +17,109 @@
     
       </ol>
     </section>
-
+ 
     <!-- Main content -->
     <section class="content">
-      <div class="row">
-        <div class="col-xs-12">
-         
-          <!-- /.box -->
+        <div class="row">
+            <div class="col-xs-12">
+            
+            <!-- /.box -->
 
-          <div class="box">
-            <!-- /.box-header -->
-            <div class="box-body table-responsive">
-              <table id="example1" class="table table-bordered table-striped">
-                <thead>
-                <tr>
-                  <th>NIP</th>
-                  <th>Nama</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                  <td>0020099</td>
-                  <td>Siti Maemunah</td>
-                </tr>
+            <div class="box">
+              <a href="/pegawai">
+                <div class="box-header">
+                <h3 class="box-title"><button type="button" class="btn btn-block btn-success" id="tombol">Edit Data Pegawai</button></h3>
+                </a>
+                <!-- /.box-header -->
+                <div class="box-body table-responsive">
+                <table id="example1" class="table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                    <th>NIP</th>
+                    <th>Nama</th>
+                    </tr>
+                    </thead>
+                    
+                    <tbody>
+                    <tr>
+                    <td>0020099</td>
+                    <td>Siti Maemunah</td>
+                    </tr>
 
-                <tr>
-                  <td>0020097</td>
-                  <td>Qotrunnada Syifa</td>
-                </tr>
+                    <tr>
+                    <td>0020097</td>
+                    <td>Qotrunnada Syifa</td>
+                    </tr>
 
-                <tr>
-                  <td>0020098</td>
-                  <td>Firda Suci</td>
-                </tr>
+                    <tr>
+                    <td>0020098</td>
+                    <td>Firda Suci</td>
+                    </tr>
 
-                <tr>
-                  <td>0020099</td>
-                  <td>Siti Maemunah</td>
-                </tr>
+                    <tr>
+                    <td>0020099</td>
+                    <td>Siti Maemunah</td>
+                    </tr>
 
-                <tr>
-                  <td>0020099</td>
-                  <td>Siti Maemunah</td>
-                </tr>
+                    <tr>
+                    <td>0020097</td>
+                    <td>Qotrunnada Syifa</td>
+                    </tr>
 
-                <tr>
-                  <td>0020097</td>
-                  <td>Qotrunnada Syifa</td>
-                </tr>
+                    <tr>
+                    <td>0020098</td>
+                    <td>Firda Suci</td>
+                    </tr>
 
-                <tr>
-                  <td>0020098</td>
-                  <td>Firda Suci</td>
-                </tr>
+                    <tr>
+                    <td>0020099</td>
+                    <td>Siti Maemunah</td>
+                    </tr>
 
-                <tr>
-                  <td>0020099</td>
-                  <td>Siti Maemunah</td>
-                </tr>
+                    <tr>
+                    <td>0020097</td>
+                    <td>Qotrunnada Syifa</td>
+                    </tr>
 
-                <tr>
-                  <td>0020099</td>
-                  <td>Siti Maemunah</td>
-                </tr>
+                    <tr>
+                    <td>0020098</td>
+                    <td>Firda Suci</td>
+                    </tr>
 
-                <tr>
-                  <td>0020097</td>
-                  <td>Qotrunnada Syifa</td>
-                </tr>
+                    <tr>
+                    <td>0020099</td>
+                    <td>Siti Maemunah</td>
+                    </tr>
 
-                <tr>
-                  <td>0020098</td>
-                  <td>Firda Suci</td>
-                </tr>
+                    <tr>
+                    <td>0020097</td>
+                    <td>Qotrunnada Syifa</td>
+                    </tr>
 
-                <tr>
-                  <td>0020099</td>
-                  <td>Siti Maemunah</td>
-                </tr>
-                </tbody>
-                <tfoot>
-                
-                </tfoot>
-              </table>
+                    <tr>
+                    <td>0020098</td>
+                    <td>Firda Suci</td>
+                    </tr>
+
+                    </tbody>
+                    <tfoot>                
+                    </tfoot>
+                </table>
+                </div>
+                <!-- /.box-body -->
             </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
+            <!-- /.box -->
+            </div>
+            <!-- /.col -->
         </div>
-        <!-- /.col -->
-      </div>
-      <!-- /.row -->
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    
-  </footer>
+        <!-- /.row -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        
+    </footer>
 
     <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
