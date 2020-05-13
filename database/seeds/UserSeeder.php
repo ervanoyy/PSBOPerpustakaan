@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
         \App\User::create([
             'name'  => 'Admin',
             'email' => 'admin@gmail.com',
-            'password'  => bcrypt('Admin')
+            'password'  => \Hash::make('Admin')
         ]);
 
     }
