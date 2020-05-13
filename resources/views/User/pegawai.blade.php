@@ -25,6 +25,10 @@
             <!-- /.box -->
 
             <div class="box">
+              <a href="/datapegawai">
+              <div class="box-header">
+              <h3 class="box-title"><button type="button" class="btn btn-block btn-success" id="tombol">Simpan</button></h3>
+              </a>
                 <!-- /.box-header -->
                 <div class="box-body table-responsive">
                 <table id="example1" class="table table-bordered table-striped">
