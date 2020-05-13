@@ -40,5 +40,15 @@ class BukuTableSeeder extends Seeder
             'Stok' => '0',
 			'Status' => 'Tidak Tersedia',
         ]);
+
+        \App\Buku::create([
+            'Kode_Buku' => 'ISBN-3443-2-34',
+            'Judul_Buku' => 'Seri Pengetahuan : Marxisme',
+            'Gambar' => '1589343406_Buku.jpg',
+            'Kategori' => 'Pendidikan',
+            'Pengarang' => 'A.Arum Candra',
+            'Stok' => '100',
+			'Status' => 'Tersedia',
+        ]);
     }
 }
