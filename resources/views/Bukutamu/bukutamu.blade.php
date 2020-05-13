@@ -28,7 +28,7 @@
         <!-- left column -->
         <div class="col-md-6">
           <!-- general form elements -->
-          
+
           <style>
             .left{
               margin-left : 30px;
@@ -62,36 +62,44 @@
                 height :30px;
                 width :50px;
             }
+            .container {
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+            }
             </style>
-            
-            <div class="row">
+
+            <div class="container">
               <div class="col-sm-6">
                  <div class = "card">
                    <div class = "left">
-                   <br>
-                   <br>
+
+                   <img src="../../dist/img/STUDENT-01.png" alt="Student" style="width:90%">
+
               <div class="box-footer">
+              <h4><b><center>Student</center></b></h4>
               </div>
             </div>
           </div>
           </div>
 
           <div class="col-sm-6">
-            <div class = "card2">
-              <div class = "left2">
-              
-              <br>
-              
-              <br>
-              
+            <div class = "card">
+              <div class = "left">
+
+              <img src="../../dist/img/NON STUDENT-01.png" alt="Non student" style="width:90%">
+
               <div class="box-footer">
+              <h4><b><center>Non Student</center></b></h4>
               </div>
             </div>
           </div>
           </div>
-        </div>  
-        
-         
+
+
+        </div>
+
+
 
     <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
