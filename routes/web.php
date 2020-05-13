@@ -18,11 +18,16 @@ Route::post('/postlogin', 'AuthController@postlogin');
 Route::get('/logout', 'AuthController@logout');
 
 
+
 Route::group(['middleware' => 'auth'], function(){
             Route::get('/dashboard', 'DashboardController@index');
 
             /* ---------- User --------------  */
 
+            Route::get('/admin', 'AdminController@index');
+            Route::get('/admin/tambahadmin', 'AdminController@tambah');
+            Route::post('/admin/tambahadmin/proses', 'AdminController@proses_tambah');
+   
             Route::get('/datasiswa', function () {
                 return view('User/datasiswa');
             });

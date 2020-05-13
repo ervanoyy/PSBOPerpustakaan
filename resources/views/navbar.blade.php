@@ -88,7 +88,7 @@
                     <a>
                         <i class="fa fa-clock-o"></i> <span id="jamweke">12:49:27</span>
                         <script type="text/javascript">
-							<!--
+							
                             function startTime() {
                                 var today = new Date(),
                                     curr_hour = today.getHours(),
@@ -164,6 +164,8 @@
                       echo "class='treeview active'"; 
                   } elseif($thisPage == "Pegawai") { 
                       echo "class='treeview active'"; 
+                  } elseif($thisPage == "Admin") { 
+                    echo "class='treeview active'"; 
                   } else {
                       echo "class='treeview'";
                   }      
@@ -176,8 +178,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
+            <li <?php if($thisPage == "Admin") echo "class='active'"; ?>><a href="/admin"><i class="fa fa-circle-o"></i> Admin</a></li>
             <li <?php if($thisPage == "Siswa") echo "class='active'"; ?>><a href="/datasiswa"><i class="fa fa-circle-o"></i> Siswa</a></li>
             <li <?php if($thisPage == "Pegawai") echo "class='active'"; ?>><a href="/datapegawai"><i class="fa fa-circle-o"></i> Pegawai</a></li>
+                 
           </ul>
         </li>
         <li <?php if($thisPage == "Buku") echo "class='active'"; ?>> <a href="/buku"><i class="fa fa-book"></i> <span>Buku</span></a></li>
