@@ -42,6 +42,17 @@
                     </thead>
                     
                     <tbody>
+                    <!-- @foreach($siswa_datasiswa as $siswa)
+                    <tr>
+                      <td>{{$siswa->NIS}}</td>
+                      <td>{{$siswa->Nama}}</td>
+                      <td>{{$siswa->Kelas}}</td>
+                      <td><a href="/Siswa/editdatasiswa/{{$siswa->NIS}}" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
+                      <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$siswa->NIS}}"data-toggle="modal" data-target="#deletedatasiswa" >Delete</a></td>
+                    </tr>
+                    @endforeach
+                 -->
+
                     <tr>
                     <td>0020099</td>
                     <td>Siti Maemunah</td>
