@@ -44,18 +44,18 @@
                     <tbody>
                     
                     <!-- kalau error ini di apus aja ya gan-->
-                    <!-- @foreach($siswa_datasiswa as $siswa)
+                    @foreach($datasiswa as $datasiswa)
                     <tr>
-                      <td>{{$siswa->NIS}}</td>
-                      <td>{{$siswa->Nama}}</td>
-                      <td>{{$siswa->Kelas}}</td>
-                      <td><a href="/Siswa/editdatasiswa/{{$siswa->NIS}}" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                      <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$siswa->NIS}}"data-toggle="modal" data-target="#deletedatasiswa" >Delete</a></td>
+                      <td>{{$datasiswa->NIS}}</td>
+                      <td>{{$datasiswa->Nama}}</td>
+                      <td>{{$datasiswa->Kelas}}</td>
+                      <!-- <td><a href="/Siswa/editdatasiswa/{{$datasiswa->NIS}}" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
+                      <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$datasiswa->NIS}}"data-toggle="modal" data-target="#deletedatasiswa" >Delete</a></td> -->
                     </tr>
                     @endforeach
-                 -->
+                
 
-                    <tr>
+                    <!-- <tr>
                     <td>0020099</td>
                     <td>Siti Maemunah</td>
                     <td>9</td>
@@ -125,7 +125,7 @@
                     <td>0020098</td>
                     <td>Firda Suci</td>
                     <td>7</td>
-                    </tr>            
+                    </tr>             -->
                     </tbody>
                     <tfoot>                
                     </tfoot>

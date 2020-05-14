@@ -28,28 +28,32 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form action="/Siswa/editdatasiswa/{{ $siswa->id }}/proses" method="POST" enctype="multipart/form-data" role="form">
+              
+              {{ csrf_field() }}
+              {{ method_field('PUT') }}
+
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">NIS</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                  <input type="text" name="NIS" class="form-control"  id="exampleInputEmail1" placeholder="" value="{{$siswa->NIS}}">
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputPassword1">Nama</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                  <input type="text" name="Nama" class="form-control" id="exampleInputPassword1" placeholder=""  value="{{$siswa->Nama}}" >
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputPassword1">Kelas</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                  <input type="text" name="Kelas" class="form-control" id="exampleInputPassword1" placeholder="" value="{{$siswa->Kelas}}">
                 </div>
                 
               </div>
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <a type="submit" class="btn btn-primary">Submit</a>
+              <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </form>
           </div>

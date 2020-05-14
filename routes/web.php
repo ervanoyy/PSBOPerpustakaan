@@ -30,17 +30,20 @@ Route::group(['middleware' => 'auth'], function(){
             
             /* ---------- Siswa --------------  */
 
-            Route::get('/datasiswa', function () {
-                return view('Siswa/datasiswa');
-            });
+            Route::get('/datasiswa', 'SiswaController@index');
+            Route::get('/siswa', 'SiswaController@index_edit');
 
-            Route::get('/editdatasiswa', function () {
-                return view('Siswa/editdatasiswa');
-            });
+            Route::get('/Siswa/editdatasiswa/{siswa_id}', 'SiswaController@edit');
+            Route::put('/Siswa/editdatasiswa/{siswa_id}/proses', 'SiswaController@proses_edit');
 
-            Route::get('/siswa', function () {
-                return view('Siswa/siswa');
-            });
+            // Route::get('/datasiswa', function () {
+            //     return view('Siswa/datasiswa');
+            // });
+
+            // Route::get('/editdatasiswa', function () {
+            //     return view('Siswa/editdatasiswa');
+            // });
+
 
             /* ---------- Pegawai --------------  */
 
