@@ -41,65 +41,13 @@
                     </thead>
                     
                     <tbody>
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    </tr>
 
+                    @foreach($datapegawai as $datapegawai)
                     <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    </tr>
+                      <td>{{$datapegawai->NIP}}</td>
+                      <td>{{$datapegawai->Nama}}</td>
+                      </tr>
+                    @endforeach
 
                     </tbody>
                     <tfoot>                

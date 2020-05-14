@@ -36,28 +36,13 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/Siswa/editdatasiswa/{siswa_id}', 'SiswaController@edit');
             Route::put('/Siswa/editdatasiswa/{siswa_id}/proses', 'SiswaController@proses_edit');
 
-            // Route::get('/datasiswa', function () {
-            //     return view('Siswa/datasiswa');
-            // });
-
-            // Route::get('/editdatasiswa', function () {
-            //     return view('Siswa/editdatasiswa');
-            // });
-
-
             /* ---------- Pegawai --------------  */
 
-            Route::get('/datapegawai', function () {
-                return view('Pegawai/datapegawai');
-            });
+            Route::get('/datapegawai', 'PegawaiController@index');
+            Route::get('/pegawai', 'PegawaiController@index_edit');
 
-            Route::get('/pegawai', function () {
-                return view('Pegawai/pegawai');
-            });
-
-            Route::get('/editdatapegawai', function () {
-                return view('Pegawai/editdatapegawai');
-            });
+            Route::get('/Pegawai/editdatapegawai/{pegawai_id}', 'PegawaiController@edit');
+            Route::put('/Pegawai/editdatapegawai/{pegawai_id}/proses', 'PegawaiController@proses_edit');
 
 
             /* ---------- Buku --------------  */

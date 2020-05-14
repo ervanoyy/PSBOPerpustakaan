@@ -16,8 +16,8 @@ class CreatePegawaiTable extends Migration
         Schema::create('pegawai', function (Blueprint $table) {
             $table->id();
             $table->string('Nama'); 
-            $table->string('No Pegawai');
-            $table->string('Bagian');
+            $table->string('NIP');
+            //$table->string('Bagian');
             $table->timestamps();
         });
     }

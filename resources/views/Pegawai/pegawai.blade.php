@@ -41,114 +41,17 @@
                     </thead>
                     
                     <tbody>
+
+                    @foreach($pegawai as $pegawai)
                     <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    <td>
-                    <a href="/editdatapegawai" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatapegawai" >Delete</a>
-                    </td>
+                      <td>{{$pegawai->NIP}}</td>
+                      <td>{{$pegawai->Nama}}</td>
+                      <td><a href="/Pegawai/editdatapegawai/{{$pegawai->id}}" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
+                      <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$pegawai->id}}"data-toggle="modal" data-target="#deletedatasiswa" >Delete</a></td>
                     </tr>
+                    @endforeach
 
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    <td>
-                    <a href="/editdatapegawai" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatapegawai" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    <td>
-                    <a href="/editdatapegawai" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatapegawai" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    <td>
-                    <a href="/editdatapegawai" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatapegawai" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    <td>
-                    <a href="/editdatapegawai" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatapegawai" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    <td>
-                    <a href="/editdataspegawai" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatapegawai" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    <td>
-                    <a href="/editdatapegawai" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatapegawai" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    <td>
-                    <a href="/editdatapegawai" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatapegawai" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    <td>
-                    <a href="/editdatapegawai" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatapegawai" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    <td>
-                    <a href="/editdatapegawai" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatapegawai" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    <td>
-                    <a href="/editdatapegawai" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatapegawai" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    <td>
-                    <a href="/editdatapegawai" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatapegawai" >Delete</a>
-                    </td>
-                    </tr>            
-
+                   
                     </tbody>
                     <tfoot>                
                     </tfoot>

@@ -49,9 +49,7 @@
                       <td>{{$datasiswa->NIS}}</td>
                       <td>{{$datasiswa->Nama}}</td>
                       <td>{{$datasiswa->Kelas}}</td>
-                      <!-- <td><a href="/Siswa/editdatasiswa/{{$datasiswa->NIS}}" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                      <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$datasiswa->NIS}}"data-toggle="modal" data-target="#deletedatasiswa" >Delete</a></td> -->
-                    </tr>
+                      </tr>
                     @endforeach
                 
 
