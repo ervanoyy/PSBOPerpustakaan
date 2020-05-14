@@ -27,30 +27,33 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/admin', 'AdminController@index');
             Route::get('/admin/tambahadmin', 'AdminController@tambah');
             Route::post('/admin/tambahadmin/proses', 'AdminController@proses_tambah');
-   
+            
+            /* ---------- Siswa --------------  */
+
             Route::get('/datasiswa', function () {
-                return view('User/datasiswa');
+                return view('Siswa/datasiswa');
             });
 
             Route::get('/editdatasiswa', function () {
-                return view('User/editdatasiswa');
+                return view('Siswa/editdatasiswa');
             });
 
             Route::get('/siswa', function () {
-                return view('User/siswa');
+                return view('Siswa/siswa');
             });
 
+            /* ---------- Pegawai --------------  */
 
             Route::get('/datapegawai', function () {
-                return view('User/datapegawai');
+                return view('Pegawai/datapegawai');
             });
 
             Route::get('/pegawai', function () {
-                return view('User/pegawai');
+                return view('Pegawai/pegawai');
             });
 
             Route::get('/editdatapegawai', function () {
-                return view('User/editdatapegawai');
+                return view('Pegawai/editdatapegawai');
             });
 
 

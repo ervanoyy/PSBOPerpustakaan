@@ -42,6 +42,8 @@
                     </thead>
                     
                     <tbody>
+                    
+                    <!-- kalau error ini di apus aja ya gan-->
                     <!-- @foreach($siswa_datasiswa as $siswa)
                     <tr>
                       <td>{{$siswa->NIS}}</td>
