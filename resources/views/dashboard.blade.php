@@ -18,32 +18,22 @@
     <main>
     <!-- Main content -->
     <section class="content">
-
-    <div class="slider-area ">
-            <div class="slider-active">
-                <div class="single-slider slider-height slider-padding sky-blue d-flex align-items-center">
-                    <div class="container">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-lg-6 col-md-9 ">
-                                <div class="hero__caption">
-                                    
-                                    <h1 data-animation="fadeInUp" data-delay=".6s">Aplikasi Perpustakaan<br>Sekolah Cendekia Baznas</h1>
-                                    <p data-animation="fadeInUp" data-delay=".8s" >SMP Cendekia BAZNAS (SCB) merupakan sekolah tingkat SMP berkonsep asrama, bebas biaya untuk anak dhuafa berprestasi yang lolos seleksi dari berbagai wilayah di Indonesia.</p>
-
-                                    <!-- Slider btn -->
-                                   <div class="slider-btns">
-                                    
-                                   </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="hero__img d-none d-lg-block f-right" data-animation="fadeInRight" data-delay="1s">
-                                    <img src="assets/img/hero/dashboard-01.png" alt="" width="350px">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> 
+        <div class="container">
+          <div class="row d-flex align-items-center">
+              <div class="col-lg-6 col-md-9 ">
+                   <div class="hero__caption">
+                    <h1 >Aplikasi Perpustakaan<br>Sekolah Cendekia Baznas</h1>
+                     <p>SMP Cendekia BAZNAS (SCB) merupakan sekolah tingkat SMP berkonsep asrama, bebas biaya untuk anak dhuafa berprestasi yang lolos seleksi dari berbagai wilayah di Indonesia.</p>
+                   </div>
+               </div>
+              <div class="col-lg-6">
+                   <div class="hero__img d-none d-lg-block f-right">
+                      <img src="assets/img/hero/dashboard-01.png" alt="" width="350px">
+                   </div>
+              </div>
+            </div>
+          </div>
+                             
       </main>
       <section class="content">
       <!-- Small boxes (Stat box) -->
