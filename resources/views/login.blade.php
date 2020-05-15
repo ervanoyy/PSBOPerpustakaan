@@ -26,6 +26,8 @@
 		<div class="container-login100">
 		
 			<div class="wrap-login100">
+				
+
 				<div class="login100-pic js-tilt" data-tilt>
 					<img src="images/img-01.png" alt="IMG">
 				</div>
@@ -33,7 +35,7 @@
 				<form class="login100-form validate-form" action="/postlogin" method="POST">
 				{{csrf_field()}}
 					<span class="login100-form-title">
-						Admin Masuk
+						<img src="images/SCB.png" alt="IMG" width="280" heigth="70">
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Masukkan username anda">
