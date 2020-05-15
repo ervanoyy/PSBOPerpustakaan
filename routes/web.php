@@ -63,7 +63,7 @@ Route::group(['middleware' => 'auth'], function(){
             Route::post('/buku/import_excel', 'BukuController@import_excel');
 
             Route::get('/buku/export_excel', 'BukuController@export_excel');
-            Route::get('/buku/pengaturan/info', function () {
+            Route::get('/buku/deleteinfo', function () {
                 return view('Buku/deleteinfo');
             });
 
