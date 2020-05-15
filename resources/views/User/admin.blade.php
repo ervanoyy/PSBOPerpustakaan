@@ -61,7 +61,7 @@
                   
                   <td>
                   <div class="grid-container">
-                  <div class="grid-item"><a type="button" class="btn btn-block btn-danger btn-sm" style="width: 80px; float:left;" >Delete</a></div>
+                  <div class="grid-item"><a type="button" class="btn btn-block btn-danger btn-sm" style="width: 80px; float:left;" data-userid="{{$user->id}}"data-toggle="modal" data-target="#deleteModal">Delete</a></div>
                   </div>  
                   </td>
                 </tr>
@@ -93,7 +93,39 @@
 </div>
 <!-- ./wrapper -->
 
+<!-- Pop Up for Delete Confirmation -->
+  <!-- Modal popup -->
+  
+  <div class="modal fade" id="deleteModal">
+       <div class="modal-dialog">
+  <!-- Modal Content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button  type="button" data-dismiss="modal" class="close">&times;</button>
+                <h3 class="modal-title">Konfirmasi Penghapusan</h3>
+              </div>
+              <form action="/admin/hapus" method="POST" id="deleteForm">
+                {{ csrf_field() }}
+                <!-- {{ method_field('DELETE') }} -->
 
+                <div class="modal-body">
+                    
+                    <h4> Setelah dihapus data akan benar-benar hilang. </h4>
+                    <h4> Apakah tetap ingin melanjutkan? </h4>
+                    
+                    <!-- <input type="hidden" name="_method" value="DELETE"> -->
+                    <input type="hidden" name="admin_id" id="admin_id" value="">
+
+                </div>
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary"> Hapus </button>
+                  <button type="button" class="btn btn-default"  data-dismiss="modal">Batal</button>
+                </div>
+              
+              </form>
+            </div>
+        </div>
 
 
 
@@ -114,7 +146,16 @@
 <script src="{{ asset('dist/js/demo.js')}}"></script>
 <!-- page script -->
 
+<script>
 
+  $('#deleteModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) 
+      var admin_id = button.data('userid') 
+      var modal = $(this)
+      modal.find('.modal-body #admin_id').val(admin_id);
+  })
+
+</script>
 
 <script>
   $(function () {

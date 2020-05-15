@@ -26,15 +26,18 @@ class AdminController extends Controller
             'password' =>  \Hash::make($request['password']),
         ]);
        
-        
-    
-
         $user->save();
         
         return redirect('/admin');
     }
 
+    public function hapus(Request $request){
 
+        $admin = User::find($request->admin_id);
+        $admin->delete();
+        return redirect('/admin');
+
+    }
 }
 
 

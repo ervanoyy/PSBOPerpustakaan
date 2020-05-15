@@ -27,6 +27,7 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/admin', 'AdminController@index');
             Route::get('/admin/tambahadmin', 'AdminController@tambah');
             Route::post('/admin/tambahadmin/proses', 'AdminController@proses_tambah');
+            Route::post('/admin/hapus', 'AdminController@hapus');
             
             /* ---------- Siswa --------------  */
 

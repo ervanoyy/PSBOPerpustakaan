@@ -113,13 +113,16 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button  type="button" data-dismiss="modal" class="close">&times;</button>
-                <h4 class="modal-title">Hapus data buku?</h4>
+                <h3 class="modal-title">Konfirmasi Penghapusan</h3>
               </div>
               <form action="/buku/hapusbuku" method="POST" id="deleteForm">
                 {{ csrf_field() }}
                 <!-- {{ method_field('DELETE') }} -->
 
                 <div class="modal-body">
+                    
+                    <h4> Setelah dihapus data akan benar-benar hilang. </h4>
+                    <h4> Apakah tetap ingin melanjutkan? </h4>
                     
                     <!-- <input type="hidden" name="_method" value="DELETE"> -->
                     <input type="hidden" name="buku_id" id="buku_id" value="">
