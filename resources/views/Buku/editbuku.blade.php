@@ -43,7 +43,7 @@
                   <label for="exampleInputFile">Gambar Buku</label>
                   <br>
                   <img class="zoom" src="{{ url('/dist/img/'.$buku->Gambar) }}" alt="" height=100px></img>
-                  <input type="file" id="exampleInputFile">
+                  <input name="file" type="file" id="exampleInputFile">
 
                   <p class="help-block">Format file : PNG,JPG,JPEG</p>
                 </div>

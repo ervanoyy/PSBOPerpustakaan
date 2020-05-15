@@ -30,6 +30,7 @@
             <div class="icon">
               <i class="fa fa-book"></i>
             </div>
+            <a href="/buku" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -44,6 +45,7 @@
             <div class="icon">
               <i class="fa fa-reply"></i>
             </div>
+            <a href="/peminjaman" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -53,11 +55,27 @@
             <div class="inner">
               <h3>{{$total_kunjungan}}</h3>
 
-              <p>Total Kunjungan</p>
+              <p>Kunjungan Siswa</p>
             </div>
             <div class="icon">
               <i class="fa fa-user"></i>
             </div>
+            <a href="/kunjungansiswa" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-xs-6">
+          <!-- small box -->
+          <div class="small-box bg-red">
+            <div class="inner">
+              <h3>{{$total_kunjungan}}</h3>
+
+              <p>Kunjungan Masyarakat</p>
+            </div>
+            <div class="icon">
+              <i class="fa fa-user"></i>
+            </div>
+            <a href="/kunjungantamu" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
