@@ -38,7 +38,7 @@ class PegawaiController extends Controller
 
     public function hapus(Request $request){
 
-        $Pegawai = Pegawai::find($request->pegawai_id);
+        $pegawai = Pegawai::find($request->pegawai_id);
         $pegawai->delete();
         return redirect('/pegawai');
 

@@ -75,7 +75,7 @@
       <!-- Pop Up for Delete Confirmation -->
   <!-- Modal popup -->
   
-  <div class="modal fade" id="deletedatapegawai">
+  <div class="modal fade" id="deletepegawai">
        <div class="modal-dialog">
   <!-- Modal Content -->
             <div class="modal-content">
