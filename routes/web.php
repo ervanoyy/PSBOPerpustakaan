@@ -59,6 +59,14 @@ Route::group(['middleware' => 'auth'], function(){
                 return view('Buku/pengaturan');
             });
 
+            Route::get('/buku/deleteall', 'BukuController@deleteall');
+            Route::post('/buku/import_excel', 'BukuController@import_excel');
+
+            Route::get('/buku/export_excel', 'BukuController@export_excel');
+            Route::get('/buku/pengaturan/info', function () {
+                return view('Buku/deleteinfo');
+            });
+
             /* ---------- Peminjaman --------------  */
 
             Route::get('/peminjaman', function () {

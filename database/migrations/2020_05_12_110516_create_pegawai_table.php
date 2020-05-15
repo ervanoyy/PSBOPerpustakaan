@@ -14,10 +14,10 @@ class CreatePegawaiTable extends Migration
     public function up()
     {
         Schema::create('pegawai', function (Blueprint $table) {
-            $table->id();
+            //$table->id();
             $table->string('Nama'); 
-            $table->string('NIP');
-            //$table->string('Bagian');
+            $table->string('No Pegawai');
+            $table->string('Bagian');
             $table->timestamps();
         });
     }

@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 
+use App\Exports\KunjunganMasyarakatExport;
+use Maatwebsite\Excel\Facades\Excel;
+use App\Http\Controllers\Controller;
+
 class KunjunganMasyarakatController extends Controller
 {
     
@@ -20,9 +24,20 @@ class KunjunganMasyarakatController extends Controller
             'masyarakat_id' => $masyarakat_id,
         ]);
         
-        return redirect('/kunjungantamu');
-        
-        
+        return redirect('/kunjungantamu')->with('info','Data kunjungan berhasil ditambahkan!');;
+                
     }
+
+    public function deleteall(){
+        \App\KunjunganMasyarakat::truncate();     
+        return redirect('/kunjungantamu');
+
+    }
+
+    public function export_excel()
+	{
+        return Excel::download(new KunjunganMasyarakatExport, 'KunjunganTamu.xlsx');
+	}
+
 
 }

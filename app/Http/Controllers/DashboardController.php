@@ -13,3 +13,4 @@ class DashboardController extends Controller
         return view('dashboard', compact('total_buku', 'total_kunjungan'));
     }
 }
+
