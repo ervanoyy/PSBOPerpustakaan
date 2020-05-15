@@ -29,14 +29,16 @@
     
     <section class="content">
     <center> 
-    
-			<h2>Hapus semua data buku?</h2>
-            <img src="../../dist/img/STUDENT-01.png" style="width:300px">
-            <h4>Ini masih asal sih gambar sama tulisannya heheh</br>
-            Seluruh data buku pada database akan hilang</br>
-            Data buku yang sudah terhapus tidak dapat dikembalikan</br>
-            Pastikan memiliki backup data sebelum melakukan penghapusan</br>
-            Backup data dapat dilakukan dengan melakukan export excel pada menu pengaturan</br>
+    <div class="alert alert-danger alert-dismissible">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <h4><i class="icon fa fa-ban"></i> Apakah anda yakin ingin menghapus seluruh data buku?</h4>
+            Seluruh data buku pada database akan hilang. Data buku yang sudah terhapus tidak dapat dikembalikan.
+            Pastikan memiliki backup data sebelum melakukan penghapusan. Backup data dapat dilakukan dengan melakukan 
+            export excel pada menu pengaturan.
+    </div>
+            <img src="../../dist/img/del-01.png" style="width:400px">
+            <h4 >Apakah anda yakin ingin menghapus seluruh data buku?</br>
+            
             </h4>
             </br>
 		
