@@ -61,7 +61,6 @@
                   
                   <td>
                   <div class="grid-container">
-                  <div class="grid-item" > <a type="button" class="btn btn-block btn-primary btn-sm" style="width: 80px; float:left;">Edit</a></div>
                   <div class="grid-item"><a type="button" class="btn btn-block btn-danger btn-sm" style="width: 80px; float:left;" >Delete</a></div>
                   </div>  
                   </td>

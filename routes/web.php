@@ -55,6 +55,10 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/buku/editbuku/{buku_id}', 'BukuController@edit');
             Route::put('/buku/editbuku/{buku_id}/proses', 'BukuController@proses_edit');
 
+            Route::get('/buku/pengaturan', function () {
+                return view('Buku/pengaturan');
+            });
+
             /* ---------- Peminjaman --------------  */
 
             Route::get('/peminjaman', function () {

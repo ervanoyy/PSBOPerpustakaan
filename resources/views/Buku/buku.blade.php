@@ -34,10 +34,12 @@
           <!-- /.box -->
 
           <div class="box">
-            <a href="/buku/tambahbuku">
             <div class="box-header">
-              <h3 class="box-title"><button type="button" class="btn btn-block btn-success" id="tombol">+ Tambah Buku</button></h3>
-            </a>
+     
+              <h3 class="box-title"><a href="/buku/tambahbuku" type="button" class="btn btn-block btn-success" id="tombol">+ Tambah Buku</a></h3>
+        
+               <h3 class="box-title pull-right"><a href="/buku/pengaturan" type="button" class="btn btn-block btn-warning"><i class="fa fa-cog"></i> &nbsp;Pengaturan</a></h3>
+           
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive">

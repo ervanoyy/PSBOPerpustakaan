@@ -12,8 +12,9 @@
         <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="/datapegawai"><i class="fa fa-user"></i> Pegawai</a></li>
-        <li class="active">Data Pegawai</li>
+        <li><i class="fa fa-user"></i>  User</li>
+        <li><a href="/datapegawai">Data Pegawai</a></li>
+        <li class="active">Edit</li>
       </ol>
     </section>
  
@@ -46,8 +47,8 @@
                     <tr>
                       <td>{{$pegawai->NIP}}</td>
                       <td>{{$pegawai->Nama}}</td>
-                      <td><a href="/Pegawai/editdatapegawai/{{$pegawai->id}}" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                      <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$pegawai->id}}"data-toggle="modal" data-target="#deletedatasiswa" >Delete</a></td>
+                      <td><a href="/Pegawai/editdatapegawai/{{$pegawai->id}}" type="button" class="btn btn-block btn-primary btn-sm" style="width: 100px;">Edit</a>
+                      <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$pegawai->id}}" style="width: 100px;">Delete</a></td>
                     </tr>
                     @endforeach
 

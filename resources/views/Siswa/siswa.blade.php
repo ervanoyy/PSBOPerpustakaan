@@ -12,8 +12,9 @@
         <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="/datasiswa"><i class="fa fa-user"></i>  Siswa</a></li>
-        <li class="active">Data Siswa</li>
+        <li><i class="fa fa-user"></i>  User</li>
+        <li><a href="/datasiswa"> Data Siswa</a></li>
+        <li class="active">Edit</li>
       </ol>
     </section>
  
@@ -48,131 +49,11 @@
                       <td>{{$siswa->NIS}}</td>
                       <td>{{$siswa->Nama}}</td>
                       <td>{{$siswa->Kelas}}</td>
-                      <td><a href="/Siswa/editdatasiswa/{{$siswa->id}}" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                      <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$siswa->id}}"data-toggle="modal" data-target="#deletedatasiswa" >Delete</a></td>
+                      <td><a href="/Siswa/editdatasiswa/{{$siswa->id}}" type="button" class="btn btn-block btn-primary btn-sm" style="width: 100px;">Edit</a>
+                      <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$siswa->id}}" style="width: 100px;" >Delete</a></td>
                     </tr>
                     @endforeach
-                
-                        
-                    <!-- <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    <td>9</td>
-                    <td>
-                    <a href="/editdatasiswa" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatasiswa" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    <td>8</td>
-                    <td>
-                    <a href="/editdatasiswa" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatasiswa" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    <td>7</td>
-                    <td>
-                    <a href="/editdatasiswa" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatasiswa" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    <td>9</td>
-                    <td>
-                    <a href="/editdatasiswa" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatasiswa" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    <td>8</td>
-                    <td>
-                    <a href="/editdatasiswa" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatasiswa" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    <td>7</td>
-                    <td>
-                    <a href="/editdatasiswa" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatasiswa" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    <td>9</td>
-                    <td>
-                    <a href="/editdatasiswa" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatasiswa" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    <td>8</td>
-                    <td>
-                    <a href="/editdatasiswa" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatasiswa" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    <td>7</td>
-                    <td>
-                    <a href="/editdatasiswa" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatasiswa" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    <td>9</td>
-                    <td>
-                    <a href="/editdatasiswa" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatasiswa" >Delete</a>
-                    </td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    <td>8</td>
-                    <td>
-                    <a href="/editdatasiswa" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatasiswa" >Delete</a>
-                    </td>
-                    </tr> -->
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    <td>7</td>
-                    <td>
-                    <a href="/editdatasiswa" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                    <a type="button" class="btn btn-block btn-danger btn-sm" data-toggle="modal" data-target="#deletedatasiswa" >Delete</a>
-                    </td>
-                    </tr>            
+         
 
                     </tbody>
                     <tfoot>                
