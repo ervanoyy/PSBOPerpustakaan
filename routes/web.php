@@ -37,6 +37,8 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/Siswa/editdatasiswa/{siswa_id}', 'SiswaController@edit');
             Route::put('/Siswa/editdatasiswa/{siswa_id}/proses', 'SiswaController@proses_edit');
 
+            Route::post('/siswa/hapussiswa', 'SiswaController@hapus');
+
             /* ---------- Pegawai --------------  */
 
             Route::get('/datapegawai', 'PegawaiController@index');
@@ -44,6 +46,8 @@ Route::group(['middleware' => 'auth'], function(){
 
             Route::get('/Pegawai/editdatapegawai/{pegawai_id}', 'PegawaiController@edit');
             Route::put('/Pegawai/editdatapegawai/{pegawai_id}/proses', 'PegawaiController@proses_edit');
+
+            Route::post('/pegawai/hapuspegawai', 'PegawaiController@hapus');
 
 
             /* ---------- Buku --------------  */

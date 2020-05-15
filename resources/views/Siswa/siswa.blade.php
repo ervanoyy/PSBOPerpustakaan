@@ -50,7 +50,7 @@
                       <td>{{$siswa->Nama}}</td>
                       <td>{{$siswa->Kelas}}</td>
                       <td><a href="/Siswa/editdatasiswa/{{$siswa->id}}" type="button" class="btn btn-block btn-primary btn-sm" style="width: 100px;">Edit</a>
-                      <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$siswa->id}}" style="width: 100px;" >Delete</a></td>
+                      <a type="button" class="btn btn-block btn-danger btn-sm delete" data-bookid="{{$siswa->id}}"data-toggle="modal" data-target="#deletesiswa" style="width: 100px;" >Delete</a></td>
                     </tr>
                     @endforeach
          
@@ -77,19 +77,33 @@
       <!-- Pop Up for Delete Confirmation -->
   <!-- Modal popup -->
   
-  <div class="modal fade" id="deletedatasiswa">
+  <div class="modal fade" id="deletesiswa">
        <div class="modal-dialog">
   <!-- Modal Content -->
             <div class="modal-content">
               <div class="modal-header">
                 <button  type="button" data-dismiss="modal" class="close">&times;</button>
-                <h4 class="modal-title">Hapus data siswa?</h4>
+                <h4 class="modal-title">Konfirmasi Penghapusan</h4>
               </div>
+              <form action="/siswa/hapussiswa" method="POST" id="deleteForm">
+                {{ csrf_field() }}
+                <!-- {{ method_field('DELETE') }} -->
 
-              <div class="modal-footer">
-              <a href="/siswa" class="btn btn-primary">Hapus</a>
-                <button class="btn btn-default"  data-dismiss="modal">Batal</button>
-              </div>
+                <div class="modal-body">
+                    
+                    <h4> Setelah dihapus data akan benar-benar hilang. </h4>
+                    <h4> Apakah tetap ingin melanjutkan? </h4>
+                    
+                    <!-- <input type="hidden" name="_method" value="DELETE"> -->
+                    <input type="hidden" name="siswa_id" id="siswa_id" value="">
+
+                </div>
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary"> Hapus </button>
+                  <button type="button" class="btn btn-default"  data-dismiss="modal">Batal</button>
+                </div>
+              </form>
 
             </div>
         </div>
@@ -116,6 +130,18 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- page script -->
+
+<script>
+
+  $('#deletesiswa').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) 
+      var siswa_id = button.data('bookid') 
+      var modal = $(this)
+      modal.find('.modal-body #siswa_id').val(siswa_id);
+  })
+
+</script>
+
 <script>
   $(function () {
     $('#example1').DataTable()

@@ -40,12 +40,12 @@ class SiswaController extends Controller
        return redirect('/siswa');
     }
 
-    // public function hapus(Request $request){
+    public function hapus(Request $request){
 
-    //     $siswa = Siswa::find($request->siswa_NIS);
-    //     $siswa->delete();
-    //     return redirect('/siswa');
+        $siswa = Siswa::find($request->siswa_id);
+        $siswa->delete();
+        return redirect('/siswa');
 
-    // }
+    }
 
 }

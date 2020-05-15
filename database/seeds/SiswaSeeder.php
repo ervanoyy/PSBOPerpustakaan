@@ -17,5 +17,12 @@ class SiswaSeeder extends Seeder
             'NIS' => '123445678',
             'Kelas' => 'VII A',
         ]);
+
+        
+        \App\Siswa::create([
+            'Nama' => 'Fathiya',
+            'NIS' => '123445668',
+            'Kelas' => 'VII AB',
+        ]);
     }
 }

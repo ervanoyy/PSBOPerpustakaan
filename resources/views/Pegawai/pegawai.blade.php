@@ -48,7 +48,7 @@
                       <td>{{$pegawai->NIP}}</td>
                       <td>{{$pegawai->Nama}}</td>
                       <td><a href="/Pegawai/editdatapegawai/{{$pegawai->id}}" type="button" class="btn btn-block btn-primary btn-sm" style="width: 100px;">Edit</a>
-                      <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$pegawai->id}}" style="width: 100px;">Delete</a></td>
+                      <a type="button" class="btn btn-block btn-danger btn-sm delete" data-bookid="{{$pegawai->id}}"data-toggle="modal" data-target="#deletepegawai" style="width: 100px;" >Delete</a></td>
                     </tr>
                     @endforeach
 
@@ -80,15 +80,28 @@
   <!-- Modal Content -->
             <div class="modal-content">
               <div class="modal-header">
-                <button  type="button" data-dismiss="modal" class="close">&times;</button>
-                <h4 class="modal-title">Hapus data pegawai?</h4>
+              <button  type="button" data-dismiss="modal" class="close">&times;</button>
+                <h4 class="modal-title">Konfirmasi Penghapusan</h4>
               </div>
+              <form action="/pegawai/hapuspegawai" method="POST" id="deleteForm">
+                {{ csrf_field() }}
+                <!-- {{ method_field('DELETE') }} -->
 
-              <div class="modal-footer">
-              <a href="/pegawai" class="btn btn-primary">Hapus</a>
-                <button class="btn btn-default"  data-dismiss="modal">Batal</button>
-              </div>
+                <div class="modal-body">
+                    
+                    <h4> Setelah dihapus data akan benar-benar hilang. </h4>
+                    <h4> Apakah tetap ingin melanjutkan? </h4>
+                    
+                    <!-- <input type="hidden" name="_method" value="DELETE"> -->
+                    <input type="hidden" name="pegawai_id" id="pegawai_id" value="">
 
+                </div>
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary"> Hapus </button>
+                  <button type="button" class="btn btn-default"  data-dismiss="modal">Batal</button>
+                </div>
+              </form>
             </div>
         </div>
 
@@ -114,6 +127,18 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- page script -->
+
+<script>
+
+  $('#deletepegawai').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) 
+      var pegawai_id = button.data('bookid') 
+      var modal = $(this)
+      modal.find('.modal-body #pegawai_id').val(pegawai_id);
+  })
+
+</script>
+
 <script>
   $(function () {
     $('#example1').DataTable()
