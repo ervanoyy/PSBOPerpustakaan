@@ -67,6 +67,8 @@ Route::group(['middleware' => 'auth'], function(){
                 return view('Buku/deleteinfo');
             });
 
+            Route::post('/buku/hapusbuku', 'BukuController@hapus');
+
             /* ---------- Peminjaman --------------  */
 
             Route::get('/peminjaman', function () {

@@ -73,7 +73,7 @@
                   <td>{{$buku->Status}}</td>
                   
                   <td><a href="/buku/editbuku/{{$buku->id}}" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
-                  <a type="button" class="btn btn-block btn-danger btn-sm" data-bookid="{{$buku->id}}"data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
+                  <a type="button" class="btn btn-block btn-danger btn-sm delete" data-bookid="{{$buku->id}}"data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
                 </tr>
                 @endforeach
 
@@ -115,12 +115,23 @@
                 <button  type="button" data-dismiss="modal" class="close">&times;</button>
                 <h4 class="modal-title">Hapus data buku?</h4>
               </div>
+              <form action="/buku/hapusbuku" method="POST" id="deleteForm">
+                {{ csrf_field() }}
+                <!-- {{ method_field('DELETE') }} -->
 
-              <div class="modal-footer">
-              <a href="/buku" class="btn btn-primary">Hapus</a>
-                <button class="btn btn-default"  data-dismiss="modal">Batal</button>
-              </div>
+                <div class="modal-body">
+                    
+                    <!-- <input type="hidden" name="_method" value="DELETE"> -->
+                    <input type="hidden" name="buku_id" id="buku_id" value="">
 
+                </div>
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary"> Hapus </button>
+                  <button type="button" class="btn btn-default"  data-dismiss="modal">Batal</button>
+                </div>
+              
+              </form>
             </div>
         </div>
 
@@ -142,7 +153,16 @@
 <script src="{{ asset('dist/js/demo.js')}}"></script>
 <!-- page script -->
 
+<script>
 
+  $('#deletebuku').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) 
+      var book_id = button.data('bookid') 
+      var modal = $(this)
+      modal.find('.modal-body #buku_id').val(book_id);
+  })
+
+</script>
 
 <script>
   $(function () {
