@@ -79,7 +79,7 @@
  
  
 		&#160;&#160;&#160;
-		<a href="/buku/export_excel" class="btn btn-success my-3 btn-lg" target="_blank" style="width: 200px;">Export Excel</a> 
+		<a href="/buku/export_excel" class="btn btn-success my-3 btn-lg"  style="width: 200px;">Export Excel</a> 
         &#160;&#160;&#160;
         <a href="/buku/deleteinfo" class="btn btn-danger my-3 btn-lg" type="button" style="width: 200px;">Hapus Database</a> 
         <br/>

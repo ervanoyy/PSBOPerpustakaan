@@ -42,9 +42,9 @@
             </h4>
             </br>
 		
-		<a href="/buku/deleteall" class="btn btn-danger my-3 btn-lg" style="width:100px" target="_blank">Hapus</a> 
+		<a href="/buku/deleteall" class="btn btn-danger my-3 btn-lg" style="width:100px">Hapus</a> 
         &#160;&#160;&#160;&#160;&#160;&#160;
-        <a href="/buku" class="btn btn-primary my-3 btn-lg" style="width:100px" target="_blank">Batal</a> 
+        <a href="/buku" class="btn btn-primary my-3 btn-lg" style="width:100px" >Batal</a> 
         <br/>
         <br/>
 	</div>
