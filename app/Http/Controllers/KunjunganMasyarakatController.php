@@ -29,7 +29,7 @@ class KunjunganMasyarakatController extends Controller
     }
 
     public function deleteall(){
-        \App\KunjunganMasyarakat::truncate();     
+        \App\KunjunganMasyarakat::truncate();       
         return redirect('/kunjungantamu');
 
     }

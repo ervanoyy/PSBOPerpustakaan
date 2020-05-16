@@ -95,7 +95,9 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/kunjungansiswa', function () {
                 return view('Kunjungan/kunjungansiswa');
             });
-
+            
+            Route::get('/kunjungantamu/deleteall', 'KunjunganMasyarakatController@deleteall');
+            Route::get('/kunjungantamu/export_excel', 'KunjunganMasyarakatController@export_excel');
             Route::get('/kunjungantamu', 'KunjunganMasyarakatController@index');
             Route::get('/kunjungantamu/{tujuan}/{masyarakat_id}', 'KunjunganMasyarakatController@tambah');
 
@@ -121,6 +123,7 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/template', function () {
                 return view('template');
             });
+
 
 });
 

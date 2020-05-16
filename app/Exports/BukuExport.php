@@ -6,7 +6,9 @@ use App\Buku;
 use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 use Maatwebsite\Excel\Concerns\ShouldAutoSize;
-class BukuExport implements FromCollection, WithHeadings, ShouldAutoSize
+use Carbon\Carbon;
+use Maatwebsite\Excel\Concerns\WithMapping;
+class BukuExport implements FromCollection, WithHeadings, ShouldAutoSize, WithMapping
 {
     /**
     * @return \Illuminate\Support\Collection
@@ -16,19 +18,32 @@ class BukuExport implements FromCollection, WithHeadings, ShouldAutoSize
         return Buku::all();
     }
 
+    public function map($Buku) : array {
+        return [
+            $Buku->id,
+            $Buku->Kode_Buku,
+            $Buku->Judul_Buku,
+            $Buku->Kategori,
+            $Buku->Pengarang,
+            $Buku->Stok,
+            $Buku->Status,                              
+            Carbon::parse($Buku->created_at)->toFormattedDateString()
+        ];
+ 
+    }
+
     public function headings():array
     {
         return [
             'No',
             'Kode Buku',
             'Judul Buku',
-            'Gambar',
             'Kategori',
             'Pengarang',
             'Stok',
             'Status',
-            'Create',
-            'Update',
+            'Tanggal Input',
+
         ];
     }
 }

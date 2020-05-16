@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Buku;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 use App\Exports\BukuExport;
 use App\Imports\BukuImport;
@@ -17,7 +18,8 @@ class BukuController extends Controller
 {
     //
     public function index(){
-        $buku_buku = Buku::all();
+        //$buku_buku = Buku::all();
+        $buku_buku = Buku::where('Kategori', 'Pendidikan')->get(); 
         return view('/Buku/buku', ['buku_buku' => $buku_buku]);
     }
 
