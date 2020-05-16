@@ -43,6 +43,7 @@ Route::group(['middleware' => 'auth'], function(){
             /* ---------- Pegawai --------------  */
 
             Route::get('/datapegawai', 'PegawaiController@index');
+            Route::post('/datapegawai/import_excel', 'PegawaiController@import_excel');
             Route::get('/pegawai', 'PegawaiController@index_edit');
 
             Route::get('/Pegawai/editdatapegawai/{pegawai_id}', 'PegawaiController@edit');
