@@ -21,8 +21,8 @@
         <div class="container">
           <div class="row d-flex align-items-center">
               <div class="col-lg-6 col-md-9 ">
-                    <h1 >Aplikasi Perpustakaan<br>Sekolah Cendekia Baznas</h1>
-                     <p>SMP Cendekia BAZNAS (SCB) merupakan sekolah tingkat SMP berkonsep asrama, bebas biaya untuk anak dhuafa berprestasi yang lolos seleksi dari berbagai wilayah di Indonesia.</p>
+                    <h1 >Aplikasi Perpustakaan<br>SMP Cendekia BAZNAS</h1>
+                     <p style="font-size:17px;">SMP Cendekia BAZNAS (SCB) merupakan sekolah tingkat SMP berkonsep asrama, bebas biaya untuk anak dhuafa berprestasi yang lolos seleksi dari berbagai wilayah di Indonesia.</p>
                </div>
               <div class="col-lg-6">
                       <img src="images/dashboard-01.png" alt="" width="350px">
