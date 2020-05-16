@@ -32,6 +32,7 @@ Route::group(['middleware' => 'auth'], function(){
             /* ---------- Siswa --------------  */
 
             Route::get('/datasiswa', 'SiswaController@index');
+            Route::post('/datasiswa/import_excel', 'SiswaController@import_excel');
             Route::get('/siswa', 'SiswaController@index_edit');
 
             Route::get('/Siswa/editdatasiswa/{siswa_id}', 'SiswaController@edit');

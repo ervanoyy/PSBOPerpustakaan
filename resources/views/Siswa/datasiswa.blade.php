@@ -3,6 +3,12 @@
 
 @section('content')
 <title>Data Siswa</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -26,10 +32,12 @@
             <!-- /.box -->
 
             <div class="box">
-              <a href="/siswa">
               <div class="box-header">
-              <h3 class="box-title"><button type="button" class="btn btn-block btn-success" id="tombol">Edit Data Siswa</button></h3>
-              </a>
+                  <h3 class="box-title"><a href="/siswa" type="button" class="btn btn-block btn-primary" id="tombol" style="width:120px;">Edit Data Siswa</a></h3>
+                  <h3 class="box-title pull-right"><a type="button" class="btn btn-block btn-success" data-toggle="modal" data-target="#importsiswa" style="width:120px;">Import Excel</a></h3> 
+              </div> 
+
+
               <!-- /.box-header -->
                 <div class="box-body table-responsive">
                 <table id="example1" class="table table-bordered table-striped">
@@ -43,7 +51,6 @@
                     
                     <tbody>
                     
-                    <!-- kalau error ini di apus aja ya gan-->
                     @foreach($datasiswa as $datasiswa)
                     <tr>
                       <td>{{$datasiswa->NIS}}</td>
@@ -53,77 +60,7 @@
                     @endforeach
                 
 
-                    <!-- <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    <td>9</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    <td>8</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    <td>7</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    <td>9</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    <td>8</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    <td>7</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    <td>9</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    <td>8</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    <td>7</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020099</td>
-                    <td>Siti Maemunah</td>
-                    <td>9</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020097</td>
-                    <td>Qotrunnada Syifa</td>
-                    <td>8</td>
-                    </tr>
-
-                    <tr>
-                    <td>0020098</td>
-                    <td>Firda Suci</td>
-                    <td>7</td>
-                    </tr>             -->
+                   
                     </tbody>
                     <tfoot>                
                     </tfoot>
@@ -140,6 +77,34 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
+
+     <!-- Modal -->
+    <div class="modal fade" id="importsiswa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<form method="post" action="/datasiswa/import_excel" enctype="multipart/form-data">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Import Excel</h5>
+						</div>
+						<div class="modal-body">
+ 
+							{{ csrf_field() }}
+ 
+							<label>Pilih file excel</label>
+							<div class="form-group">
+								<input type="file" name="file" required="required">
+							</div>
+ 
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							<button type="submit" class="btn btn-primary">Import</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
     <footer class="main-footer">
         
     </footer>
