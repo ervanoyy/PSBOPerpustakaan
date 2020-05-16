@@ -4,14 +4,14 @@
 @section('content')
 <title>Buku</title>
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/imagezoom.css')}}">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  
+
     <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -22,7 +22,7 @@
       </h1>
       <ol class="breadcrumb">
         <li class="active"><i class="fa fa-book"></i>  Pendataan Buku</li>
-    
+
       </ol>
     </section>
 
@@ -30,31 +30,31 @@
     <section class="content">
       <div class="row">
         <div class="col-xs-12">
-         
+
           <!-- /.box -->
 
           <div class="box">
             <div class="box-header">
-     
+
               <h3 class="box-title"><a href="/buku/tambahbuku" type="button" class="btn btn-block btn-success" id="tombol">+ Tambah Buku</a></h3>
-        
+
                <h3 class="box-title pull-right"><a href="/buku/pengaturan" type="button" class="btn btn-block btn-warning"><i class="fa fa-cog"></i> &nbsp;Pengaturan</a></h3>
-           
+
             </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Kode Buku</th>
-                  <th>Judul Buku</th>
-                  <th>Gambar</th>
-                  <th>Kategori</th>
-                  <th>Pengarang</th>
-                  <th>Tanggal Input</th>
-                  <th>Stok</th>
-                  <th>Status Buku</th>
-                  <th>Aksi</th>
+                  <th><center>Kode Buku</center></th>
+                  <th><center>Judul Buku</center></th>
+                  <th><center>Gambar</center></th>
+                  <th><center>Kategori</center></th>
+                  <th><center>Pengarang</center></th>
+                  <th><center>Tanggal Input</center></th>
+                  <th><center>Stok</center></th>
+                  <th><center>Status Buku</center></th>
+                  <th><center>Aksi</center></th>
                 </tr>
                 </thead>
 
@@ -65,20 +65,20 @@
                 <tr>
                   <td>{{$buku->Kode_Buku}}</td>
                   <td>{{$buku->Judul_Buku}}</td>
-                  <td><img class="zoom" src="{{ url('/dist/img/'.$buku->Gambar) }}" alt="" height=100px></img></td>
+                  <td><center><img class="zoom" src="{{ url('/dist/img/'.$buku->Gambar) }}" alt="" height=100px></img></center></td>
                   <td>{{$buku->Kategori}}</td>
                   <td>{{$buku->Pengarang}}</td>
                   <td><?php echo $buku->created_at->format('d-F-Y')?></td>
                   <td>{{$buku->Stok}}</td>
                   <td>{{$buku->Status}}</td>
-                  
+
                   <td><a href="/buku/editbuku/{{$buku->id}}" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
                   <a type="button" class="btn btn-block btn-danger btn-sm delete" data-bookid="{{$buku->id}}"data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
                 </tr>
                 @endforeach
 
                 </tbody>
-                <tfoot>                
+                <tfoot>
                 </tfoot>
               </table>
             </div>
@@ -94,7 +94,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    
+
   </footer>
 
     <!-- Add the sidebar's background. This div must be placed
@@ -106,7 +106,7 @@
 
   <!-- Pop Up for Delete Confirmation -->
   <!-- Modal popup -->
-  
+
   <div class="modal fade" id="deletebuku">
        <div class="modal-dialog">
   <!-- Modal Content -->
@@ -120,10 +120,10 @@
                 <!-- {{ method_field('DELETE') }} -->
 
                 <div class="modal-body">
-                    
+
                     <h4> Setelah dihapus data akan benar-benar hilang. </h4>
                     <h4> Apakah tetap ingin melanjutkan? </h4>
-                    
+
                     <!-- <input type="hidden" name="_method" value="DELETE"> -->
                     <input type="hidden" name="buku_id" id="buku_id" value="">
 
@@ -133,7 +133,7 @@
                   <button type="submit" class="btn btn-primary"> Hapus </button>
                   <button type="button" class="btn btn-default"  data-dismiss="modal">Batal</button>
                 </div>
-              
+
               </form>
             </div>
         </div>
@@ -159,8 +159,8 @@
 <script>
 
   $('#deletebuku').on('show.bs.modal', function (event) {
-      var button = $(event.relatedTarget) 
-      var book_id = button.data('bookid') 
+      var button = $(event.relatedTarget)
+      var book_id = button.data('bookid')
       var modal = $(this)
       modal.find('.modal-body #buku_id').val(book_id);
   })
