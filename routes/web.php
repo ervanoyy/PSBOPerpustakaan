@@ -78,6 +78,31 @@ Route::group(['middleware' => 'auth'], function(){
             // Route::post('/tahfidz/hapussiswatahfidz', 'SiswaTahfizController@hapus');
 
 
+             /* ---------- Masyarakat (Anggota) --------------  */
+
+            Route::get('/datamasyarakat', function() {
+                return view('Masyarakat.datamasyarakat') ;
+            }) ;
+
+            Route::get('/masyarakat', function() {
+                return view('Masyarakat.masyarakat') ;
+            }) ;
+
+            Route::get('/Masyarakat/editdatamasyarakat', function() {
+                return view('Masyarakat.editdatamasyarakat') ;
+            }) ;
+            
+
+            // Route::post('/datasantri/import_excel', 'SiswaTahfizController@import_excel');
+            // Route::get('/tahfidz', 'SiswaController@index_edit');
+            
+
+            // Route::get('/Tahfidz/editdatatahfidz/{siswa_id}', 'SiswaTahfizController@edit');
+            // Route::put('/Siswa/editdatasiswa/{siswa_id}/proses', 'SiswaTahfizController@proses_edit');
+
+            // Route::post('/tahfidz/hapussiswatahfidz', 'SiswaTahfizController@hapus');
+
+
             
             /* ---------- Buku --------------  */
 

@@ -1,8 +1,8 @@
-<?php $thisPage="Siswa"; ?>
+<?php $thisPage="Masyarakat"; ?>
 @extends ('navbar')
 
 @section('content')
-<title>Data Santri</title>
+<title>Data Masyarakat</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
     <!-- jQuery library -->
@@ -14,12 +14,12 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Data Santri
+        Data Masyarakat
         <small></small>
       </h1>
       <ol class="breadcrumb">
         <li><i class="fa fa-user"></i>  User</li>
-        <li class="active">Data Santri</li>
+        <li class="active">Data Masyarakat</li>
     
       </ol>
     </section>
@@ -33,7 +33,7 @@
 
             <div class="box">
               <div class="box-header">
-                  <h3 class="box-title"><a href="/tahfidz" type="button" class="btn btn-block btn-primary" id="tombol" style="width:130px;">Edit Data Santri</a></h3>
+                  <h3 class="box-title"><a href="/masyarakat" type="button" class="btn btn-block btn-primary" id="tombol" style="width:170px;">Edit Data Masyarakat</a></h3>
                   <h3 class="box-title pull-right"><a type="button" class="btn btn-block btn-success" data-toggle="modal" data-target="#importsiswa" style="width:120px;">Import Excel</a></h3> 
               </div> 
 
@@ -43,9 +43,10 @@
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                    <th>NIST</th>
                     <th>Nama</th>
-                    <th>Jenis Kelamin</th>
+                    <th>Alamat</th>
+                    <th>Umur</th>
+                    <th>No.Telp</th>
                     </tr>
                     </thead>
                     
@@ -68,7 +69,7 @@
      <!-- Modal -->
     <div class="modal fade" id="importsiswa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
-				<form method="post" action="/datasantri/import_excel" enctype="multipart/form-data">
+				<form method="post" action="/datamasyarakat/import_excel" enctype="multipart/form-data">
 					<div class="modal-content">
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Import Excel</h5>

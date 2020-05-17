@@ -1,26 +1,20 @@
-<?php $thisPage="Siswa"; ?>
+<?php $thisPage="Masyarakat"; ?>
 @extends ('navbar')
 
 @section('content')
-<title>Data Santri</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Data Masyarakat</title>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Data Santri
+        Data Masyarakat
         <small></small>
       </h1>
       <ol class="breadcrumb">
         <li><i class="fa fa-user"></i>  User</li>
-        <li class="active">Data Santri</li>
-    
+        <li><a href="/datamasyarakat"> Data Masyarakat</a></li>
+        <li class="active">Edit</li>
       </ol>
     </section>
  
@@ -32,23 +26,30 @@
             <!-- /.box -->
 
             <div class="box">
+              <a href="/datamasyarakat">
               <div class="box-header">
-                  <h3 class="box-title"><a href="/tahfidz" type="button" class="btn btn-block btn-primary" id="tombol" style="width:130px;">Edit Data Santri</a></h3>
-                  <h3 class="box-title pull-right"><a type="button" class="btn btn-block btn-success" data-toggle="modal" data-target="#importsiswa" style="width:120px;">Import Excel</a></h3> 
-              </div> 
-
-
+              <h3 class="box-title"><button type="button" class="btn btn-block btn-success" id="tombol">Simpan</button></h3>
+              </a>
               <!-- /.box-header -->
                 <div class="box-body table-responsive">
                 <table id="example1" class="table table-bordered table-striped">
                     <thead>
                     <tr>
-                    <th>NIST</th>
                     <th>Nama</th>
-                    <th>Jenis Kelamin</th>
+                    <th>Alamat</th>
+                    <th>Umur</th>
+                    <th>No.Telp</th>
+                    <th>Aksi</th>
+
                     </tr>
                     </thead>
+
+                    <tbody>
+
                     
+         
+
+                    </tbody>
                     <tfoot>                
                     </tfoot>
                 </table>
@@ -64,37 +65,42 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-
-     <!-- Modal -->
-    <div class="modal fade" id="importsiswa" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-			<div class="modal-dialog" role="document">
-				<form method="post" action="/datasantri/import_excel" enctype="multipart/form-data">
-					<div class="modal-content">
-						<div class="modal-header">
-							<h5 class="modal-title" id="exampleModalLabel">Import Excel</h5>
-						</div>
-						<div class="mod-al-body">
- 
-							{{ csrf_field() }}
- 
-							<label>Pilih file excel</label>
-							<div class="form-group">
-								<input type="file" name="file" required="required">
-							</div>
- 
-						</div>
-						<div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="submit" class="btn btn-primary">Import</button>
-						</div>
-					</div>
-				</form>
-			</div>
-		</div>
-
     <footer class="main-footer">
         
     </footer>
+      <!-- Pop Up for Delete Confirmation -->
+  <!-- Modal popup -->
+  
+  <div class="modal fade" id="deletemasyarakat">
+       <div class="modal-dialog">
+  <!-- Modal Content -->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button  type="button" data-dismiss="modal" class="close">&times;</button>
+                <h4 class="modal-title">Konfirmasi Penghapusan</h4>
+              </div>
+              <form action="/masyarakat/hapusmasyarakat" method="POST" id="deleteForm">
+                {{ csrf_field() }}
+                <!-- {{ method_field('DELETE') }} -->
+
+                <div class="modal-body">
+                    
+                    <h4> Setelah dihapus data akan benar-benar hilang. </h4>
+                    <h4> Apakah tetap ingin melanjutkan? </h4>
+                    
+                    <!-- <input type="hidden" name="_method" value="DELETE"> -->
+                    <input type="hidden" name="siswa_id" id="siswa_id" value="">
+
+                </div>
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary"> Hapus </button>
+                  <button type="button" class="btn btn-default"  data-dismiss="modal">Batal</button>
+                </div>
+              </form>
+
+            </div>
+        </div>
 
     <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
@@ -118,6 +124,18 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- page script -->
+
+<script>
+
+  $('#deletesiswa').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget) 
+      var siswa_id = button.data('bookid') 
+      var modal = $(this)
+      modal.find('.modal-body #siswa_id').val(siswa_id);
+  })
+
+</script>
+
 <script>
   $(function () {
     $('#example1').DataTable()
