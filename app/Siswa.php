@@ -11,4 +11,7 @@ class Siswa extends Model
 
     protected $fillable = ['NIS', 'Nama', 'Kelas'];
     
+    public function KunjunganMasyarakat(){
+        return $this->hasMany('App\KunjunganMasyarakat');
+    }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSiswaTahfizTable extends Migration
+class CreateSantrisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateSiswaTahfizTable extends Migration
      */
     public function up()
     {
-        Schema::create('siswa_tahfiz', function (Blueprint $table) {
+        Schema::create('santris', function (Blueprint $table) {
             $table->id();
-            $table->Nama();
-            $table->NIST();
+            $table->string('NIST');
+            $table->string('Nama'); 
+            $table->string('Jenis_Kelamin');
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateSiswaTahfizTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('siswa_tahfiz');
+        Schema::dropIfExists('santris');
     }
 }
