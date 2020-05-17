@@ -16,13 +16,14 @@ class BukuImport implements ToModel
     public function model(array $row)
     {
         return new Buku([
-            'Kode_Buku'=> $row[1], 
-            'Judul_Buku'=> $row[2], 
-            'Gambar'=> $row[3], 
-            'Kategori'=> $row[4], 
-            'Pengarang'=> $row[5], 
-            'Stok'=> $row[6],
-            'Status'=> $row[7],
+            'Kode_Buku'=> $row[1],
+            'Judul_Buku'=> $row[2],
+            'Gambar'=> $row[3],
+            'Kategori'=> $row[4],
+            'JenisPustaka'=> $row[5],
+            'Pengarang'=> $row[6],
+            'Stok'=> $row[7],
+            'Status'=> $row[8],
         ]);
     }
 }

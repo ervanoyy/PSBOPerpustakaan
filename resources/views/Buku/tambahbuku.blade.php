@@ -40,7 +40,7 @@
 
             <!-- form start -->
             <form action="/buku/tambahbuku/proses" method="POST" enctype="multipart/form-data" role="form">
-             {{ csrf_field() }} 
+             {{ csrf_field() }}
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">Judul Buku</label>
@@ -55,8 +55,13 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Kode Buku</label>
-                  <input name="Kode_Buku" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                  <label for="exampleInputPassword1">Kode Buku Inventaris</label>
+                  <input name="Kode_BukuInventaris" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Kode Buku Lemari</label>
+                  <input name="Kode_BukuLemari" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
                 </div>
 
                 <div class="form-group">
@@ -70,6 +75,15 @@
                 </div>
 
                 <div class="form-group">
+                  <label>Jenis Pustaka</label>
+                  <select name="JenisPustaka" class="form-control">
+                    <option value="Buku">Buku</option>
+                    <option value="Modul">Modul</option>
+                    <option value="Jurnal">Jurnal</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
                   <label for="exampleInputPassword1">Pengarang</label>
                   <input name="Pengarang" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
                 </div>
@@ -78,8 +92,13 @@
                   <label for="exampleInputPassword1">Jumlah Buku</label>
                   <input name="Jumlah_Buku" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
                 </div>
-                
-                
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Keterangan</label>
+                  <input name="Keterangan" type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                </div>
+
+
               </div>
               <!-- /.box-body -->
 

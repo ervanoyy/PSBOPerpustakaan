@@ -18,8 +18,8 @@ class BukuController extends Controller
 {
     //
     public function index(){
-        //$buku_buku = Buku::all();
-        $buku_buku = Buku::where('Kategori', 'Pendidikan')->get(); 
+        $buku_buku = Buku::all();
+        //$buku_buku = Buku::where('Kategori', 'Pendidikan')->get();
         return view('/Buku/buku', ['buku_buku' => $buku_buku]);
     }
 
@@ -28,7 +28,7 @@ class BukuController extends Controller
     }
 
     public function proses_tambah(Request $request){
-        
+
         $messages = [
             'required' => ':attribute wajib diisi ya',
             'mimes' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
@@ -40,12 +40,15 @@ class BukuController extends Controller
         ];
 
         $this->validate($request, [
-            'Kode_Buku' => 'required',
+            'Kode_BukuInventaris' => 'required',
+            'Kode_BukuLemari' => 'required',
             'Judul_Buku' => 'required',
             'Gambar' => 'nullable|file|image|mimes:jpeg,png,jpg|max:2048',
             'Kategori' => 'required',
+            'JenisPustaka' => 'required',
             'Pengarang' => 'required',
-            'Jumlah_Buku' => 'required|numeric|gte:0'
+            'Jumlah_Buku' => 'required|numeric|gte:0',
+            'Keterangan' => ''
 		], $messages);
 
         $file = $request->file('Gambar');
@@ -55,19 +58,22 @@ class BukuController extends Controller
         $tujuan_upload = 'dist/img';
 
         $file->move($tujuan_upload,$nama_file);
-        
+
         $status = $request->Jumlah_Buku >= 1? "Tersedia":"Tidak Tersedia";
 
         Buku::create([
-            'Kode_Buku' => $request->Kode_Buku,
+            'Kode_BukuInventaris' => $request->Kode_BukuInventaris,
+            'Kode_BukuLemari' => $request->Kode_BukuLemari,
             'Judul_Buku' => $request->Judul_Buku,
             'Gambar' => $nama_file,
             'Kategori' => $request->Kategori,
+            'JenisPustaka' => $request->JenisPustaka,
             'Pengarang' => $request->Pengarang,
             'Stok' => $request->Jumlah_Buku,
-			'Status' => $status,
+            'Status' => $status,
+            'Keterangan' => $request->Keterangan
         ]);
-        
+
         return redirect('/buku')->with('info','Data buku berhasil ditambahkan!');
     }
 
@@ -79,7 +85,7 @@ class BukuController extends Controller
     public function proses_edit(Request $request, $buku_id){
 
         $buku = Buku::find($buku_id);
-        
+
         if($request->hasFile('file')){
             $file = $request->file('file');
             $nama_file = time()."_".$file->getClientOriginalName();
@@ -88,10 +94,12 @@ class BukuController extends Controller
             $buku->Gambar = $nama_file;
 
         }
-        
-        $buku->Kode_Buku = $request->Kode_Buku;
+
+        $buku->Kode_BukuInventaris = $request->Kode_BukuInventaris;
+        $buku->Kode_BukuLemari = $request->Kode_BukuLemari;
         $buku->Judul_Buku = $request->Judul_Buku;
         $buku->Kategori = $request->Kategori;
+        $buku->JenisPustaka = $request->JenisPustaka;
         $buku->Pengarang = $request->Pengarang;
         $buku->Stok = $request->Jumlah_Buku;
         $buku->status = $request->Jumlah_Buku >= 1? "Tersedia":"Tidak Tersedia";
@@ -110,41 +118,41 @@ class BukuController extends Controller
 
     }
 
-    
+
     public function export_excel()
 	{
         return Excel::download(new BukuExport, 'DataBuku.xlsx');
     }
-    
 
-    public function import_excel(Request $request) 
+
+    public function import_excel(Request $request)
 	{
 		// validasi
 		$this->validate($request, [
 			'file' => 'required|mimes:csv,xls,xlsx'
 		]);
- 
+
 		// menangkap file excel
 		$file = $request->file('file');
- 
+
 		// membuat nama file unik
 		$nama_file = rand().$file->getClientOriginalName();
- 
+
 		// upload ke folder file_siswa di dalam folder public
 		$file->move('file_buku',$nama_file);
- 
+
 		// import data
 		Excel::import(new BukuImport, public_path('/file_buku/'.$nama_file));
- 
- 
+
+
 		// alihkan halaman kembali
 		return redirect('/buku');
     }
 
     public function deleteall(){
-        Buku::truncate();     
+        Buku::truncate();
         return redirect('/buku');
 
     }
-    
+
 }

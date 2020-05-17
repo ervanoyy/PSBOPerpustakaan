@@ -46,14 +46,17 @@
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th><center>Kode Buku</center></th>
+                  <th><center>Kode Buku Inventaris</center></th>
+                  <th><center>Kode Buku Lemari</center></th>
                   <th><center>Judul Buku</center></th>
                   <th><center>Gambar</center></th>
                   <th><center>Kategori</center></th>
+                  <th><center>Jenis Pustaka</center></th>
                   <th><center>Pengarang</center></th>
                   <th><center>Tanggal Input</center></th>
                   <th><center>Stok</center></th>
                   <th><center>Status Buku</center></th>
+                  <th><center>Keterangan</center></th>
                   <th><center>Aksi</center></th>
                 </tr>
                 </thead>
@@ -63,15 +66,17 @@
 
                 @foreach($buku_buku as $buku)
                 <tr>
-                  <td>{{$buku->Kode_Buku}}</td>
+                  <td>{{$buku->Kode_BukuInventaris}}</td>
+                  <td>{{$buku->Kode_BukuLemari}}</td>
                   <td>{{$buku->Judul_Buku}}</td>
                   <td><center><img class="zoom" src="{{ url('/dist/img/'.$buku->Gambar) }}" alt="" height=100px></img></center></td>
                   <td>{{$buku->Kategori}}</td>
+                  <td>{{$buku->JenisPustaka}}</td>
                   <td>{{$buku->Pengarang}}</td>
                   <td><?php echo $buku->created_at->format('d-F-Y')?></td>
                   <td>{{$buku->Stok}}</td>
                   <td>{{$buku->Status}}</td>
-
+                  <td>{{$buku->Keterangan}}</td>
                   <td><a href="/buku/editbuku/{{$buku->id}}" type="button" class="btn btn-block btn-primary btn-sm">Edit</a>
                   <a type="button" class="btn btn-block btn-danger btn-sm delete" data-bookid="{{$buku->id}}"data-toggle="modal" data-target="#deletebuku" >Delete</a></td>
                 </tr>

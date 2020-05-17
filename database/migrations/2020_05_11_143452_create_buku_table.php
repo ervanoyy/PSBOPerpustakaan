@@ -15,13 +15,16 @@ class CreateBukuTable extends Migration
     {
         Schema::create('buku', function (Blueprint $table) {
             $table->id();
-            $table->string('Kode_Buku');
+            $table->string('Kode_BukuInventaris');
+            $table->string('Kode_BukuLemari');
             $table->string('Judul_Buku');
             $table->string('Gambar');
             $table->string('Kategori');
+            $table->string('JenisPustaka');
             $table->string('Pengarang');
             $table->unsignedTinyInteger('Stok');
             $table->string('Status');
+            $table->string('Keterangan');
             $table->timestamps();
         });
     }

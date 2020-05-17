@@ -29,7 +29,7 @@
             <!-- /.box-header -->
             <!-- form start -->
             <form action="/buku/editbuku/{{ $buku->id }}/proses" method="POST" enctype="multipart/form-data" role="form">
-              
+
               {{ csrf_field() }}
               {{ method_field('PUT') }}
 
@@ -49,8 +49,13 @@
                 </div>
 
                 <div class="form-group">
-                  <label for="exampleInputPassword1">Kode Buku</label>
-                  <input type="text" name="Kode_Buku" value="{{$buku->Kode_Buku}}" class="form-control" id="exampleInputPassword1" placeholder="">
+                  <label for="exampleInputPassword1">Kode Buku Inventaris</label>
+                  <input type="text" name="Kode_BukuInventaris" value="{{$buku->Kode_BukuInventaris}}" class="form-control" id="exampleInputPassword1" placeholder="">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Kode Buku Lemari</label>
+                  <input type="text" name="Kode_BukuLemari" value="{{$buku->Kode_BukuLemari}}" class="form-control" id="exampleInputPassword1" placeholder="">
                 </div>
 
                 <div class="form-group">
@@ -61,22 +66,44 @@
                     @else
                     <option value="Pendidikan">Pendidikan</option>
                     @endif
-                    @if($buku->Kategori=='Fiksi')
-                    <option value="Fiksi" selected>Fiksi</option>
+                    @if($buku->Kategori=='Modul')
+                    <option value="Modul" selected>Modul</option>
                     @else
-                    <option value="Fiksi">Fiksi</option>
+                    <option value="Modul">Modul</option>
                     @endif
-                    @if($buku->Kategori=='Non_Fiksi')
-                    <option value="Non_Fiksi" selected>Non Fiksi</option>
+                    @if($buku->Kategori=='Jurnal')
+                    <option value="Jurnal" selected>Non Modul</option>
                     @else
-                    <option value="Non_Fiksi">Non Fiksi</option>
+                    <option value="Jurnal">Non Modul</option>
                     @endif
                     @if($buku->Kategori=='Agama')
                     <option value="Agama" selected>Agama</option>
                     @else
                     <option value="Agama">Agama</option>
                     @endif
-                    
+
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Jenis Pustaka</label>
+                  <select name="JenisPustaka" class="form-control">
+                    @if($buku->JenisPustaka=='Buku')
+                    <option value="Buku" selected>Buku</option>
+                    @else
+                    <option value="Buku">Buku</option>
+                    @endif
+                    @if($buku->JenisPustaka=='Modul')
+                    <option value="Modul" selected>Modul</option>
+                    @else
+                    <option value="Modul">Modul</option>
+                    @endif
+                    @if($buku->JenisPustaka=='Jurnal')
+                    <option value="Jurnal" selected>Jurnal</option>
+                    @else
+                    <option value="Jurnal">Jurnal</option>
+                    @endif
+
                   </select>
                 </div>
 
@@ -89,8 +116,12 @@
                   <label for="exampleInputPassword1">Jumlah Buku</label>
                   <input type="text" name="Jumlah_Buku" value="{{$buku->Stok}}" class="form-control" id="exampleInputPassword1" placeholder="">
                 </div>
-                
-                
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Keterangan</label>
+                  <input type="text" name="Keterangan" value="{{$buku->Keterangan}}" class="form-control" id="exampleInputPassword1" placeholder="">
+                </div>
+
               </div>
               <!-- /.box-body -->
 

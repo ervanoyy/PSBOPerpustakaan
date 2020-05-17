@@ -12,43 +12,55 @@ class BukuTableSeeder extends Seeder
     public function run()
     {
         \App\Buku::create([
-            'Kode_Buku' => '0020099',
+            'Kode_BukuInventaris' => '0020099',
+            'Kode_BukuLemari' => 'F0001',
             'Judul_Buku' => 'Pendidikan Aye',
             'Gambar' => '1589300251_gambarbuku.jpg',
             'Kategori' => 'Fiksi',
+            'JenisPustaka' => '',
             'Pengarang' => 'Ervanoyy',
             'Stok' => '10',
-			'Status' => 'Tersedia',
+            'Status' => 'Tersedia',
+            'Keterangan' => '',
         ]);
 
         \App\Buku::create([
-            'Kode_Buku' => '0002',
+            'Kode_BukuInventaris' => '0002',
+            'Kode_BukuLemari' => 'N0001',
             'Judul_Buku' => 'Judul 02',
             'Gambar' => '1589286027_CoverBuuk1.png',
             'Kategori' => 'Non_Fiksi',
+            'JenisPustaka' => '',
             'Pengarang' => 'Pengarang 02',
             'Stok' => '11',
-			'Status' => 'Tersedia',
+            'Status' => 'Tersedia',
+            'Keterangan' => '',
         ]);
 
         \App\Buku::create([
-            'Kode_Buku' => '0003',
+            'Kode_BukuInventaris' => '0003',
+            'Kode_BukuLemari' => 'N0003',
             'Judul_Buku' => 'Judul 03',
             'Gambar' => '1589280069_CoverBuuk.png',
             'Kategori' => 'Non_Fiksi',
+            'JenisPustaka' => '',
             'Pengarang' => 'Pengarang 01',
             'Stok' => '0',
-			'Status' => 'Tidak Tersedia',
+            'Status' => 'Tidak Tersedia',
+            'Keterangan' => '',
         ]);
 
         \App\Buku::create([
-            'Kode_Buku' => 'ISBN-3443-2-34',
+            'Kode_BukuInventaris' => 'ISBN-3443-2-34',
+            'Kode_BukuLemari' => 'P0001',
             'Judul_Buku' => 'Seri Pengetahuan : Marxisme',
             'Gambar' => '1589343406_Buku.jpg',
             'Kategori' => 'Pendidikan',
+            'JenisPustaka' => '',
             'Pengarang' => 'A.Arum Candra',
             'Stok' => '100',
-			'Status' => 'Tersedia',
+            'Status' => 'Tersedia',
+            'Keterangan' => '',
         ]);
     }
 }

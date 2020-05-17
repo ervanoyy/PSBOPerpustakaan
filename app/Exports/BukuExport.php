@@ -21,29 +21,34 @@ class BukuExport implements FromCollection, WithHeadings, ShouldAutoSize, WithMa
     public function map($Buku) : array {
         return [
             $Buku->id,
-            $Buku->Kode_Buku,
+            $Buku->Kode_BukuInvetaris,
+            $Buku->Kode_BukuLemari,
             $Buku->Judul_Buku,
             $Buku->Kategori,
+            $Buku->JenisPustaka,
             $Buku->Pengarang,
             $Buku->Stok,
-            $Buku->Status,                              
+            $Buku->Status,
+            $Buku->Keterangan,
             Carbon::parse($Buku->created_at)->toFormattedDateString()
         ];
- 
+
     }
 
     public function headings():array
     {
         return [
             'No',
-            'Kode Buku',
+            'Kode Buku Inventaris',
+            'Kode Buku Lemari',
             'Judul Buku',
             'Kategori',
+            'Jenis Pustaka',
             'Pengarang',
             'Stok',
             'Status',
             'Tanggal Input',
-
+            'Keterangan',
         ];
     }
 }
