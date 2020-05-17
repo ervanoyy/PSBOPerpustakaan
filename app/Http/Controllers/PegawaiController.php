@@ -34,6 +34,8 @@ class PegawaiController extends Controller
                 
         $pegawai->NIP = $request->NIP;
         $pegawai->Nama = $request->Nama;
+        $pegawai->Alamat = $request->Alamat;
+        $pegawai->Tanggal_Masuk = $request->Tanggal_Masuk;
 
         $pegawai->save();
        return redirect('/pegawai');
