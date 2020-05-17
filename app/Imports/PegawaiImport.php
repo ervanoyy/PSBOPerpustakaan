@@ -17,6 +17,8 @@ class PegawaiImport implements ToModel
         return new Pegawai([
             'NIP'=> $row[1], 
             'Nama'=> $row[2], 
+            'Alamat'=> $row[3], 
+            'Tanggal_Masuk'=> $row[4], 
         ]);
     }
 }

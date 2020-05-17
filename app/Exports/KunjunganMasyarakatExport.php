@@ -33,7 +33,7 @@ class KunjunganMasyarakatExport implements FromCollection, WithMapping, ShouldAu
 
     public function headings() : array {
         return [
-            'No',
+            '#',
             'Nama',
             'Umur',
             'Alamat',

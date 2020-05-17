@@ -17,11 +17,12 @@ class CreatePegawaiTable extends Migration
             $table->id();
             $table->string('Nama'); 
             $table->string('NIP');
-            //$table->date('Tanggal_Bergabung');
-            //$table->string('Bagian');
+            $table->string('Alamat');
+            $table->string('Tanggal_Masuk');
             $table->timestamps();
         });
     }
+
 
     /**
      * Reverse the migrations.

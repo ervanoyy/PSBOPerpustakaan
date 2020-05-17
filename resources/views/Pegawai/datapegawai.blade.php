@@ -37,6 +37,8 @@
                     <tr>
                     <th>NIP</th>
                     <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Tanggal Masuk</th>
                     </tr>
                     </thead>
                     
@@ -46,6 +48,8 @@
                     <tr>
                       <td>{{$datapegawai->NIP}}</td>
                       <td>{{$datapegawai->Nama}}</td>
+                      <td>{{$datapegawai->Alamat}}</td>
+                      <td>{{$datapegawai->Tanggal_Masuk}}</td>
                       </tr>
                     @endforeach
 

@@ -38,7 +38,7 @@ class BukuExport implements FromCollection, WithHeadings, ShouldAutoSize, WithMa
     public function headings():array
     {
         return [
-            'No',
+            '#',
             'Kode Buku Inventaris',
             'Kode Buku Lemari',
             'Judul Buku',

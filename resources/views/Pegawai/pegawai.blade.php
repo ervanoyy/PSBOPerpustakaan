@@ -37,6 +37,8 @@
                     <tr>
                     <th>NIP</th>
                     <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Tanggal Masuk</th>
                     <th>Aksi</th>
                     </tr>
                     </thead>
@@ -47,6 +49,8 @@
                     <tr>
                       <td>{{$pegawai->NIP}}</td>
                       <td>{{$pegawai->Nama}}</td>
+                      <td>{{$pegawai->Alamat}}</td>
+                      <td>{{$pegawai->Tanggal_Masuk}}</td>
                       <td><a href="/Pegawai/editdatapegawai/{{$pegawai->id}}" type="button" class="btn btn-block btn-primary btn-sm" style="width: 100px;">Edit</a>
                       <a type="button" class="btn btn-block btn-danger btn-sm delete" data-bookid="{{$pegawai->id}}"data-toggle="modal" data-target="#deletepegawai" style="width: 100px;" >Delete</a></td>
                     </tr>

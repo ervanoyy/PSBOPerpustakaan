@@ -138,6 +138,10 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/kunjungansiswa', function () {
                 return view('Kunjungan/kunjungansiswa');
             });
+
+            Route::get('/kunjungantamu/deletetamu', function () {
+                return view('Kunjungan/deletetamu');
+            });
             
             Route::get('/kunjungantamu/deleteall', 'KunjunganMasyarakatController@deleteall');
             Route::get('/kunjungantamu/export_excel', 'KunjunganMasyarakatController@export_excel');

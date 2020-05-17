@@ -44,6 +44,16 @@
                   <label for="exampleInputPassword1">Nama</label>
                   <input type="text" name="Nama" class="form-control" id="exampleInputPassword1" placeholder="" value="{{$pegawai->Nama}}">
                 </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Alamat</label>
+                  <input type="text" name="Alamat" class="form-control" id="exampleInputPassword1" placeholder="" value="{{$pegawai->Alamat}}">
+                </div>
+
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Tanggal Masuk</label>
+                  <input type="text" name="Tanggal_Masuk" class="form-control" id="exampleInputPassword1" placeholder="" value="{{$pegawai->Tanggal_Masuk}}">
+                </div>
                 
               </div>
               <!-- /.box-body -->

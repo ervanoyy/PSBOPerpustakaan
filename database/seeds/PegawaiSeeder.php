@@ -15,6 +15,8 @@ class PegawaiSeeder extends Seeder
         \App\Pegawai::create([
             'Nama' => 'Hedi sang wibu',
             'NIP' => '1111111111',
+            'Alamat' => 'Jl Babakan Raya',
+            'Tanggal_Masuk' => 'Belum Ada Data',
         ]);
     }
 }
