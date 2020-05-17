@@ -163,9 +163,11 @@
         <li <?php if($thisPage == "Bukutamu") echo "class='active'"; ?>><a href="/formsiswa"><i class="fa fa-edit"></i> <span>Isi Buku Tamu</span></a></li>  
         <li <?php if($thisPage == "Buku") { 
                       echo "class='treeview active'"; 
-                  } elseif($thisPage == "Buku") { 
+                  } elseif($thisPage == "Modul") { 
                       echo "class='treeview active'"; 
-                  }else {
+                  } elseif($thisPage == "Jurnal") { 
+                    echo "class='treeview active'"; 
+                } else {
                       echo "class='treeview'";
                   }      
         ?>>
@@ -177,9 +179,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li <?php if($thisPage == "Buku") echo "class='active'"; ?>><a href="/peminjaman"><i class="fa fa-circle-o"></i> Buku</a></li>
-            <li <?php if($thisPage == "Buku") echo "class='active'"; ?>><a href="/dashboard"><i class="fa fa-circle-o"></i> Modul</a></li>
-            <li <?php if($thisPage == "Buku") echo "class='active'"; ?>><a href="/dashboard"><i class="fa fa-circle-o"></i> Jurnal</a></li>
+            <li <?php if($thisPage == "Buku") echo "class='active'"; ?>><a href="/buku"><i class="fa fa-circle-o"></i> Buku</a></li>
+            <li <?php if($thisPage == "Modul") echo "class='active'"; ?>><a href="/modul"><i class="fa fa-circle-o"></i> Modul</a></li>
+            <li <?php if($thisPage == "Jurnal") echo "class='active'"; ?>><a href="/jurnal"><i class="fa fa-circle-o"></i> Jurnal</a></li>
                  
           </ul>
         </li>

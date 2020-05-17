@@ -16,7 +16,7 @@
         <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li><i class="fa fa-book"></i>  Pendataan Buku</li>
+        <li><i class="fa fa-book"></i> Bahan Pustaka</li>
         <li >  Pengaturan</li>
         <li class="active">  Hapus Database</li>
     
@@ -31,13 +31,13 @@
     <center> 
     <div class="alert alert-danger alert-dismissible">
         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            <h4><i class="icon fa fa-ban"></i> Apakah anda yakin ingin menghapus seluruh data buku?</h4>
-            Seluruh data buku pada database akan hilang. Data buku yang sudah terhapus tidak dapat dikembalikan.
+            <h4><i class="icon fa fa-ban"></i> Apakah anda yakin ingin menghapus seluruh data bahan pustaka?</h4>
+            Seluruh data bahan pustaka pada database akan hilang. Data yang sudah terhapus tidak dapat dikembalikan.
             Pastikan memiliki backup data sebelum melakukan penghapusan. Backup data dapat dilakukan dengan melakukan 
             export excel pada menu pengaturan.
     </div>
-            <img src="../../dist/img/del-01.png" style="width:400px">
-            <h4 >Apakah anda yakin ingin menghapus seluruh data buku?</br>
+            <img src="../../dist/img/del-01.png" style="width:250px">
+            <h4 >Apakah anda yakin ingin menghapus seluruh data bahan pustaka?</br>
             
             </h4>
             </br>

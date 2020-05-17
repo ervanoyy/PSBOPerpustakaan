@@ -17,10 +17,19 @@ use App\Http\Controllers\Controller;
 class BukuController extends Controller
 {
     //
-    public function index(){
-        $buku_buku = Buku::all();
-        //$buku_buku = Buku::where('Kategori', 'Pendidikan')->get();
+    public function bukuview(){
+        $buku_buku = Buku::where('JenisPustaka', 'Buku')->get();
         return view('/Buku/buku', ['buku_buku' => $buku_buku]);
+    }
+
+    public function modulview(){
+        $buku_buku = Buku::where('JenisPustaka', 'Modul')->get();
+        return view('/Buku/modul', ['buku_buku' => $buku_buku]);
+    }
+
+    public function jurnalview(){
+        $buku_buku = Buku::where('JenisPustaka', 'Jurnal')->get();
+        return view('/Buku/jurnal', ['buku_buku' => $buku_buku]);
     }
 
     public function tambah(){
@@ -43,12 +52,12 @@ class BukuController extends Controller
             'Kode_BukuInventaris' => 'required',
             'Kode_BukuLemari' => 'required',
             'Judul_Buku' => 'required',
-            'Gambar' => 'nullable|file|image|mimes:jpeg,png,jpg|max:2048',
+            'Gambar' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
             'Kategori' => 'required',
             'JenisPustaka' => 'required',
             'Pengarang' => 'required',
             'Jumlah_Buku' => 'required|numeric|gte:0',
-            'Keterangan' => ''
+            'Keterangan' => 'required'
 		], $messages);
 
         $file = $request->file('Gambar');
@@ -103,7 +112,7 @@ class BukuController extends Controller
         $buku->Pengarang = $request->Pengarang;
         $buku->Stok = $request->Jumlah_Buku;
         $buku->status = $request->Jumlah_Buku >= 1? "Tersedia":"Tidak Tersedia";
-
+        $buku->Keterangan = $request->Keterangan;
         $buku->save();
 
         return redirect('/buku');

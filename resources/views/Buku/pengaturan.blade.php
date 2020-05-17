@@ -16,7 +16,7 @@
         <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="/buku"><i class="fa fa-book"></i>  Pendataan Buku</a></li>
+        <li><a href="/buku"><i class="fa fa-book"></i>  Bahan Pustaka</a></li>
         <li class="active">Pengaturan</li>
     
       </ol>
@@ -26,7 +26,7 @@
     <section class="content">
      
        <center>
-			<h2>Pengaturan Data Buku</h2>
+			<h2>Pengaturan Bahan Pustaka</h2>
             </br>
             </br>
 		
@@ -91,9 +91,7 @@
   </div>
 
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    
-  </footer>
+
 
     <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->

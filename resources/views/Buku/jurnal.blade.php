@@ -1,8 +1,8 @@
-<?php $thisPage="Buku"; ?>
+<?php $thisPage="Jurnal"; ?>
 @extends ('navbar')
 
 @section('content')
-<title>Buku</title>
+<title>Jurnal</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="{{ asset('dist/css/imagezoom.css')}}">
@@ -17,7 +17,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Daftar Buku
+        Daftar Jurnal
         <small></small>
       </h1>
       <ol class="breadcrumb">

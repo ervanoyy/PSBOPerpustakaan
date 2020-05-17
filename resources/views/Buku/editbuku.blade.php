@@ -11,7 +11,7 @@
         Edit buku
       </h1>
       <ol class="breadcrumb">
-        <li><a href="/buku"><i class="fa fa-book"></i>  Pendataan Buku</a></li>
+        <li><a href="/buku"><i class="fa fa-book"></i>  Bahan Pustaka</a></li>
         <li class="active">Edit Buku</li>
       </ol>
     </section>
@@ -24,7 +24,7 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">Data Buku</h3>
+              <h3 class="box-title">Data Bahan Pustaka</h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->

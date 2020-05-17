@@ -21,7 +21,7 @@ class BukuExport implements FromCollection, WithHeadings, ShouldAutoSize, WithMa
     public function map($Buku) : array {
         return [
             $Buku->id,
-            $Buku->Kode_BukuInvetaris,
+            $Buku->Kode_BukuInventaris,
             $Buku->Kode_BukuLemari,
             $Buku->Judul_Buku,
             $Buku->Kategori,
@@ -47,8 +47,8 @@ class BukuExport implements FromCollection, WithHeadings, ShouldAutoSize, WithMa
             'Pengarang',
             'Stok',
             'Status',
-            'Tanggal Input',
             'Keterangan',
+            'Tanggal Input',
         ];
     }
 }

@@ -53,9 +53,9 @@ Route::group(['middleware' => 'auth'], function(){
 
 
 
-            /* ---------- Siswa Tahfidz --------------  */
+             /* ---------- Siswa Tahfidz --------------  */
 
-            Route::get('/datasantri', function() {
+             Route::get('/datasantri', function() {
                 return view('Tahfidz.datasantri') ;
             }) ;
 
@@ -77,8 +77,7 @@ Route::group(['middleware' => 'auth'], function(){
 
             // Route::post('/tahfidz/hapussiswatahfidz', 'SiswaTahfizController@hapus');
 
-
-             /* ---------- Masyarakat (Anggota) --------------  */
+            /* ---------- Masyarakat (Anggota) --------------  */
 
             Route::get('/datamasyarakat', function() {
                 return view('Masyarakat.datamasyarakat') ;
@@ -91,22 +90,14 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/Masyarakat/editdatamasyarakat', function() {
                 return view('Masyarakat.editdatamasyarakat') ;
             }) ;
-            
-
-            // Route::post('/datasantri/import_excel', 'SiswaTahfizController@import_excel');
-            // Route::get('/tahfidz', 'SiswaController@index_edit');
-            
-
-            // Route::get('/Tahfidz/editdatatahfidz/{siswa_id}', 'SiswaTahfizController@edit');
-            // Route::put('/Siswa/editdatasiswa/{siswa_id}/proses', 'SiswaTahfizController@proses_edit');
-
-            // Route::post('/tahfidz/hapussiswatahfidz', 'SiswaTahfizController@hapus');
 
 
             
             /* ---------- Buku --------------  */
 
-            Route::get('/buku', 'BukuController@index');
+            Route::get('/buku', 'BukuController@bukuview');
+            Route::get('/modul', 'BukuController@modulview');
+            Route::get('/jurnal', 'BukuController@jurnalview');
 
             Route::get('/buku/tambahbuku', 'BukuController@tambah');
             Route::post('/buku/tambahbuku/proses', 'BukuController@proses_tambah');
