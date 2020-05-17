@@ -36,7 +36,7 @@
   <div class="lockscreen-item">
     <!-- lockscreen image -->
     <div class="lockscreen-image">
-      <img src="../../dist/img/Logoscb.png" alt="User Image">
+      <img src="../../dist/img/logo bulet.png" alt="User Image">
     </div>
     <!-- /.lockscreen-image -->  
     <!-- lockscreen credentials (contains the form) -->
