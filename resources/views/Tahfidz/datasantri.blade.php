@@ -48,6 +48,17 @@
                     <th>Jenis Kelamin</th>
                     </tr>
                     </thead>
+
+                    <tbody>
+                    
+                    @foreach($santri as $santri)
+                    <tr>
+                      <td>{{$santri->NIST}}</td>
+                      <td>{{$santri->Nama}}</td>
+                      <td>{{$santri->Jenis_Kelamin}}</td>
+                      </tr>
+                    @endforeach
+                    </tbody>
                     
                     <tfoot>                
                     </tfoot>

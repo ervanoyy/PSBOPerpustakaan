@@ -28,23 +28,25 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form action="/Tahfidz/editdatatahfidz/" method="POST" enctype="multipart/form-data" role="form">
+            <form action="/Tahfidz/editdatatahfidz/{{ $santri->id }}/proses" method="POST" enctype="multipart/form-data" role="form">
 
+            {{ csrf_field() }}
+              {{ method_field('PUT') }}
 
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">NIST</label>
-                  <input type="text" name="NIST" class="form-control"  id="exampleInputEmail1" placeholder="">
+                  <input type="text" name="NIST" class="form-control"  id="exampleInputEmail1" placeholder="" value="{{$santri->NIST}}">
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputPassword1">Nama</label>
-                  <input type="text" name="Nama" class="form-control" id="exampleInputPassword1" placeholder="" >
+                  <input type="text" name="Nama" class="form-control" id="exampleInputPassword1" placeholder="" value="{{$santri->Nama}}">
                 </div>
 
                 <div class="form-group">
                   <label>Jenis Kelamin</label>
-                  <select name="Jenis Kelamin" class="form-control">
+                  <select name="Jenis Kelamin" class="form-control" value="{{$santri->Jenis_Kelamin}}">
                     <option value="Laki-Laki">Laki-Laki</option>
                     <option value="Perempuan">Perempuan</option>
                   </select>

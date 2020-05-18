@@ -44,6 +44,15 @@
 
                     <tbody>
 
+                    @foreach($santri as $santri)
+                    <tr>
+                      <td>{{$santri->NIST}}</td>
+                      <td>{{$santri->Nama}}</td>
+                      <td>{{$santri->Jenis_Kelamin}}</td>
+                      <td><a href="/Tahfidz/editdatatahfidz/{{$santri->id}}" type="button" class="btn btn-block btn-primary btn-sm" style="width: 100px;">Edit</a>
+                      <a type="button" class="btn btn-block btn-danger btn-sm delete" data-bookid="{{$santri->id}}"data-toggle="modal" data-target="#deletesiswa" style="width: 100px;" >Delete</a></td>
+                    </tr>
+                    @endforeach
                     
          
 
@@ -87,7 +96,7 @@
                     <h4> Apakah tetap ingin melanjutkan? </h4>
                     
                     <!-- <input type="hidden" name="_method" value="DELETE"> -->
-                    <input type="hidden" name="siswa_id" id="siswa_id" value="">
+                    <input type="hidden" name="santri_id" id="santri_id" value="">
 
                 </div>
 

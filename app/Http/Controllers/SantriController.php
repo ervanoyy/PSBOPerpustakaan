@@ -11,18 +11,18 @@ class SantriController extends Controller
     //
     public function index(){
         $santri = Santri::all();
-        return view('/Siswa/datasiswa', ['santri' => $santri]);
+        return view('/Tahfidz/datasantri', ['santri' => $santri]);
     }
 
     
     public function index_edit(){
         $santri = Santri::all();
-        return view('/Siswa/siswa', ['santri' => $santri]);
+        return view('/Tahfidz/Tahfidz', ['santri' => $santri]);
     }
 
     public function edit($santri_id){
         $santri = Santri::find($santri_id);
-        return view('/Siswa/editdatasiswa', ['santri' => $santri]);
+        return view('/Tahfidz/editdatatahfidz', ['santri' => $santri]);
     }
 
     public function proses_edit(Request $request, $santri_id){
@@ -30,16 +30,42 @@ class SantriController extends Controller
         $santri = Santri::find($santri_id);
                 
         $santri->NIST = $request->NIST;
-        $ssantri->Nama = $request->Nama;
+        $santri->Nama = $request->Nama;
         $santri->Jenis_Kelamin = $request->Jenis_Kelamin;
 
-        $siswa->save();
-       return redirect('/siswa');
+        $santri->save();
+       return redirect('/tahfidz');
     }
 
     public function hapus(Request $request){
 
         $santri = Santri::find($request->santri_id);
         $santri->delete();
-        return redirect('/siswa');
+        return redirect('/tahfidz');
+    }
+
+    public function import_excel(Request $request) 
+	{
+		// validasi
+		$this->validate($request, [
+			'file' => 'required|mimes:csv,xls,xlsx'
+		]);
+ 
+		// menangkap file excel
+		$file = $request->file('file');
+ 
+		// membuat nama file unik
+		$nama_file = rand().$file->getClientOriginalName();
+ 
+		// upload ke folder file_siswa di dalam folder public
+		$file->move('file_siswa',$nama_file);
+ 
+		// import data
+		Excel::import(new SiswaImport, public_path('/file_siswa/'.$nama_file));
+ 
+ 
+		// alihkan halaman kembali
+		return redirect('/datatahfidz');
+    }
+
 }

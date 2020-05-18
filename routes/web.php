@@ -54,28 +54,14 @@ Route::group(['middleware' => 'auth'], function(){
 
 
              /* ---------- Siswa Tahfidz --------------  */
-
-             Route::get('/datasantri', function() {
-                return view('Tahfidz.datasantri') ;
-            }) ;
-
-            Route::get('/tahfidz', function() {
-                return view('Tahfidz.tahfidz') ;
-            }) ;
-
-            Route::get('/Tahfidz/editdatatahfidz', function() {
-                return view('Tahfidz.editdatatahfidz') ;
-            }) ;
+            Route::get('/datasantri', 'SantriController@index');
+            Route::post('/datasantri/import_excel', 'SantriController@import_excel');
+            Route::get('/tahfidz', 'SantriController@index_edit');
             
+            Route::get('/Tahfidz/editdatatahfidz/{santri_id}', 'SantriController@edit');
+            Route::put('/Tahfidz/editdatatahfidz/{santri_id}/proses', 'SantriController@proses_edit');
 
-            // Route::post('/datasantri/import_excel', 'SiswaTahfizController@import_excel');
-            // Route::get('/tahfidz', 'SiswaController@index_edit');
-            
-
-            // Route::get('/Tahfidz/editdatatahfidz/{siswa_id}', 'SiswaTahfizController@edit');
-            // Route::put('/Siswa/editdatasiswa/{siswa_id}/proses', 'SiswaTahfizController@proses_edit');
-
-            // Route::post('/tahfidz/hapussiswatahfidz', 'SiswaTahfizController@hapus');
+            Route::post('/tahfidz/hapussiswatahfidz', 'SantriController@hapus');
 
             /* ---------- Masyarakat (Anggota) --------------  */
 
