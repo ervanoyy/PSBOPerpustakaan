@@ -9,7 +9,9 @@ class KunjunganSiswa extends Model
     //
     protected $table = "kunjungan_siswa";
 
-    public function Masyarakat(){
-    	return $this->belongsTo('App\Siswa', 'NIS');
+    protected $fillable = ['ksiswa_id'];
+
+    public function Siswa(){
+    	return $this->belongsTo('App\Siswa', 'ksiswa_id');
     }
 }

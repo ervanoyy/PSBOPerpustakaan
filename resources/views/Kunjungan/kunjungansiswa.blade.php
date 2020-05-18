@@ -26,92 +26,33 @@
           <!-- /.box -->
 
           <div class="box">
+          <div class="box-header"> 
+             <h3 class="box-title"><a href="/kunjungansiswa/export_excel" type="button" class="btn btn-block btn-success" id="tombol"> Export Data</a></h3>
+             <h3 class="box-title pull-right"><a href="/kunjungansiswa/deletesiswa" type="button" class="btn btn-block btn-danger">Hapus Data</a></h3>
+          </div>
             <!-- /.box-header -->
             <div class="box-body table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
+                  <th>Tanggal</th>
                   <th>NIS</th>
                   <th>Nama</th>
-                  <th>Tanggal</th>
+                  <th>Kelas</th>
                 </tr>
                 </thead>
                 <tbody>
 
-               
 
-                <!-- <tr>
-                  <td>0020099</td>
-                  <td>Siti Maemunah</td>
-                  <td>9</td>
-                </tr>
 
-                <tr>
-                  <td>0020097</td>
-                  <td>Qotrunnada Syifa</td>
-                  <td>8</td>
-                </tr>
-
-                <tr>
-                  <td>0020098</td>
-                  <td>Firda Suci</td>
-                  <td>7</td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>Siti Maemunah</td>
-                  <td>9</td>
-                </tr> -->
-
-                <tr>
-                  <td>0020097</td>
-                  <td>Qotrunnada Syifa</td>
-                  <td>8</td>
-                </tr>
-
-                <tr>
-                  <td>0020098</td>
-                  <td>Firda Suci</td>
-                  <td>7</td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>Siti Maemunah</td>
-                  <td>9</td>
-                </tr>
-
-                <tr>
-                  <td>0020097</td>
-                  <td>Qotrunnada Syifa</td>
-                  <td>8</td>
-                </tr>
-
-                <tr>
-                  <td>0020098</td>
-                  <td>Firda Suci</td>
-                  <td>7</td>
-                </tr>
-
-                <tr>
-                  <td>0020099</td>
-                  <td>Siti Maemunah</td>
-                  <td>9</td>
-                </tr>
-
-                <tr>
-                  <td>0020097</td>
-                  <td>Qotrunnada Syifa</td>
-                  <td>8</td>
-                </tr>
-
-                <tr>
-                  <td>0020098</td>
-                  <td>Firda Suci</td>
-                  <td>7</td>
-                </tr> 
-
+                @foreach($kunjungan as $siswa)
+                  <tr>
+                    <td><?php echo $siswa->created_at->format('d-F-Y')?></td>
+                    <td>{{$siswa->Siswa->NIS}}</td>
+                    <td>{{$siswa->Siswa->Nama}}</td>
+                    <td>{{$siswa->Siswa->Kelas}}</td>
+                  </tr>
+                @endforeach
 
                 
             
@@ -132,9 +73,7 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    
-  </footer>
+
 
     <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->

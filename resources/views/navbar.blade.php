@@ -187,10 +187,12 @@
         </li>
         
         
-        <li <?php if($thisPage == "Peminjaman") { 
+        <li <?php if($thisPage == "PeminjamanSiswa") { 
                       echo "class='treeview active'"; 
-                  } elseif($thisPage == "Peminjaman") { 
+                  } elseif($thisPage == "PeminjamanPegawai") { 
                       echo "class='treeview active'"; 
+                  }elseif($thisPage == "PeminjamanSantri") { 
+                    echo "class='treeview active'"; 
                   }else {
                       echo "class='treeview'";
                   }      
@@ -203,9 +205,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li <?php if($thisPage == "Peminjaman") echo "class='active'"; ?>><a href="/peminjamansiswa"><i class="fa fa-circle-o"></i> Siswa</a></li>
-            <li <?php if($thisPage == "Peminjaman") echo "class='active'"; ?>><a href="/peminjamanpegawai"><i class="fa fa-circle-o"></i> Pegawai</a></li>
-            <li <?php if($thisPage == "Peminjaman") echo "class='active'"; ?>><a href="/peminjamansantri"><i class="fa fa-circle-o"></i> Santri Tahfidz</a></li>
+            <li <?php if($thisPage == "PeminjamanSiswa") echo "class='active'"; ?>><a href="/peminjamansiswa"><i class="fa fa-circle-o"></i> Siswa</a></li>
+            <li <?php if($thisPage == "PeminjamanPegawai") echo "class='active'"; ?>><a href="/peminjamanpegawai"><i class="fa fa-circle-o"></i> Pegawai</a></li>
+            <li <?php if($thisPage == "PeminjamanSantri") echo "class='active'"; ?>><a href="/peminjamansantri"><i class="fa fa-circle-o"></i> Santri Tahfidz</a></li>
                  
           </ul>
         </li>  

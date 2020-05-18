@@ -21,9 +21,10 @@
         <li class="active"></i>  Siswa</li>
       </ol>
     </section>
-
+    
     <!-- Main content -->
   <div class="lockscreen-wrapper">
+  @include('flash-message')
   <div class="lockscreen-logo">
     <b>Masukkan NIS</b>
   </br>
@@ -40,12 +41,14 @@
     </div>
     <!-- /.lockscreen-image -->  
     <!-- lockscreen credentials (contains the form) -->
-    <form class="lockscreen-credentials">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="NIS">
 
+             
+    <form class="lockscreen-credentials" action="/kunjungansiswa/cari/proses" method="POST" enctype="multipart/form-data" role="form">
+    {{ csrf_field() }}
+      <div class="input-group" style="tesxt-decoration:none;">
+        <input type="text" class="form-control" placeholder="NIS" name="NIS">
         <div class="input-group-btn">
-          <button type="button" class="btn" data-toggle="modal" data-target="#NISinput"><i class="fa fa-arrow-right text-muted"></i></button>
+          <button type="submit" class="btn"><i class="fa fa-arrow-right text-muted"></i></button>
         </div>
       </div>
     </form>

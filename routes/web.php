@@ -105,7 +105,7 @@ Route::group(['middleware' => 'auth'], function(){
 
             Route::post('/buku/hapusbuku', 'BukuController@hapus');
 
-            /* ---------- Peminjaman Siswa--------------  */
+            /* ---------- Peminjaman Siswa --------------  */
 
             Route::get('/peminjamansiswa', function () {
                 return view('Peminjaman/siswa');
@@ -160,20 +160,26 @@ Route::group(['middleware' => 'auth'], function(){
                 return view('Peminjaman/confirmpeminjamansantri');
             });
 
-
             /* ---------- Kunjungan --------------  */
 
-            Route::get('/kunjungansiswa', function () {
-                return view('Kunjungan/kunjungansiswa');
-            });
+            Route::get('/kunjungansiswa', 'KunjunganSiswaController@index');
+            Route::get('/kunjungantamu', 'KunjunganMasyarakatController@index');
 
             Route::get('/kunjungantamu/deletetamu', function () {
                 return view('Kunjungan/deletetamu');
             });
+
+            Route::get('/kunjungansiswa/deletesiswa', function () {
+                return view('Kunjungan/deletesiswa');
+            });
+
+            Route::post('/kunjungansiswa/cari/proses', 'KunjunganSiswaController@proses_cari');
             
             Route::get('/kunjungantamu/deleteall', 'KunjunganMasyarakatController@deleteall');
+            Route::get('/kunjungansiswa/deleteall', 'KunjunganSiswaController@deleteall');
             Route::get('/kunjungantamu/export_excel', 'KunjunganMasyarakatController@export_excel');
-            Route::get('/kunjungantamu', 'KunjunganMasyarakatController@index');
+            Route::get('/kunjungansiswa/export_excel', 'KunjunganSiswaController@export_excel');
+            Route::get('/kunjungansiswa', 'KunjunganSiswaController@index');
             Route::get('/kunjungantamu/{tujuan}/{masyarakat_id}', 'KunjunganMasyarakatController@tambah');
 
             /* ---------- Buku Tamu --------------  */

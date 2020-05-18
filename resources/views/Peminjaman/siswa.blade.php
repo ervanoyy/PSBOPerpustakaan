@@ -1,8 +1,8 @@
-<?php $thisPage="Peminjaman"; ?>
+<?php $thisPage="PeminjamanSiswa"; ?>
 @extends ('navbar')
 
 @section('content')
-<title>Peminjaman Buku</title>
+<title>Peminjaman Buku Siswa</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -14,7 +14,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Peminjaman Buku
+        Peminjaman Buku Siswa
         <small></small>
       </h1>
       <ol class="breadcrumb">

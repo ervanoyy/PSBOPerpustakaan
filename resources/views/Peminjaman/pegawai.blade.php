@@ -1,4 +1,4 @@
-<?php $thisPage="Peminjaman"; ?>
+<?php $thisPage="PeminjamanPegawai"; ?>
 @extends ('navbar')
 
 @section('content')
@@ -14,7 +14,7 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Peminjaman Buku
+        Peminjaman Buku Pegawai
         <small></small>
       </h1>
       <ol class="breadcrumb">
