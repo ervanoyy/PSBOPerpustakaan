@@ -137,8 +137,12 @@ Pada menu pengaturan admin, staff perpustakaan dapat menambahkan admin perpustak
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Pengaturan%20admin.png" alt="Use Case", width=900>
 </a>
 
-
 ## E. Konsep OOP yang digunakan
+```text
+Isi 
+```
+
+## F. Tipe Desain Pengembangan
 ```text
 Dalam projek kami, kami menerapkan design pattern MVC (model, view, controller). MVC adalah suatu pola 
 arsitektur yang digunakan dalam rekayasa perangkat lunak, prinsipnya bahwa logic suatu aplikasi harus 
@@ -179,15 +183,6 @@ Penerapan pada sistem :
 Auth controller digunakan untuk mengatur autentikasi saat login sehingga hanya yang menjadi admin yang bisa mengakses sistem perpustakaan
 2. Controller untuk setiap model
 
-
-
-
-
-
-## F. Tipe Desain Pengembangan
-```text
-Isi 
-```
 
 ## Developer
 
