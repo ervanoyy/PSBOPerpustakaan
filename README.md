@@ -27,11 +27,19 @@ Isi
 ## Diagram
 
 ### 1. Use Case Diagram
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/Perpustakaan_Use%20Case.png" alt="Use Case", width=400>
+</a>
 
 ### 2. Activity Diagram
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/Perpustakaan_Class_Diagram.png" alt="Use Case", width=800>
+</a>
 
 ### 3. Class Diagram
-
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/Perpustakaan_Class_Diagram.png" alt="Use Case", width=900>
+</a>
 
 ## Fitur
 ```text
