@@ -145,6 +145,11 @@ arsitektur yang digunakan dalam rekayasa perangkat lunak, prinsipnya bahwa logic
 dipisahkan dari presentation codenya. Sehingga design pattern ini membagi suatu aplikasi menjadi tiga 
 bagian yang saling berhubungan. 
 ```
+
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/Peta%20Arsitektur.png" alt="Use Case", width=900>
+</a>
+
 ### 1. Model
 Model bertanggung jawab untuk mengambil data dan mengubahnya menjadi data yang lebih bermakna yang dapat dikelola oleh lapisan aplikasi yang lain dan mengirimkannya kembali ke lapisan yang sesuai.
 
