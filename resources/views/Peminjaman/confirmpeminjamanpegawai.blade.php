@@ -2,14 +2,15 @@
 @extends ('navbar')
 
 @section('content')
-<title>Konfirmasi Peminjaman</title>
+<title>Konfirmasi Peminjaman Pegawai</title>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <ol class="breadcrumb">
-        <li><a href="/peminjaman"><i class="fa fa-exchange"></i>  Peminjaman Buku</a></li>
-        <li><a href="/tambahpeminjaman">Form Peminjaman</a></li>
+        <li><a><i class="fa fa-exchange"></i> Peminjaman Buku</a></li>
+        <li><a href="/peminjamanpegawai"></i> Pegawai</a></li>
+        <li><a href="/tambahpeminjamanpegawai">Form Peminjaman</a></li>
         <li class="active">Konfirmasi Peminjaman</li>
       </ol>
     </section>
@@ -55,7 +56,7 @@
               <h2><b>Peminjaman Buku</b></h2>
               
                 <tr>
-                  <td width="80" align="left" valign="top">NIS / NIP</td>
+                  <td width="80" align="left" valign="top">NIP</td>
                   <td width="5" align="left" valign="top">:</td>
                   <td width="300" align="left" valign="top">023023109</td>
                   <br>
@@ -91,8 +92,8 @@
               
               <div class="box-footer">
               <div class = "container">
-                <button type="submit" class="btn btn-danger">Batal</button>
-                <a href="/peminjaman" type="submit" class="btn btn-primary">Simpan</a>
+                <a href="/tambahpeminjamanpegawai" type="submit" class="btn btn-danger">Batal</a>
+                <a href="/peminjamanpegawai" type="submit" class="btn btn-primary">Simpan</a>
               </div>
             </div>
             </div>

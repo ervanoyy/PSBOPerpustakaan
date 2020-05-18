@@ -11,7 +11,8 @@
         Form Peminjaman
       </h1>
       <ol class="breadcrumb">
-        <li><a href="/peminjaman"><i class="fa fa-exchange"></i>  Peminjaman Buku</a></li>
+        <li><a><i class="fa fa-exchange"></i> Peminjaman Buku</a></li>
+        <li><a href="/peminjamanpegawai"></i> Pegawai</a></li>
         <li class="active">Form Peminjaman</li>
       </ol>
     </section>
@@ -31,7 +32,7 @@
             <form role="form">
               <div class="box-body">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">NIS/NIP</label>
+                  <label for="exampleInputEmail1">NIP</label>
                   <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
                 </div>
 
@@ -44,9 +45,9 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <a href="/confirmpeminjaman" type="submit" class="btn btn-primary">Pinjam</a>
+                <a href="/confirmpeminjamanpegawai" type="submit" class="btn btn-primary">Pinjam</a>
               
-              <a href="/peminjaman"
+              <a href="/peminjamanpegawai"
                 <button type="button" class="btn btn-default">Cancel</button>
               </a> 
 

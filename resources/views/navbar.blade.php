@@ -203,9 +203,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li <?php if($thisPage == "Peminjaman") echo "class='active'"; ?>><a href="/peminjaman"><i class="fa fa-circle-o"></i> Siswa</a></li>
-            <li <?php if($thisPage == "Peminjaman") echo "class='active'"; ?>><a href="/dashboard"><i class="fa fa-circle-o"></i> Pegawai</a></li>
-            <li <?php if($thisPage == "Peminjaman") echo "class='active'"; ?>><a href="/dashboard"><i class="fa fa-circle-o"></i> Santri Tahfidz</a></li>
+            <li <?php if($thisPage == "Peminjaman") echo "class='active'"; ?>><a href="/peminjamansiswa"><i class="fa fa-circle-o"></i> Siswa</a></li>
+            <li <?php if($thisPage == "Peminjaman") echo "class='active'"; ?>><a href="/peminjamanpegawai"><i class="fa fa-circle-o"></i> Pegawai</a></li>
+            <li <?php if($thisPage == "Peminjaman") echo "class='active'"; ?>><a href="/peminjamansantri"><i class="fa fa-circle-o"></i> Santri Tahfidz</a></li>
                  
           </ul>
         </li>  

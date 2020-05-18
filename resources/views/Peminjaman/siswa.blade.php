@@ -18,7 +18,8 @@
         <small></small>
       </h1>
       <ol class="breadcrumb">
-        <li class="active"><i class="fa fa-exchange"></i>  Peminjaman Buku</a></li>
+        <li><a><i class="fa fa-exchange"></i> Peminjaman Buku</a></li>
+        <li class="active"> Siswa</li>
     
       </ol>
     </section>
@@ -35,19 +36,21 @@
         ?>
 
           <!-- /.box -->
-
           <div class="box">
-            <a href="/tambahpeminjaman">
-            <div class="box-header">
-              <h3 class="box-title"><button type="button" class="btn btn-block btn-success" id="tombol">+ Peminjaman Buku</button></h3>
-            </a>
-            </div>
+          <div class="box-header"> 
+             <h3 class="box-title"><a href="/tambahpeminjamansiswa" type="button" class="btn btn-block btn-success" id="tombol">+ Peminjaman Buku</a></h3>
+             <h3 class="box-title pull-center"><a href="/peminjamansiswa/export_excel" type="button" class="btn btn-block btn-success" id="tombol"> Export Data</a></h3>
+             <h3 class="box-title pull-right"><a href="/peminjamansiswa/deletesiswa" type="button" class="btn btn-block btn-danger">Hapus Data</a></h3>
+             
+             
+          </div>
+
             <!-- /.box-header -->
             <div class="box-body table-responsive">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>ID</th>
+                  <th>NIS</th>
                   <th>Nama</th>
                   <th>Kode Buku</th>
                   <th>Judul Buku</th>
@@ -59,6 +62,7 @@
                 </tr>
                 </thead>
                 <tbody>
+
                 <tr>
                   <td>9987223</td>
                   <td>Siti Nurhasanah</td>
@@ -239,7 +243,7 @@
               </div>
 
               <div class="modal-footer">
-              <a href="/peminjaman" class="btn btn-primary">Ya</a>
+              <a href="/peminjamansiswa" class="btn btn-primary">Ya</a>
                 <button class="btn btn-default"  data-dismiss="modal">Batal</button>
               </div>
 

@@ -105,19 +105,61 @@ Route::group(['middleware' => 'auth'], function(){
 
             Route::post('/buku/hapusbuku', 'BukuController@hapus');
 
-            /* ---------- Peminjaman --------------  */
+            /* ---------- Peminjaman Siswa--------------  */
 
-            Route::get('/peminjaman', function () {
-                return view('Peminjaman/peminjaman');
+            Route::get('/peminjamansiswa', function () {
+                return view('Peminjaman/siswa');
             });
 
-            Route::get('/tambahpeminjaman', function () {
-                return view('Peminjaman/tambahpeminjaman');
+            Route::get('/peminjamansiswa/deletesiswa', function () {
+                return view('Peminjaman/deletesiswa');
             });
 
-            Route::get('/confirmpeminjaman', function () {
-                return view('Peminjaman/confirmpeminjaman');
+            Route::get('/tambahpeminjamansiswa', function () {
+                return view('Peminjaman/tambahpeminjamansiswa');
             });
+
+            Route::get('/confirmpeminjamansiswa', function () {
+                return view('Peminjaman/confirmpeminjamansiswa');
+            });
+
+
+            /* ---------- Peminjaman Pegawai--------------  */
+
+            Route::get('/peminjamanpegawai', function () {
+                return view('Peminjaman/pegawai');
+            });
+
+            Route::get('/peminjamanpegawai/deletepegawai', function () {
+                return view('Peminjaman/deletepegawai');
+            });
+
+            Route::get('/tambahpeminjamanpegawai', function () {
+                return view('Peminjaman/tambahpeminjamanpegawai');
+            });
+
+            Route::get('/confirmpeminjamanpegawai', function () {
+                return view('Peminjaman/confirmpeminjamanpegawai');
+            });
+
+
+            /* ---------- Peminjaman Santri--------------  */
+            Route::get('/peminjamansantri', function () {
+                return view('Peminjaman/santri');
+            });
+
+            Route::get('/peminjamansantri/deletesantri', function () {
+                return view('Peminjaman/deletesantri');
+            });
+
+            Route::get('/tambahpeminjamansantri', function () {
+                return view('Peminjaman/tambahpeminjamansantri');
+            });
+
+            Route::get('/confirmpeminjamansantri', function () {
+                return view('Peminjaman/confirmpeminjamansantri');
+            });
+
 
             /* ---------- Kunjungan --------------  */
 
