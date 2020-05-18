@@ -59,31 +59,49 @@ yang terdapat pada aplikasi perpustakaan SCB.
 </a>
 
 ### 1. Pencatatan Kunjungan
+```text
+Isi 
+```
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Isi%20Buku%20Tame.png" alt="Use Case", width=900>
 </a>
 
 ### 2. Pengelolaan Data Pustaka
+```text
+Isi 
+```
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Data%20Buku.png" alt="Use Case", width=900>
 </a>
 
 ### 3. Pengelolaan Peminjaman dan Pengembalian
+```text
+Isi 
+```
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Peminjaman.png" alt="Use Case", width=900>
 </a>
 
 ### 4. Pengelolaan Data Kunjungan
+```text
+Isi 
+```
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Kunjungan%20Masy.png" alt="Use Case", width=900>
 </a>
 
 ### 5. Pengelolaan Data Anggota
+```text
+Isi 
+```
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Data%20Siswa.png" alt="Use Case", width=900>
 </a>
 
 ### 6. Pengaturan Admin
+```text
+Isi 
+```
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Pengaturan%20admin.png" alt="Use Case", width=900>
 </a>
