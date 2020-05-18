@@ -28,7 +28,11 @@ Isi
 ```
 
 ## Diagram
-
+```text
+Dalam merancang suatu sistem, dilakukan pendekatan dengan cara membagi suatu permasalahan yang
+besar menjadi sub-masalah yang lebih kecil sehingga permasalahan tersebut mudah untuk diatasi.
+Untuk itu kami membuat model diagram untuk membantu proses perancangan sistem. 
+```
 ### 1. Use Case Diagram
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/Perpustakaan_Use%20Case.png" alt="Use Case", width=400>
