@@ -1,6 +1,6 @@
 <p align="center">
   <a href="">
-    <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/logo1.png" alt="Sistem Perpustakaan" width=72 height=72>
+    <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/logo1.png" alt="Sistem Perpustakaan" width=72 height=80>
   </a>
 
   <h3 align="center">Sistem Perpustakaan SCB</h3>
