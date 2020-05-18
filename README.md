@@ -140,8 +140,44 @@ Pada menu pengaturan admin, staff perpustakaan dapat menambahkan admin perpustak
 
 ## E. Konsep OOP yang digunakan
 ```text
-Isi 
+Dalam projek kami, kami menerapkan design pattern MVC (model, view, controller). MVC adalah suatu pola 
+arsitektur yang digunakan dalam rekayasa perangkat lunak, prinsipnya bahwa logic suatu aplikasi harus 
+dipisahkan dari presentation codenya. Sehingga design pattern ini membagi suatu aplikasi menjadi tiga 
+bagian yang saling berhubungan. 
 ```
+### 1. Model
+Model bertanggung jawab untuk mengambil data dan mengubahnya menjadi data yang lebih bermakna yang dapat dikelola oleh lapisan aplikasi yang lain dan mengirimkannya kembali ke lapisan yang sesuai.
+
+Penerapan pada sistem :
+1. Model Siswa : Pada model siswa terdapat informasi mengenai nama dan nis siswa sekolah cendekia baznas yang akan dibutuhkan ketika siswa berkunjung ke perpustakaan dan ketika siswa melakukan peminjaman buku di perpustakaan
+2. Model Pegawai : Pada model pegawai terdapat informasi mengenai nama dan nip pegawai sekolah cendekia baznas yang akan dibutuhkan ketika pegawai tersebut meminjam buku di perpustakaan
+3. Model Buku : Pada model buku terdapat informasi mengenai buku yang ada di perpustakaan yang akan dibutuhkan ketika seseorang melakukan peminjaman buku
+4. Model Peminjaman Buku : Pada model ini terdapat informasi mengenai peminjaman buku yang dilakukan oleh siswa dan pegawai sekolah cendekia baznas
+5. Model Kunjungan : Pada model ini terdapat informasi mengenai kunjungan perpustakaan yang dilakukan oleh siswa sekolah cendekia baznas dan masyarakat sekitar sekolah 
+
+### 2. View
+View mendefinisikan dengan tepat apa yang disajikan kepada pengguna. Biasanya, Controller meneruskan data ke setiap Tampilan. Tampilan juga mengumpulkan data dari pengguna. Di sini kami menggunakan bahasa pemrograman PHP untuk tampilan. Pada framework laravel terdapat fitur Blade. Blade berfungsi untuk menampilkan output pada view. blade juga digunakan untuk membuat layout website.
+
+Penerapan pada sistem :
+1. Form login : berisi tampilan awal saat web dijalankan berupa form login yang dapat diisi oleh admin untuk masuk ke dalam sistem
+2. Anggota Perpustakaan : berisi tampilan daftar siswa, pegawai, dan santri tahfidz di sekolah cendekia BAZNAS
+3. Bahan pustaka : berisi tampilan daftar bahan pustaka yang ada di perpustakaan sekolah cendekia BAZNAS
+4. Peminjaman Buku : berisi tampilan daftar peminjaman buku yang dilakukan siswa dan pegawai
+5. Kunjungan (Siswa dan Masyarakat): berisi tampilan daftar kunjungan yang dilakukan siswa dan masyarakat. Tampilan siswa dan masyarakat dibuat terpisah untuk memudahkan admin.
+6. Isi Buku Tamu (Siswa dan Masyarakat) : berisi input untuk mendata kunjungan yang dilakukan oleh siswa dan masyarakat sekitar. Form dibuat terpisah karena siswa cukup memasukkan nis nya saja, namun masyarakat perlu memasukkan informasi seperti umur, alamat, telepon dan alasan berkunjung.
+
+### 3. Controller
+Controller merupakan bagian yang menjembatani model dan view. Controller berisi perintah-perintah yang berfungsi untuk memproses suatu data dan mengirimkannya ke halaman web.
+
+Penerapan pada sistem :
+1. Auth Controller
+Auth controller digunakan untuk mengatur autentikasi saat login sehingga hanya yang menjadi admin yang bisa mengakses sistem perpustakaan
+2. Controller untuk setiap model
+
+
+
+
+
 
 ## F. Tipe Desain Pengembangan
 ```text
