@@ -48,41 +48,74 @@ Untuk itu kami membuat model diagram untuk membantu proses perancangan sistem.
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/Perpustakaan_Class_Diagram.png" alt="Use Case", width=900>
 </a>
 
-## D. Fitur
+## D. Fitur dan Tampilan Aplikasi
 ```text
 Pada aplikasi perpustakaan SCB terdapat beberapa fitur yang dapat digunakan oleh staf perpustakaan
 dalam mengelola segala kegiatan yang ada di perpustakaan, berikut ini penjabaran beberapa fitur 
 yang terdapat pada aplikasi perpustakaan SCB.
 ```
+### 1. Form Login
+```text
+Berikut ini merupakan tampilan dari form login, yang mana untuk bisa masuk pada aplikasi terdapat
+dua input yang harus diisi yaitu username dan password yang telah terdaftar di dalam database.
+```
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Login.png" alt="Use Case", width=900>
+</a>
+
+### 2. Dashboard
+```text
+Pada dashboard terdapat total dari data secara keseluruhan, serta menampilkan grafik untuk persentase
+kunjungan, serta data histogram untuk anggota perpustakaan.
+```
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Dashboard.png" alt="Use Case", width=900>
 </a>
 
-### 1. Pencatatan Kunjungan
+### 3. Pencatatan Kunjungan
 ```text
-Isi 
+Pada menu "Isi Buku Tamu" staf perpustakaan dapat melakukan pencatatan kunjungan. sebelumnya tidak ada
+pencatatan kunjungan untuk siswa, kini pada aplikasi perpustakaan SCB terdapat pencatatan kunjungan untuk
+siswa maupun masyarakat. yang mana untuk masyarakat perlu juga di data beberapa informasi tambahan seperti
+Nama lengkap, umur, alamat, Nomor telepon, serta tujuan datang. Sementara untuk siswa SCB cukup memasukkan
+Nomor induk siswa saja.
 ```
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Isi%20Buku%20Tame.png" alt="Use Case", width=900>
 </a>
 
-### 2. Pengelolaan Data Pustaka
+### 4. Pengelolaan Data Pustaka
 ```text
-Isi 
+Pada menu bahan pustaka terdapat 3 sub menu antara lain buku, modul, dan jurnal. Menu bahan pustaka berfungsi 
+untuk mengelola pendataan bahan pustaka yang ada di perpustakaan. "Tambah Buku" berfungsi untuk menambahkan 
+buku yang yang baru masuk ke ke perpustakaan. Selain itu pada menu bahan pustaka kita juga dapat mengimpor data
+dari luar database menggunakan fitur "Import" dan mengekspor data buku dalam bentuk Excel menggunakan fitur 
+"Export". Selain itu juga terdapat fitur untuk menghapus data buku, dan fitur edit buku yang berfungsi untuk 
+mengubah data buku apabila terdapat kesalahan input.
 ```
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Data%20Buku.png" alt="Use Case", width=900>
 </a>
 
-### 3. Pengelolaan Peminjaman dan Pengembalian
+### 5. Pengelolaan Peminjaman dan Pengembalian
 ```text
-Isi 
+Menu peminjaman berfungsi untuk mencatat segala transaksi peminjaman dan pengembalian buku. Pada 
+menu peminjaman kita dapat melakukan pencarian menggunakan fitur "search". Untuk mengubah status 
+peminjaman buku kita dapat mengubahnya menggunakan fitur yang berada pada kolom "aksi".
 ```
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Peminjaman.png" alt="Use Case", width=900>
 </a>
 
-### 4. Pengelolaan Data Kunjungan
+```text
+untuk menambah transaksi peminjaman kita bisa menekan tombol "tambah peminjaman buku" lalu terdapat 
+dua input yang harus diisi antara lain nomor identitas serta kode buku.
+```
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Peminjaman%202.png" alt="Use Case", width=900>
+</a>
+
+### 6. Pengelolaan Data Kunjungan
 ```text
 Isi 
 ```
@@ -90,7 +123,7 @@ Isi
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Kunjungan%20Masy.png" alt="Use Case", width=900>
 </a>
 
-### 5. Pengelolaan Data Anggota
+### 7. Pengelolaan Data Anggota
 ```text
 Isi 
 ```
@@ -98,7 +131,7 @@ Isi
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Data%20Siswa.png" alt="Use Case", width=900>
 </a>
 
-### 6. Pengaturan Admin
+### 8. Pengaturan Admin
 ```text
 Isi 
 ```
