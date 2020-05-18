@@ -12,7 +12,7 @@
   </p>
 </p>
 
-## Nama Pengembang
+## Developer
 
 1. Ryvan Arnandha Putra (G64170007)
 2. Fathiya (G64170010)
@@ -22,3 +22,30 @@
 6. Ervan Sadhaly (G64170072)
 7. Hedianto Agus Widodo (G64170081)
 8. Nadhir Dhanu Dwinanda (G64170083)
+
+## Deskripsi singkat
+
+```text
+Isi 
+```
+
+## Ruang lingkup pengembangan
+
+```text
+Isi 
+```
+
+## Diagram
+
+### 1. Use Case Diagram
+
+### 2. Activity Diagram
+
+### 3. Class Diagram
+
+
+## Fitur
+
+## Konsep OOP yang digunakan
+
+## Tipe Desain Pengembangan
