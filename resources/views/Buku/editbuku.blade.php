@@ -2,17 +2,17 @@
 @extends ('navbar')
 
 @section('content')
-<title>Edit Buku</title>
+<title>Edit Bahan Pustaka</title>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Edit buku
+        Edit Bahan Pustaka
       </h1>
       <ol class="breadcrumb">
         <li><a href="/buku"><i class="fa fa-book"></i>  Bahan Pustaka</a></li>
-        <li class="active">Edit Buku</li>
+        <li class="active">Edit Bahan Pustaka</li>
       </ol>
     </section>
 

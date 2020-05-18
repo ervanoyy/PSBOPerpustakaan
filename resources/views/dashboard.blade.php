@@ -205,7 +205,7 @@ Highcharts.chart('chartanggota', {
 
     }, {
         name: 'Santri Tahfidz',
-        data: [10]
+        data: [{{$total_santri}}]
 
     }]
 });
