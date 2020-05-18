@@ -12,17 +12,6 @@
   </p>
 </p>
 
-## Developer
-
-1. Ryvan Arnandha Putra (G64170007)
-2. Fathiya (G64170010)
-3. Zaki Muttaqin (G64170012)
-4. Dina Fadila (G64170021)
-5. Siti Nur Hasanah (G64170036)
-6. Ervan Sadhaly (G64170072)
-7. Hedianto Agus Widodo (G64170081)
-8. Nadhir Dhanu Dwinanda (G64170083)
-
 ## Deskripsi singkat
 
 ```text
@@ -45,7 +34,27 @@ Isi
 
 
 ## Fitur
+```text
+Isi 
+```
 
 ## Konsep OOP yang digunakan
+```text
+Isi 
+```
 
 ## Tipe Desain Pengembangan
+```text
+Isi 
+```
+
+## Developer
+
+1. Ryvan Arnandha Putra (G64170007) : Front end Developer
+2. Fathiya (G64170010) : Project Manager(front end), Front end Developer
+3. Zaki Muttaqin (G64170012) : Project Manager(main), Back end Developer
+4. Dina Fadila (G64170021) : Front end Developer, Web Designer
+5. Siti Nur Hasanah (G64170036) : Front end Developer
+6. Ervan Sadhaly (G64170072) : Front end Developer
+7. Hedianto Agus Widodo (G64170081) : Back end Developer
+8. Nadhir Dhanu Dwinanda (G64170083) : Front end Developer
