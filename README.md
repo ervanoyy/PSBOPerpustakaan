@@ -186,7 +186,7 @@ Auth controller digunakan untuk mengatur autentikasi saat login sehingga hanya y
 
 ## Developer
 | Nama                 | NIM           | Job Desk                     |
-| -------------------- |:-------------:| :----------------------------:|
+| -------------------- |:-------------:| :----------------------------|
 | Ryvan Arnandha Putra | G64170007     | Front end Developer          |
 | Fathiya              | G64170010     | Project Manager (front end), Front end Developer |
 | Zaki Muttaqin        | G64170012     | Project Manager (main), Back end Developer |
