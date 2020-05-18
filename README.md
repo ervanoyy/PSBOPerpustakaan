@@ -39,10 +39,10 @@ Untuk itu kami membuat model diagram untuk membantu proses perancangan sistem.
 </a></p>
 
 ### 2. Activity Diagram
-<a>
+<p align="center"><a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/Activity%20Diagram%20Kunjungan%20dan%20Peminjaman.png" alt="Activity Diagram Kunjungan dan Peminjaman", width=800>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/Activity%20Diagram%20Pengembalian.png" alt="Activity Diagram Pengembalian Buku", width=800>
-</a>
+</a></p>
 
 ### 3. Class Diagram
 <a>
