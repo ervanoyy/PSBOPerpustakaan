@@ -12,7 +12,7 @@
   </p>
 </p>
 
-## Deskripsi singkat
+## A. Deskripsi singkat
 
 ```text
 Aplikasi Perpustakaan SCB merupakan Aplikasi berbasis Web yang bermanfaat untuk membantu staf 
@@ -21,13 +21,13 @@ pengembalian buku, mengelola data anggota, data buku dan pembuatan laporan. Apli
 diakses secara offline.
 ```
 
-## Ruang lingkup pengembangan
+## B. Ruang lingkup pengembangan
 
 ```text
 Isi 
 ```
 
-## Diagram
+## C. Diagram
 ```text
 Dalam merancang suatu sistem, dilakukan pendekatan dengan cara membagi suatu permasalahan yang
 besar menjadi sub-masalah yang lebih kecil sehingga permasalahan tersebut mudah untuk diatasi.
@@ -48,7 +48,7 @@ Untuk itu kami membuat model diagram untuk membantu proses perancangan sistem.
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/Perpustakaan_Class_Diagram.png" alt="Use Case", width=900>
 </a>
 
-## Fitur
+## D. Fitur
 ```text
 Pada aplikasi perpustakaan SCB terdapat beberapa fitur yang dapat digunakan oleh staf perpustakaan
 dalam mengelola segala kegiatan yang ada di perpustakaan, berikut ini penjabaran beberapa fitur 
@@ -107,12 +107,12 @@ Isi
 </a>
 
 
-## Konsep OOP yang digunakan
+## E. Konsep OOP yang digunakan
 ```text
 Isi 
 ```
 
-## Tipe Desain Pengembangan
+## F. Tipe Desain Pengembangan
 ```text
 Isi 
 ```
