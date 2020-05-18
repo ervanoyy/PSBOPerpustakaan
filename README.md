@@ -34,9 +34,9 @@ besar menjadi sub-masalah yang lebih kecil sehingga permasalahan tersebut mudah 
 Untuk itu kami membuat model diagram untuk membantu proses perancangan sistem. 
 ```
 ### 1. Use Case Diagram
-<a>
+<p align="center"><a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/Perpustakaan_Use%20Case.png" alt="Use Case", width=400>
-</a>
+</a></p>
 
 ### 2. Activity Diagram
 <a>
@@ -50,8 +50,44 @@ Untuk itu kami membuat model diagram untuk membantu proses perancangan sistem.
 
 ## Fitur
 ```text
-Isi 
+Pada aplikasi perpustakaan SCB terdapat beberapa fitur yang dapat digunakan oleh staf perpustakaan
+dalam mengelola segala kegiatan yang ada di perpustakaan, berikut ini penjabaran beberapa fitur 
+yang terdapat pada aplikasi perpustakaan SCB.
 ```
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Dashboard.png" alt="Use Case", width=900>
+</a>
+
+### 1. Pencatatan Kunjungan
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Isi%20Buku%20Tame.png" alt="Use Case", width=900>
+</a>
+
+### 2. Pengelolaan Data Pustaka
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Data%20Buku.png" alt="Use Case", width=900>
+</a>
+
+### 3. Pengelolaan Peminjaman dan Pengembalian
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Peminjaman.png" alt="Use Case", width=900>
+</a>
+
+### 4. Pengelolaan Data Kunjungan
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Kunjungan%20Masy.png" alt="Use Case", width=900>
+</a>
+
+### 5. Pengelolaan Data Anggota
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Data%20Siswa.png" alt="Use Case", width=900>
+</a>
+
+### 6. Pengaturan Admin
+<a>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Pengaturan%20admin.png" alt="Use Case", width=900>
+</a>
+
 
 ## Konsep OOP yang digunakan
 ```text
