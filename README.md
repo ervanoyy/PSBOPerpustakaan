@@ -15,7 +15,10 @@
 ## Deskripsi singkat
 
 ```text
-Aplikasi Perpustakaan SCB merupakan Aplikasi berbasis Web yang mana kegunaannya untuk membantu staf perpustakaan dalam melaksanakan tugasnya, misalnya melakukan pencatatan data kunjungan, peminjaman dan pengembalian buku, data anggota, data buku dan pembuatan laporan. Aplikasi ini dapat diakses secara offline  
+Aplikasi Perpustakaan SCB merupakan Aplikasi berbasis Web yang bermanfaat untuk membantu staf 
+perpustakaan dalam melaksanakan tugasnya, misalnya pencatatan data kunjungan, peminjaman dan 
+pengembalian buku, mengelola data anggota, data buku dan pembuatan laporan. Aplikasi ini dapat 
+diakses secara offline.
 ```
 
 ## Ruang lingkup pengembangan
