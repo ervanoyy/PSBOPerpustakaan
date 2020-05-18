@@ -1,14 +1,8 @@
-<?php $thisPage="Siswa"; ?>
+<?php $thisPage="Santri"; ?>
 @extends ('navbar')
 
 @section('content')
 <title>Data Santri</title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -34,7 +28,7 @@
             <div class="box">
               <div class="box-header">
                   <h3 class="box-title"><a href="/tahfidz" type="button" class="btn btn-block btn-primary" id="tombol" style="width:130px;">Edit Data Santri</a></h3>
-                  <h3 class="box-title pull-right"><a type="button" class="btn btn-block btn-success" data-toggle="modal" data-target="#importsiswa" style="width:120px;">Import Excel</a></h3> 
+                  <h3 class="box-title pull-right"><a type="button" class="btn btn-block btn-success" data-toggle="modal" data-target="#importsiswa" style="width:130px;">Import Excel</a></h3> 
               </div> 
 
 
@@ -84,7 +78,7 @@
 						<div class="modal-header">
 							<h5 class="modal-title" id="exampleModalLabel">Import Excel</h5>
 						</div>
-						<div class="mod-al-body">
+						<div class="modal-body">
  
 							{{ csrf_field() }}
  
@@ -103,9 +97,6 @@
 			</div>
 		</div>
 
-    <footer class="main-footer">
-        
-    </footer>
 
     <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->

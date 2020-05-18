@@ -232,6 +232,8 @@
                       echo "class='treeview active'"; 
                   } elseif($thisPage == "Pegawai") { 
                       echo "class='treeview active'"; 
+                  }elseif($thisPage == "Santri") { 
+                    echo "class='treeview active'"; 
                   }else {
                       echo "class='treeview'";
                   }      
@@ -246,8 +248,7 @@
           <ul class="treeview-menu">
             <li <?php if($thisPage == "Siswa") echo "class='active'"; ?>><a href="/datasiswa"><i class="fa fa-circle-o"></i> Siswa</a></li>
             <li <?php if($thisPage == "Pegawai") echo "class='active'"; ?>><a href="/datapegawai"><i class="fa fa-circle-o"></i> Pegawai</a></li>
-            <li <?php if($thisPage == "Pegawai") echo "class='active'"; ?>><a href="/datasantri"><i class="fa fa-circle-o"></i> Santri Tahfidz</a></li> 
-            <li <?php if($thisPage == "Pegawai") echo "class='active'"; ?>><a href="/datamasyarakat"><i class="fa fa-circle-o"></i> Masyarakat</a></li>      
+            <li <?php if($thisPage == "Santri") echo "class='active'"; ?>><a href="/datasantri"><i class="fa fa-circle-o"></i> Santri Tahfidz</a></li>     
           </ul>
         </li>
         <li <?php if($thisPage == "Admin") echo "class='active'"; ?>> <a href="/admin"><i class="fa fa-gears"></i> <span>Pengaturan Admin</span></a></li>

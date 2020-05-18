@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Santri;
 use Carbon\Carbon;
+use App\Imports\SantriImport;
+use Maatwebsite\Excel\Facades\Excel;
 
 class SantriController extends Controller
 {
@@ -57,14 +59,15 @@ class SantriController extends Controller
 		$nama_file = rand().$file->getClientOriginalName();
  
 		// upload ke folder file_siswa di dalam folder public
-		$file->move('file_siswa',$nama_file);
+		$file->move('file_santri',$nama_file);
  
 		// import data
-		Excel::import(new SiswaImport, public_path('/file_siswa/'.$nama_file));
+		Excel::import(new SantriImport, public_path('/file_santri/'.$nama_file));
  
  
 		// alihkan halaman kembali
-		return redirect('/datatahfidz');
+		return redirect('/datasantri');
     }
+
 
 }

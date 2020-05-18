@@ -33,8 +33,8 @@
 
             <div class="box">
               <div class="box-header">
-                  <h3 class="box-title"><a href="/siswa" type="button" class="btn btn-block btn-primary" id="tombol" style="width:120px;">Edit Data Siswa</a></h3>
-                  <h3 class="box-title pull-right"><a type="button" class="btn btn-block btn-success" data-toggle="modal" data-target="#importsiswa" style="width:120px;">Import Excel</a></h3> 
+                  <h3 class="box-title"><a href="/siswa" type="button" class="btn btn-block btn-primary" id="tombol" style="width:130px;">Edit Data Siswa</a></h3>
+                  <h3 class="box-title pull-right"><a type="button" class="btn btn-block btn-success" data-toggle="modal" data-target="#importsiswa" style="width:130px;">Import Excel</a></h3> 
               </div> 
 
 
@@ -105,9 +105,7 @@
 			</div>
 		</div>
 
-    <footer class="main-footer">
-        
-    </footer>
+
 
     <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->

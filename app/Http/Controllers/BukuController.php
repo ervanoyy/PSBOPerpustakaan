@@ -93,6 +93,28 @@ class BukuController extends Controller
 
     public function proses_edit(Request $request, $buku_id){
 
+        $messages = [
+            'required' => ':attribute wajib diisi ya',
+            'mimes' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
+            'max' => ':attribute maksimal sebesar 2048 ya!',
+            'file' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
+            'image' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
+            'numeric' => ':attribute tolong diisi dengan angka saja ya!',
+            'gte' => ':attribute diisi paling kecil 0 ya!'
+        ];
+
+        $this->validate($request, [
+            'Kode_BukuInventaris' => 'required',
+            'Kode_BukuLemari' => 'required',
+            'Judul_Buku' => 'required',
+            'Gambar' => 'file|image|mimes:jpeg,png,jpg|max:2048',
+            'Kategori' => 'required',
+            'JenisPustaka' => 'required',
+            'Pengarang' => 'required',
+            'Jumlah_Buku' => 'required|numeric|gte:0',
+            'Keterangan' => 'required'
+		], $messages);
+
         $buku = Buku::find($buku_id);
 
         if($request->hasFile('file')){

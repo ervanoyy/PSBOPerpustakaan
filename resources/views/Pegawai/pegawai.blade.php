@@ -73,9 +73,7 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        
-    </footer>
+
       <!-- Pop Up for Delete Confirmation -->
   <!-- Modal popup -->
   

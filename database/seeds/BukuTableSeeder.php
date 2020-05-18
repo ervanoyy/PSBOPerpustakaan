@@ -21,7 +21,7 @@ class BukuTableSeeder extends Seeder
             'Pengarang' => 'Ervanoyy',
             'Stok' => '10',
             'Status' => 'Tersedia',
-            'Keterangan' => '',
+            'Keterangan' => 'Baik',
         ]);
 
         \App\Buku::create([
@@ -34,7 +34,7 @@ class BukuTableSeeder extends Seeder
             'Pengarang' => 'Pengarang 02',
             'Stok' => '11',
             'Status' => 'Tersedia',
-            'Keterangan' => '',
+            'Keterangan' => 'Baik',
         ]);
 
         \App\Buku::create([
@@ -47,7 +47,7 @@ class BukuTableSeeder extends Seeder
             'Pengarang' => 'Pengarang 01',
             'Stok' => '0',
             'Status' => 'Tidak Tersedia',
-            'Keterangan' => '',
+            'Keterangan' => 'Baik',
         ]);
 
         \App\Buku::create([
@@ -60,7 +60,7 @@ class BukuTableSeeder extends Seeder
             'Pengarang' => 'A.Arum Candra',
             'Stok' => '100',
             'Status' => 'Tersedia',
-            'Keterangan' => '',
+            'Keterangan' => 'Baik',
         ]);
     }
 }

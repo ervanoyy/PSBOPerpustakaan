@@ -27,6 +27,17 @@
               <h3 class="box-title">Data Bahan Pustaka</h3>
             </div>
             <!-- /.box-header -->
+
+            @if (count($errors) > 0)
+              <div class="alert alert-danger">
+                  <ul>
+                      @foreach ($errors->all() as $error)
+                          <li>{{ $error }}</li>
+                      @endforeach
+                  </ul>
+              </div>
+            @endif
+            
             <!-- form start -->
             <form action="/buku/editbuku/{{ $buku->id }}/proses" method="POST" enctype="multipart/form-data" role="form">
 
@@ -66,15 +77,15 @@
                     @else
                     <option value="Pendidikan">Pendidikan</option>
                     @endif
-                    @if($buku->Kategori=='Modul')
-                    <option value="Modul" selected>Modul</option>
+                    @if($buku->Kategori=='Fiksi')
+                    <option value="Fiksi" selected>Fiksi</option>
                     @else
-                    <option value="Modul">Modul</option>
+                    <option value="Fiksi">Fiksi</option>
                     @endif
-                    @if($buku->Kategori=='Jurnal')
-                    <option value="Jurnal" selected>Non Modul</option>
+                    @if($buku->Kategori=='Non_Fiksi')
+                    <option value="Non_Fiksi" selected>Non_Fiksi</option>
                     @else
-                    <option value="Jurnal">Non Modul</option>
+                    <option value="Non_Fiksi">Non_Fiksi</option>
                     @endif
                     @if($buku->Kategori=='Agama')
                     <option value="Agama" selected>Agama</option>

@@ -1,4 +1,4 @@
-<?php $thisPage="Siswa"; ?>
+<?php $thisPage="Santri"; ?>
 @extends ('navbar')
 
 @section('content')
@@ -72,9 +72,7 @@
         <!-- /.content -->
     </div>
     <!-- /.content-wrapper -->
-    <footer class="main-footer">
-        
-    </footer>
+
       <!-- Pop Up for Delete Confirmation -->
   <!-- Modal popup -->
   

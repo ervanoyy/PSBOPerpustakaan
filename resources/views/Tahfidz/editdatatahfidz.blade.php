@@ -1,4 +1,4 @@
-<?php $thisPage="Siswa"; ?>
+<?php $thisPage="Santri"; ?>
 @extends ('navbar')
 
 @section('content')
@@ -46,9 +46,17 @@
 
                 <div class="form-group">
                   <label>Jenis Kelamin</label>
-                  <select name="Jenis Kelamin" class="form-control" value="{{$santri->Jenis_Kelamin}}">
-                    <option value="Laki-Laki">Laki-Laki</option>
-                    <option value="Perempuan">Perempuan</option>
+                  <select name="Jenis_Kelamin" class="form-control" value="{{$santri->Jenis_Kelamin}}">
+                    @if($santri->Jenis_Kelamin=='Akhwat')
+                    <option value="Akhwat" selected>Akhwat</option>
+                    @else
+                    <option value="Akhwat">Akhwat</option>
+                    @endif
+                    @if($santri->Jenis_Kelamin=='Ikhwan')
+                    <option value="Ikhwan" selected>Ikhwan</option>
+                    @else
+                    <option value="Ikhwan">Ikhwan</option>
+                    @endif
                   </select>
                 </div>
 

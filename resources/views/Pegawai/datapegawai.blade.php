@@ -71,7 +71,7 @@
     <!-- /.content-wrapper -->
 
          <!-- Modal -->
-         <div class="modal fade" id="importpegawai" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="importpegawai" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 				<form method="post" action="/datapegawai/import_excel" enctype="multipart/form-data">
 					<div class="modal-content">
@@ -96,9 +96,7 @@
 				</form>
 			</div>
 		</div>
-    <footer class="main-footer">
-        
-    </footer>
+
 
     <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
