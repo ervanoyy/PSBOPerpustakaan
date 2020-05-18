@@ -45,7 +45,7 @@ Untuk itu kami membuat model diagram untuk membantu proses perancangan sistem.
 
 ### 3. Class Diagram
 <a>
-<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/Perpustakaan_Class_Diagram.png" alt="Use Case", width=900>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/Perpustakaan%20Class%20Diagram.png" alt="Use Case", width=900>
 </a>
 
 ## D. Fitur dan Tampilan Aplikasi
