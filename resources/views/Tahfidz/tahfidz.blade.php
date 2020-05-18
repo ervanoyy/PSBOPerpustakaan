@@ -50,7 +50,7 @@
                       <td>{{$santri->Nama}}</td>
                       <td>{{$santri->Jenis_Kelamin}}</td>
                       <td><a href="/Tahfidz/editdatatahfidz/{{$santri->id}}" type="button" class="btn btn-block btn-primary btn-sm" style="width: 100px;">Edit</a>
-                      <a type="button" class="btn btn-block btn-danger btn-sm delete" data-bookid="{{$santri->id}}"data-toggle="modal" data-target="#deletesiswa" style="width: 100px;" >Delete</a></td>
+                      <a type="button" class="btn btn-block btn-danger btn-sm delete" data-bookid="{{$santri->id}}"data-toggle="modal" data-target="#deletesantri" style="width: 100px;" >Delete</a></td>
                     </tr>
                     @endforeach
                     
@@ -78,7 +78,7 @@
       <!-- Pop Up for Delete Confirmation -->
   <!-- Modal popup -->
   
-  <div class="modal fade" id="deletesiswa">
+  <div class="modal fade" id="deletesantri">
        <div class="modal-dialog">
   <!-- Modal Content -->
             <div class="modal-content">
@@ -134,11 +134,11 @@
 
 <script>
 
-  $('#deletesiswa').on('show.bs.modal', function (event) {
+  $('#deletesantri').on('show.bs.modal', function (event) {
       var button = $(event.relatedTarget) 
-      var siswa_id = button.data('bookid') 
+      var santri_id = button.data('bookid') 
       var modal = $(this)
-      modal.find('.modal-body #siswa_id').val(siswa_id);
+      modal.find('.modal-body #santri_id').val(santri_id);
   })
 
 </script>

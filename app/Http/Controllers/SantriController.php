@@ -38,7 +38,6 @@ class SantriController extends Controller
     }
 
     public function hapus(Request $request){
-
         $santri = Santri::find($request->santri_id);
         $santri->delete();
         return redirect('/tahfidz');
