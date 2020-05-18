@@ -55,86 +55,84 @@ dalam mengelola segala kegiatan yang ada di perpustakaan, berikut ini penjabaran
 yang terdapat pada aplikasi perpustakaan SCB.
 ```
 ### 1. Form Login
-```text
+
 Berikut ini merupakan tampilan dari form login, yang mana untuk bisa masuk pada aplikasi terdapat
 dua input yang harus diisi yaitu username dan password yang telah terdaftar di dalam database.
-```
+
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Login.png" alt="Use Case", width=900>
 </a>
 
 ### 2. Dashboard
-```text
+
 Pada dashboard terdapat total dari data secara keseluruhan, serta menampilkan grafik untuk persentase
 kunjungan, serta data histogram untuk anggota perpustakaan.
-```
+
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Dashboard.png" alt="Use Case", width=900>
 </a>
 
 ### 3. Pencatatan Kunjungan
-```text
+
 Pada menu "Isi Buku Tamu" staf perpustakaan dapat melakukan pencatatan kunjungan. sebelumnya tidak ada
 pencatatan kunjungan untuk siswa, kini pada aplikasi perpustakaan SCB terdapat pencatatan kunjungan untuk
 siswa maupun masyarakat. yang mana untuk masyarakat perlu juga di data beberapa informasi tambahan seperti
 Nama lengkap, umur, alamat, Nomor telepon, serta tujuan datang. Sementara untuk siswa SCB cukup memasukkan
 Nomor induk siswa saja.
-```
+
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Isi%20Buku%20Tame.png" alt="Use Case", width=900>
 </a>
 
 ### 4. Pengelolaan Data Pustaka
-```text
+
 Pada menu bahan pustaka terdapat 3 sub menu antara lain buku, modul, dan jurnal. Menu bahan pustaka berfungsi 
 untuk mengelola pendataan bahan pustaka yang ada di perpustakaan. "Tambah Buku" berfungsi untuk menambahkan 
 buku yang yang baru masuk ke ke perpustakaan. Selain itu pada menu bahan pustaka kita juga dapat mengimpor data
 dari luar database menggunakan fitur "Import" dan mengekspor data buku dalam bentuk Excel menggunakan fitur 
 "Export". Selain itu juga terdapat fitur untuk menghapus data buku, dan fitur edit buku yang berfungsi untuk 
 mengubah data buku apabila terdapat kesalahan input.
-```
+
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Data%20Buku.png" alt="Use Case", width=900>
 </a>
 
 ### 5. Pengelolaan Peminjaman dan Pengembalian
-```text
+
 Menu peminjaman berfungsi untuk mencatat segala transaksi peminjaman dan pengembalian buku. Pada 
 menu peminjaman kita dapat melakukan pencarian menggunakan fitur "search". Untuk mengubah status 
 peminjaman buku kita dapat mengubahnya menggunakan fitur yang berada pada kolom "aksi".
-```
+
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Peminjaman.png" alt="Use Case", width=900>
 </a>
 
-```text
 untuk menambah transaksi peminjaman kita bisa menekan tombol "tambah peminjaman buku" lalu terdapat 
 dua input yang harus diisi antara lain nomor identitas serta kode buku.
-```
+
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Peminjaman%202.png" alt="Use Case", width=900>
 </a>
 
 ### 6. Pengelolaan Data Kunjungan
-```text
-Isi 
-```
+Pada menu data kunjungan terdapat dua sub-menu yaitu siswa dan masyarakat pada sub-menu siswa berisi 
+data kunjungan dari siswa SCB, sedangkan pada sub-menu masyarakat berisi data kunjungan dari masyarakat
+luar yang berkunjung ke perpustakaan SCB
+
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Kunjungan%20Masy.png" alt="Use Case", width=900>
 </a>
 
 ### 7. Pengelolaan Data Anggota
-```text
-Isi 
-```
+Pada menu anggota perpustakaan terdapat 3 submenu yaitu siswa, pegawai, dan santri tahfidz. Pada menu anggota perpustakaan staf perpustakaan dapat melakukan import data dari luar database, Selain itu staf perpustakaan juga bisa melakukan edit data siswa jika terdapat kesalahan input pada waktu memasukkan data.
+
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Data%20Siswa.png" alt="Use Case", width=900>
 </a>
 
 ### 8. Pengaturan Admin
-```text
-Isi 
-```
+Pada menu pengaturan admin, staff perpustakaan dapat menambahkan admin perpustakaan dengan cara menekan tombol "tambah admin" yang berada pada bagian kiri. Lalu jika staf perpustakaan ingin menghapus akses admin, dapat dilakukan dengan cara menekan tombol delete yang terdapat pada kolom aksi.
+
 <a>
 <img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Pengaturan%20admin.png" alt="Use Case", width=900>
 </a>
