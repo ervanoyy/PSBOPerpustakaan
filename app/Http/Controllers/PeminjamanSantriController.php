@@ -45,12 +45,12 @@ class PeminjamanSantriController extends Controller
             }
             else{
                 alert()->error('Error','Data buku tidak ditemukan');
-                return redirect('/tambahpeminjamansantri');
+                return redirect('/tambahpeminjamansantri')->with('error','Data tidak ditemukan');
             }
         }
         else{
             alert()->error('Error','Data NIST tidak ditemukan');    
-            return redirect('/tambahpeminjamansantri');
+            return redirect('/tambahpeminjamansantri')->with('error','Data tidak ditemukan');
         }
     }
 
@@ -63,12 +63,14 @@ class PeminjamanSantriController extends Controller
         $buku=Buku::find($bukupinjam);
         $buku->Stok=$buku->Stok+1;
         $buku->save();
+        alert()->success('Sukses','Buku sudah dikembalikan!');
         return redirect('/peminjamansantri');
     }
 
     public function deleteall(){
-        \App\PeminjamanSantri::truncate();       
-        return redirect('/peminjamansantri')->with('warning','Seluruh data berhasil dihapus!');
+        \App\PeminjamanSantri::truncate();
+        alert()->success('Sukses','Seluruh data berhasil dihapus!');       
+        return redirect('/peminjamansantri');
         
     }
         

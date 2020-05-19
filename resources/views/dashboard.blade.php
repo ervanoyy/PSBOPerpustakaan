@@ -60,7 +60,7 @@
                     <div class="icon">
                       <i class="fa fa-reply"></i>
                     </div>
-                    <a href="/peminjaman" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="/peminjamansiswa" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                   </div>
                 </div>
         <!-- ./col -->

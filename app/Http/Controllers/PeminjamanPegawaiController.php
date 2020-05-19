@@ -64,12 +64,14 @@ class PeminjamanPegawaiController extends Controller
             $buku=Buku::find($bukupinjam);
             $buku->Stok=$buku->Stok+1;
             $buku->save();
+            alert()->success('Sukses','Buku sudah dikembalikan!');
             return redirect('/peminjamanpegawai');
         }
 
         public function deleteall(){
-            \App\PeminjamanPegawai::truncate();       
-            return redirect('/peminjamanpegawai');
+            \App\PeminjamanPegawai::truncate();
+            alert()->success('Sukses','Seluruh data berhasil dihapus!');       
+            return redirect('/kunjungansiswa');
     
         }
     
