@@ -20,7 +20,7 @@ class BukuController extends Controller
 {
     //
     public function index(){
-        $buku_buku = \App\KunjunganMasyarakat::all();
+        $buku_buku = \App\Buku::all();
         return view('/Buku/buku', ['buku_buku' => $buku_buku]);
     }
 
