@@ -23,21 +23,33 @@ class PeminjamanSantriController extends Controller
     public function proses_tambah(Request $request){
         $cari_s =  Santri::where('NIST', $request->NIST)->first()->id ?? 0;
         $cari_b =  Buku::where('Kode_BukuInventaris', $request->Kode_BukuInventaris)->first()->id ?? 0;
+        $cari_stok =  Buku::where('Kode_BukuInventaris', $request->Kode_BukuInventaris)->first()->Stok ?? 0;
         if ($cari_s!=0){
-            if ($cari_b!=0){ 
+            if ($cari_b!=0){
+                if($cari_stok!=0){
+                    $buku=Buku::find($cari_b);
+                    $buku->Stok=$buku->Stok-1;
+                    $buku->save(); 
                 $status = "Belum Dikembalikan";
                 \App\PeminjamanSantri::create([
                     'psantri_id' => $cari_s,
                     'book_id' => $cari_b,
                     'status' => $status,
-            ]);
-            return redirect('/peminjamansantri')->with('success','Data Kunjungan berhasil ditambahkan!');  
+                    ]);
+                    alert()->success('Sukses','Data peminjaman berhasil ditambahkan');
+                    return redirect('/peminjamansantri'); 
+                }else {
+                alert()->error('Error','Stok buku habis');
+                return redirect('/tambahpeminjamansantri');
+            }
             }
             else{
+                alert()->error('Error','Data buku tidak ditemukan');
                 return redirect('/tambahpeminjamansantri')->with('error','Data tidak ditemukan');
             }
         }
-        else{  
+        else{
+            alert()->error('Error','Data NIST tidak ditemukan');    
             return redirect('/tambahpeminjamansantri')->with('error','Data tidak ditemukan');
         }
     }
@@ -46,6 +58,11 @@ class PeminjamanSantriController extends Controller
         $pinjam = PeminjamanSantri::find($request->pinjam_id);
         $pinjam->status = "Sudah Dikembalikan";
         $pinjam->save();
+
+        $bukupinjam = $pinjam->book_id;
+        $buku=Buku::find($bukupinjam);
+        $buku->Stok=$buku->Stok+1;
+        $buku->save();
         return redirect('/peminjamansantri');
     }
 
