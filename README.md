@@ -154,9 +154,45 @@ Pada menu pengaturan admin, staff perpustakaan dapat menambahkan admin perpustak
 </a>
 
 ## E. Konsep OOP yang digunakan
+### 1. Encapsulation
+Encapsulation adalah membungkus class dan menjaga apa apa saja yang ada didalam class tersebut, baik method ataupun atribut, agar tidak dapat di akses oleh class lainnya. Untuk menjaga hal tersebut dalam Encapsulation dikenal nama Hak Akses Modifier yang terdiri dari : Public, Private, dan Protected.
+
 ```text
-Isi 
+...
+class DashboardController extends Controller
+{
+    public function index() {
+        $total_buku = \App\Buku::all()->count();
+        $total_kunjungan = \App\KunjunganMasyarakat::all()->count();
+
+        return view('dashboard', compact('total_buku', 'total_kunjungan'));
+    }
+}
+...
 ```
+### 2. Inheritance
+Penggunaan inheritance dalam OOP adalah untuk mengklasifikasikan object dalam program sesuai karakteristik umum dan fungsinya yang membuat pekerjaan bersama object lebih mudah dan lebih intuitif.
+```text
+...
+use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+
+class User extends Authenticatable
+{
+    use Notifiable;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array
+     */
+    protected $fillable = [
+        'name', 'email', 'password',
+    ];
+...
+```
+
 
 ## F. Tipe Desain Pengembangan
 ```text
