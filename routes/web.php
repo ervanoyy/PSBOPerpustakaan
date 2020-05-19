@@ -107,9 +107,7 @@ Route::group(['middleware' => 'auth'], function(){
 
             /* ---------- Peminjaman Siswa --------------  */
 
-            Route::get('/peminjamansiswa', function () {
-                return view('Peminjaman/siswa');
-            });
+            Route::get('/peminjamansiswa', 'PeminjamanSiswaController@index');
 
             Route::get('/peminjamansiswa/deletesiswa', function () {
                 return view('Peminjaman/deletesiswa');
@@ -119,6 +117,8 @@ Route::group(['middleware' => 'auth'], function(){
                 return view('Peminjaman/tambahpeminjamansiswa');
             });
 
+            Route::post('Peminjaman/tambahpeminjamansiswa/proses', 'PeminjamanSiswaController@proses_tambah');
+
             Route::get('/confirmpeminjamansiswa', function () {
                 return view('Peminjaman/confirmpeminjamansiswa');
             });
@@ -126,9 +126,7 @@ Route::group(['middleware' => 'auth'], function(){
 
             /* ---------- Peminjaman Pegawai--------------  */
 
-            Route::get('/peminjamanpegawai', function () {
-                return view('Peminjaman/pegawai');
-            });
+            Route::get('/peminjamanpegawai', 'PeminjamanPegawaiController@index');
 
             Route::get('/peminjamanpegawai/deletepegawai', function () {
                 return view('Peminjaman/deletepegawai');
@@ -138,15 +136,16 @@ Route::group(['middleware' => 'auth'], function(){
                 return view('Peminjaman/tambahpeminjamanpegawai');
             });
 
+            Route::post('Peminjaman/tambahpeminjamanpegawai/proses', 'PeminjamanPegawaiController@proses_tambah');
+
             Route::get('/confirmpeminjamanpegawai', function () {
                 return view('Peminjaman/confirmpeminjamanpegawai');
             });
 
 
             /* ---------- Peminjaman Santri--------------  */
-            Route::get('/peminjamansantri', function () {
-                return view('Peminjaman/santri');
-            });
+            Route::get('/peminjamansantri', 'PeminjamanSantriController@index');
+
 
             Route::get('/peminjamansantri/deletesantri', function () {
                 return view('Peminjaman/deletesantri');
@@ -155,6 +154,8 @@ Route::group(['middleware' => 'auth'], function(){
             Route::get('/tambahpeminjamansantri', function () {
                 return view('Peminjaman/tambahpeminjamansantri');
             });
+
+            Route::post('Peminjaman/tambahpeminjamansantri/proses', 'PeminjamanSantriController@proses_tambah');
 
             Route::get('/confirmpeminjamansantri', function () {
                 return view('Peminjaman/confirmpeminjamansantri');

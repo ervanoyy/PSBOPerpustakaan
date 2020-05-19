@@ -60,7 +60,21 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+
+                @foreach($peminjaman as $pinjam)
+                  <tr>
+                    <td>{{$pinjam->Santri->NIST}}</td>
+                    <td>{{$pinjam->Santri->Nama}}</td>
+                    <td>{{$pinjam->Buku->Kode_BukuInventaris}}</td>
+                    <td>{{$pinjam->Buku->Judul_Buku}}
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button type="button" class="btn btn-block btn-primary btn-sm disabled">Sudah dikembalikan</button></td>
+                  </tr>
+                @endforeach
+                <!-- <tr>
                   <td>9987223</td>
                   <td>Siti Nurhasanah</td>
                   <td>002344</td>
@@ -203,7 +217,7 @@
                   <td></td>
                   <td><button type="button" class="btn btn-block btn-primary btn-sm" data-toggle="modal" data-target="#pengembalian">Belum dikembalikan</button></td>
                 </tr>
-          
+           -->
             </tbody>
                 <tfoot>
                 

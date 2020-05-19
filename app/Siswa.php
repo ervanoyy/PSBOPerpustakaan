@@ -14,4 +14,8 @@ class Siswa extends Model
     public function KunjunganSiswa(){
         return $this->hasMany('App\KunjunganSiswa');
     }
+
+    public function PeminjamanSiswa(){
+        $this->hasMany('App\PeminjamanSiswa');
+    }
 }

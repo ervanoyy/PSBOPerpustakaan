@@ -55,27 +55,28 @@
               <br>
               <h2><b>Peminjaman Buku</b></h2>
               
+              @foreach($peminjaman as $pinjam)
                 <tr>
                   <td width="80" align="left" valign="top">NIS</td>
                   <td width="5" align="left" valign="top">:</td>
-                  <td width="300" align="left" valign="top">023023109</td>
+                  <td width="300" align="left" valign="top">{{$pinjam->Siswa->NIS}}</td>
                   <br>
                 </tr>  
                 
                 <tr>
                   <td width="80" align="left" valign="top">Nama</td>
                   <td width="5" align="left" valign="top">:</td>
-                  <td width="300" align="left" valign="top">Dina Fadila</td>
+                  <td width="300" align="left" valign="top">{{$pinjam->Siswa->Nama}}</td>
                 </tr>
                 <tr>
                   <td width="80" align="left" valign="top">Kode Buku</td>
                   <td width="5" align="left" valign="top">:</td>
-                  <td width="300" align="left" valign="top">02323230902</td>
+                  <td width="300" align="left" valign="top">{{$pinjam->Buku->Kode_BukuInventaris}}</td>
                 </tr>
                 <tr>
                   <td width="80" align="left" valign="top">Judul Buku</td>
                   <td width="5" align="left" valign="top">:</td>
-                  <td width="300" align="left" valign="top">Ilmu Pengetahuan Alam</td>
+                  <td width="300" align="left" valign="top">{{$pinjam->Buku->Judul_Buku}}</td>
                 </tr>
                 <tr>
                   <td width="80" align="left" valign="top">Tanggal Peminjaman</td>
@@ -87,7 +88,9 @@
                   <td width="5" align="left" valign="top">:</td>
                   <td width="300" align="left" valign="top">19 Maret 2020</td>
                 </tr>
+              @endforeach
               </table>
+              
               <br>
               
               <div class="box-footer">

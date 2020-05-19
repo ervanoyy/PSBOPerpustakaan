@@ -29,23 +29,24 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form action="/Peminjaman/tambahpeminjamanpegawai/proses" method="POST" enctype="multipart/form-data" role="form">
+             {{ csrf_field() }}
               <div class="box-body">
                 <div class="form-group">
                   <label for="exampleInputEmail1">NIP</label>
-                  <input type="text" class="form-control" id="exampleInputEmail1" placeholder="">
+                  <input type="text" class="form-control" placeholder="NIP" name="NIP">
                 </div>
 
                 <div class="form-group">
                   <label for="exampleInputPassword1">Kode Buku</label>
-                  <input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+                  <input type="text" class="form-control" placeholder="Kode Buku" name="Kode_BukuInventaris">
                 </div>    
                 
               </div>
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <a href="/confirmpeminjamanpegawai" type="submit" class="btn btn-primary">Pinjam</a>
+                <button type="submit" class="btn btn-primary">Pinjam<button>
               
               <a href="/peminjamanpegawai"
                 <button type="button" class="btn btn-default">Cancel</button>
