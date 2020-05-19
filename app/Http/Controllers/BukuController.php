@@ -14,6 +14,8 @@ use App\Imports\BukuImport;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
 
+use Alert;
+
 class BukuController extends Controller
 {
     //
@@ -82,7 +84,6 @@ class BukuController extends Controller
             'Status' => $status,
             'Keterangan' => $request->Keterangan
         ]);
-
         return redirect('/buku')->with('info','Data buku berhasil ditambahkan!');
     }
 
@@ -137,15 +138,30 @@ class BukuController extends Controller
         $buku->Keterangan = $request->Keterangan;
         $buku->save();
 
-        return redirect('/buku')->with('info','Data berhasil diedit!');
+        $edit = $buku->save();
+        if($edit){
+            alert()->success('Sukses','Data Buku berhasil diupdate');
+            return redirect('/buku');
+        }
+        else{
+            alert()->error('Error','Data Buku gagal diupdate');
+            return redirect('/buku');
+        }
 
     }
 
     public function hapus(Request $request){
 
         $buku = Buku::find($request->buku_id);
-        $buku->delete();
-        return redirect('/buku')->with('warning','Data berhasil dihapus!');
+        $hapus = $buku->delete();
+        if($hapus){
+            alert()->success('Sukses dihapus','Data Buku berhasil dihapus');
+            return redirect('/buku');
+        }
+        else{
+            alert()->error('Error','Data Buku gagal dihapus');
+            return redirect('/buku');
+        }
 
     }
 
