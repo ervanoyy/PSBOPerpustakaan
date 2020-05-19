@@ -4,14 +4,18 @@ namespace App\Imports;
 
 use App\Siswa;
 use Maatwebsite\Excel\Concerns\ToModel;
-
-class SiswaImport implements ToModel
+use Maatwebsite\Excel\Concerns\WithStartRow;
+class SiswaImport implements ToModel, WithStartRow
 {
     /**
     * @param array $row
     *
     * @return \Illuminate\Database\Eloquent\Model|null
     */
+    public function startRow(): int
+    {
+        return 2;
+    }
     public function model(array $row)
     {
         return new Siswa([

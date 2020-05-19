@@ -4,14 +4,18 @@ namespace App\Imports;
 
 use App\Santri;
 use Maatwebsite\Excel\Concerns\ToModel;
-
-class SantriImport implements ToModel
+use Maatwebsite\Excel\Concerns\WithStartRow;
+class SantriImport implements ToModel, WithStartRow
 {
     /**
     * @param array $row
     *
     * @return \Illuminate\Database\Eloquent\Model|null
     */
+    public function startRow(): int
+    {
+        return 2;
+    }
     public function model(array $row)
     {
         return new Santri([
