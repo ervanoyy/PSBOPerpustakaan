@@ -22,7 +22,8 @@
           <div class="row d-flex align-items-center">
               <div class="col-lg-6 col-md-9 ">
                     <h1 >Aplikasi Perpustakaan<br>SMP Cendekia BAZNAS</h1>
-                     <p style="font-size:17px;">SMP Cendekia BAZNAS (SCB) merupakan sekolah tingkat SMP berkonsep asrama, bebas biaya untuk anak dhuafa berprestasi yang lolos seleksi dari berbagai wilayah di Indonesia.</p>
+                    <p style="font-size:17px;">Perpustakaan SCB (Sekolah Cendekia BAZNAS) adalah Perpustakaan yang berada di SCB yang berstatus Perpustakaan Umum dan dapat diakses oleh masyarakat sekitar. Perpustakaan SCB berdiri sejak Juli 2017 dan hingga kini memiliki ribuan koleksi bahan pustaka.
+                    </p>
                </div>
               <div class="col-lg-6">
                       <img src="images/dashboard-01.png" alt="" width="350px">
