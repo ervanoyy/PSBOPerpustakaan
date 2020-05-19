@@ -12,8 +12,14 @@ class DashboardController extends Controller
         $total_siswa = \App\Siswa::all()->count();
         $total_pegawai = \App\Pegawai::all()->count();
         $total_santri = \App\Santri::all()->count();
+        $total_ksiswa = \App\KunjunganSiswa::all()->count();
 
-        return view('dashboard', compact('total_buku', 'total_kunjungan', 'total_siswa', 'total_pegawai', 'total_santri'));
+        $peminjamansiswa = \App\PeminjamanSiswa::all()->count();
+        $peminjamanpegawai = \App\PeminjamanPegawai::all()->count();
+        $peminjamansantri = \App\PeminjamanSantri::all()->count();
+        $total_peminjaman = $peminjamansiswa+$peminjamanpegawai+$peminjamansantri; 
+
+        return view('dashboard', compact('total_buku', 'total_kunjungan', 'total_siswa', 'total_pegawai', 'total_santri', 'total_ksiswa', 'total_peminjaman'));
     }
 }
 

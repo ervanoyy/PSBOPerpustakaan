@@ -53,7 +53,7 @@
                   <!-- small box -->
                   <div class="small-box bg-green">
                     <div class="inner">
-                      <h3>314</h3>
+                      <h3>{{$total_peminjaman}}</h3>
 
                       <p>Sedang dipinjam</p>
                     </div>
@@ -68,7 +68,7 @@
                   <!-- small box -->
                   <div class="small-box bg-yellow">
                     <div class="inner">
-                      <h3>{{$total_kunjungan}}</h3>
+                      <h3>{{$total_ksiswa}}</h3>
 
                       <p>Kunjungan Siswa</p>
                     </div>
@@ -246,7 +246,7 @@ Highcharts.chart('chartkunjungan', {
         colorByPoint: true,
         data: [{
             name: 'Siswa',
-            y: 40,
+            y: {{$total_ksiswa}},
             sliced: true,
             selected: true
         }, {

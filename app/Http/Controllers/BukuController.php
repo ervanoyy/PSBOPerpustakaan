@@ -42,6 +42,7 @@ class BukuController extends Controller
 
         $messages = [
             'required' => ':attribute wajib diisi ya',
+            'unique' => ':attribute harus unik ya',
             'mimes' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
             'max' => ':attribute maksimal sebesar 2048 ya!',
             'file' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
@@ -51,24 +52,29 @@ class BukuController extends Controller
         ];
 
         $this->validate($request, [
-            'Kode_BukuInventaris' => 'required',
+            'Kode_BukuInventaris' => 'required|unique:buku',
             'Kode_BukuLemari' => 'required',
             'Judul_Buku' => 'required',
-            'Gambar' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+            'Gambar' => 'file|image|mimes:jpeg,png,jpg|max:2048',
             'Kategori' => 'required',
             'JenisPustaka' => 'required',
             'Pengarang' => 'required',
             'Jumlah_Buku' => 'required|numeric|gte:0',
-            'Keterangan' => 'required'
 		], $messages);
 
-        $file = $request->file('Gambar');
+        if($request->hasFile('Gambar')){
 
-        $nama_file = time()."_".$file->getClientOriginalName();
+                $file = $request->file('Gambar');
 
-        $tujuan_upload = 'dist/img';
+                $nama_file = time()."_".$file->getClientOriginalName();
 
-        $file->move($tujuan_upload,$nama_file);
+                $tujuan_upload = 'dist/img';
+
+                $file->move($tujuan_upload,$nama_file);
+
+        }else {
+                $nama_file = null;
+        }
 
         $status = $request->Jumlah_Buku >= 1? "Tersedia":"Tidak Tersedia";
 
@@ -82,7 +88,7 @@ class BukuController extends Controller
             'Pengarang' => $request->Pengarang,
             'Stok' => $request->Jumlah_Buku,
             'Status' => $status,
-            'Keterangan' => $request->Keterangan
+            'Keterangan' => $request->Keterangan ?? ''
         ]);
         alert()->success('Sukses','Data Buku berhasil ditambahkan');
         return redirect('/buku');
@@ -97,6 +103,7 @@ class BukuController extends Controller
 
         $messages = [
             'required' => ':attribute wajib diisi ya',
+            'unique' => ':attribute harus unik ya',
             'mimes' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
             'max' => ':attribute maksimal sebesar 2048 ya!',
             'file' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
@@ -106,7 +113,7 @@ class BukuController extends Controller
         ];
 
         $this->validate($request, [
-            'Kode_BukuInventaris' => 'required',
+            'Kode_BukuInventaris' => 'required|unique:buku',
             'Kode_BukuLemari' => 'required',
             'Judul_Buku' => 'required',
             'Gambar' => 'file|image|mimes:jpeg,png,jpg|max:2048',
@@ -114,8 +121,9 @@ class BukuController extends Controller
             'JenisPustaka' => 'required',
             'Pengarang' => 'required',
             'Jumlah_Buku' => 'required|numeric|gte:0',
-            'Keterangan' => 'required'
 		], $messages);
+
+       
 
         $buku = Buku::find($buku_id);
 
