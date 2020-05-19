@@ -12,7 +12,7 @@
   </p>
 </p>
 
-## A. Deskripsi singkat
+## A. Deskripsi Singkat
 
 ```text
 Aplikasi Perpustakaan SCB merupakan Aplikasi berbasis Web yang bermanfaat untuk membantu staf 
@@ -20,11 +20,28 @@ perpustakaan dalam melaksanakan tugasnya, misalnya pencatatan data kunjungan, pe
 pengembalian buku, mengelola data anggota, data buku dan pembuatan laporan. 
 ```
 
-## B. Ruang lingkup pengembangan
+## B. Ruang Lingkup Pengembangan
 
 ```text
-Isi 
+Aplikasi yang dirancang adalah sistem aplikasi berbasis Web dengan deskripsi yang dibahas 
+pada sub-bahasan sebelumnya.
+Sehingga sistem ini memiliki ruang lingkup sebagai berikut :
 ```
+### 1. Sistem Pencatatan Data Kunjungan
+Sistem pencatatan data kunjungan disimpan dalam database dengan operasi insert, delete, dan view data yang ditampilkan dalam web. Data yang di input berdasarkan pengunjung yang datang sehingga datanya pun tersimpan secara terpisah di dalam database (siswa dan masyarakat). Dimana, untuk siswa SCB hanya perlu memasukkan Nomor Induk Siswa saja, sementara untuk masyarakat menggunakan beberapa informasi tambahan seperti nama lengkap, umur, alamat, nomor telepon, serta tujuan datang.
+
+### 2. Sistem Pendataan Bahan Pustaka
+Jenis bahan pustaka terdiri dari buku, modul dan jurnal. Namun, sistem pendataan bahan pustakanya disimpan menjadi satu dalam database dengan operasi insert, update, delete, dan view data yang ditampilkan dalam web. Data input untuk masing-masing jenis bahan pustaka yaitu berupa kode buku inventaris, kode buku lemari, judul buku, gambar, kategori, jenis pustaka, pengarang, tanggal input, stok, status buku, keterangan (Rusak atau tidak).
+
+### 3. Sistem Peminjaman dan Pengembalian Bahan Pustaka
+Sistem peminjaman buku disimpan dalam database dengan operasi insert, update, delete, dan view data yang ditampilkan dalam web. Data input peminjaman berupa nama, kode buku, judul buku, tanggal peminjaman, batas pengembalian, tanggal pengembalian, status pengembalian, dan aksi untuk pengecekkan status peminjaman (sudah dikembalikan atau belum).
+
+### 4. Sistem Pendataan Anggota Perpustakaan
+Status keanggotaan di perpustakaan terdiri dari siswa, pegawai, dan santri tahfidz. Sistem pendataan anggota perpustakaan disimpan dalam database dengan operasi insert, update, delete, dan view data yang ditampilkan dalam web. Data kunjungan tersimpan ke dalam database secara terpisah berdasarkan status keanggotaannya sehingga input datanya pun berbeda. Untuk Siswa datanya adalah NIS, nama, dan Kelas. Lalu untuk pegawai adalah NIP, nama, alamat, dan tanggal masuk. Dan untuk santri tahfidz adalah NIST, nama, dan jenis kelamin.
+
+### 5. Sistem Pengaturan Admin
+Sistem pengaturan admin disimpan dalam database dengan operasi insert, delete, dan view data yang ditampilkan dalam web. Data input untuk menambahkan admin berupa Username dan email. 
+
 
 ## C. Diagram
 ```text
