@@ -39,4 +39,15 @@ class PeminjamanSantriController extends Controller
             return redirect('/tambahpeminjamansantri')->with('error','Data tidak ditemukan');
         }
     }
+
+    public function deleteall(){
+        \App\PeminjamanSantri::truncate();       
+        return redirect('/peminjamansantri')->with('warning','Seluruh data berhasil dihapus!');
+        
+    }
+        
+     public function export_excel()
+    {
+        return Excel::download(new PeminjamanSantriExport, 'PeminjamanSantri.xlsx');
+    }
 }

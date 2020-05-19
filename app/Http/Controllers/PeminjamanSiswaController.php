@@ -38,7 +38,17 @@ class PeminjamanSiswaController extends Controller
         }
         else{  
             return redirect('/tambahpeminjamansiswa')->with('error','Data tidak ditemukan');
-        }
+        }}
 
+    public function deleteall(){
+        \App\PeminjamanSiswa::truncate();       
+        return redirect('/peminjamansiswa')->with('warning','Seluruh data berhasil dihapus!');
+        
     }
+        
+     public function export_excel()
+    {
+        return Excel::download(new PeminjamanSiswaExport, 'PeminjamanSiswa.xlsx');
+    }
+
 }

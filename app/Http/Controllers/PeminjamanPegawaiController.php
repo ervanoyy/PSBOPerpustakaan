@@ -37,7 +37,16 @@ class PeminjamanPegawaiController extends Controller
         }
         else{  
             return redirect('/tambahpeminjamanpegawai')->with('error','Data tidak ditemukan');
-        }
+        }}
 
-    }
+        public function deleteall(){
+            \App\PeminjamanPegawai::truncate();       
+            return redirect('/kunjungansiswa')->with('warning','Seluruh data berhasil dihapus!');
+    
+        }
+    
+        public function export_excel()
+        {
+            return Excel::download(new PeminjamanPegawaiExport, 'PeminjamanPegawai.xlsx');
+        }
 }
