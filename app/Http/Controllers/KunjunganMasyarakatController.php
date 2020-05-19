@@ -23,14 +23,15 @@ class KunjunganMasyarakatController extends Controller
             'Tujuan' => $tujuan,
             'masyarakat_id' => $masyarakat_id,
         ]);
-        
-        return redirect('/kunjungantamu')->with('info','Data kunjungan berhasil ditambahkan!');
+        alert()->success('Sukses','Data kunjungan berhasil ditambahkan!');
+        return redirect('/kunjungantamu');
                 
     }
 
     public function deleteall(){
-        \App\KunjunganMasyarakat::truncate();       
-        return redirect('/kunjungantamu')->with('warning','Seluruh data berhasil dihapus!');
+        \App\KunjunganMasyarakat::truncate();    
+        alert()->success('Sukses','Seluruh data berhasil dihapus!');   
+        return redirect('/kunjungantamu');
 
     }
 

@@ -84,7 +84,8 @@ class BukuController extends Controller
             'Status' => $status,
             'Keterangan' => $request->Keterangan
         ]);
-        return redirect('/buku')->with('info','Data buku berhasil ditambahkan!');
+        alert()->success('Sukses','Data Buku berhasil ditambahkan');
+        return redirect('/buku');
     }
 
     public function edit($buku_id){
@@ -197,8 +198,15 @@ class BukuController extends Controller
     }
 
     public function deleteall(){
-        Buku::truncate();
-        return redirect('/buku')->with('warning','Seluruh data berhasil dihapus!');
+        $hapussemua = Buku::truncate();
+        if($hapussemua){
+            alert()->success('Sukses dihapus','Semua Data Buku berhasil dihapus');
+            return redirect('/buku');
+        }
+        else{
+            alert()->error('Error','Semua Data Buku gagal dihapus');
+            return redirect('/buku');
+        }
 
     }
 

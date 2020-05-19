@@ -23,13 +23,15 @@ class KunjunganSiswaController extends Controller
     public function proses_cari(Request $request){
         $cari =  Siswa::where('NIS', $request->NIS)->first()->id ?? 0;
         if ($cari==0) {
-        return redirect('/formsiswa')->with('error','NIS tidak ditemukan');
+            alert()->error('Error','NIS tidak ditemukan');
+            return redirect('/formsiswa');
         }
         else{ 
         \App\KunjunganSiswa::create([
             'ksiswa_id' => $cari,
         ]);
-        return redirect('/formsiswa')->with('success','Data Kunjungan berhasil ditambahkan!');    
+        alert()->success('Sukses','Data Kunjungan berhasil ditambahkan!');
+        return redirect('/formsiswa');    
         }
 
     }
