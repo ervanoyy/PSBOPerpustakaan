@@ -160,31 +160,9 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li <?php if($thisPage == "Dashboard") echo "class='active'"; ?>><a href="/dashboard"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-        <li <?php if($thisPage == "Bukutamu") echo "class='active'"; ?>><a href="/formsiswa"><i class="fa fa-edit"></i> <span>Isi Buku Tamu</span></a></li>  
-        <li <?php if($thisPage == "Buku") { 
-                      echo "class='treeview active'"; 
-                  } elseif($thisPage == "Modul") { 
-                      echo "class='treeview active'"; 
-                  } elseif($thisPage == "Jurnal") { 
-                    echo "class='treeview active'"; 
-                } else {
-                      echo "class='treeview'";
-                  }      
-        ?>>
-       
-          <a href="">
-          <i class="fa fa-book"></i> <span>Bahan Pustaka</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li <?php if($thisPage == "Buku") echo "class='active'"; ?>><a href="/buku"><i class="fa fa-circle-o"></i> Buku</a></li>
-            <li <?php if($thisPage == "Modul") echo "class='active'"; ?>><a href="/modul"><i class="fa fa-circle-o"></i> Modul</a></li>
-            <li <?php if($thisPage == "Jurnal") echo "class='active'"; ?>><a href="/jurnal"><i class="fa fa-circle-o"></i> Jurnal</a></li>
-                 
-          </ul>
-        </li>
+        <li <?php if($thisPage == "Bukutamu") echo "class='active'"; ?>><a href="/formsiswa"><i class="fa fa-edit"></i> <span>Isi Buku Tamu</span></a></li>
+
+        <li <?php if($thisPage == "Buku") echo "class='active'"; ?>><a href="/buku"><i class="fa fa-book"></i> <span>Bahan Pustaka</span></a></li>  
         
         
         <li <?php if($thisPage == "PeminjamanSiswa") { 
