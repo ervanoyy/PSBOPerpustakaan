@@ -242,7 +242,7 @@ Auth controller digunakan untuk mengatur autentikasi saat login sehingga hanya y
 | Ryvan Arnandha Putra | G64170007     | Front end Developer          |
 | Fathiya              | G64170010     | Project Manager (front end), Front end Developer |
 | Zaki Muttaqin        | G64170012     | Project Manager (main), Back end Developer |
-| Dina Fadila          | G64170021     | Front end Developer, Web Designer |
+| Dina Fadila          | G64170021     | Front end Developer |
 | Siti Nur Hasanah     | G64170036     | Front end Developer |
 | Ervan Sadhaly        | G64170072     | Front end Developer |
 | Hedianto Agus Widodo | G64170081     | Back end Developer |
