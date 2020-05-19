@@ -46,10 +46,10 @@
               <!-- /.box-body -->
 
               <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Pinjam<button>
+                <button type="submit" class="btn btn-primary"> Pinjam </button>
               
-              <a href="/peminjamanpegawai"
-                <button type="button" class="btn btn-default">Cancel</button>
+              <a href="/peminjamanpegawai">
+                <button type="button" class="btn btn-default"> Batal </button>
               </a> 
 
               </div>

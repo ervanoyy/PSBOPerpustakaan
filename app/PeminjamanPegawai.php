@@ -9,7 +9,7 @@ class PeminjamanPegawai extends Model
     //
     protected $table = "peminjaman_pegawai";
 
-    protected $fillable = ['ppegawai_id','book_id'];
+    protected $fillable = ['ppegawai_id','book_id','status'];
 
     public function Pegawai(){
         return $this->belongsTo('App\Pegawai', 'ppegawai_id');

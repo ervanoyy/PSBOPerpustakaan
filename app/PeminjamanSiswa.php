@@ -9,7 +9,7 @@ class PeminjamanSiswa extends Model
     //
     protected $table = "peminjaman_siswa";
 
-    protected $fillable = ['psiswa_id','book_id'];
+    protected $fillable = ['psiswa_id','book_id', 'status'];
 
     public function Siswa(){
         return $this->belongsTo('App\Siswa', 'psiswa_id');

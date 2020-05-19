@@ -123,7 +123,7 @@ Route::group(['middleware' => 'auth'], function(){
                 return view('Peminjaman/confirmpeminjamansiswa');
             });
 
-            
+            Route::post('/peminjamansiswa/kembalikan', 'PeminjamanSiswaController@kembalikan');
             Route::get('/peminjamansiswa/deleteall', 'PeminjamanSiswaController@deleteall');
             Route::get('/peminjamansiswa/export_excel', 'PeminjamanSiswaController@export_excel');
 
@@ -148,6 +148,7 @@ Route::group(['middleware' => 'auth'], function(){
                 return view('Peminjaman/confirmpeminjamanpegawai');
             });
 
+            Route::post('/peminjamanpegawai/kembalikan', 'PeminjamanPegawaiController@kembalikan');
             Route::get('/peminjamanpegawai/deleteall', 'PeminjamanPegawaiController@deleteall');
             Route::get('/peminjamanpegawai/export_excel', 'PeminjamanPegawaiController@export_excel');
 
@@ -170,6 +171,7 @@ Route::group(['middleware' => 'auth'], function(){
                 return view('Peminjaman/confirmpeminjamansantri');
             });
 
+            Route::post('/peminjamansantri/kembalikan', 'PeminjamanSantriController@kembalikan');
             Route::get('/peminjamansantri/deleteall', 'PeminjamanSantriController@deleteall');
             Route::get('/peminjamansantri/export_excel', 'PeminjamanSantriController@export_excel');
 

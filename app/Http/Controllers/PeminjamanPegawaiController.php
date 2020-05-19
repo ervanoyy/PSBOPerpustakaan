@@ -24,11 +24,13 @@ class PeminjamanPegawaiController extends Controller
         $cari_s =  Pegawai::where('NIP', $request->NIP)->first()->id ?? 0;
         $cari_b =  Buku::where('Kode_BukuInventaris', $request->Kode_BukuInventaris)->first()->id ?? 0;
         if ($cari_s!=0){
-            if ($cari_b!=0){  
-            \App\PeminjamanPegawai::create([
-                'ppegawai_id' => $cari_s,
-                'book_id' => $cari_b,
-            ]);
+            if ($cari_b!=0){ 
+                $status = "Belum Dikembalikan";
+                \App\PeminjamanPegawai::create([
+                    'ppegawai_id' => $cari_s,
+                    'book_id' => $cari_b,
+                    'status' => $status,
+                ]);
             return redirect('/peminjamanpegawai')->with('success','Data Kunjungan berhasil ditambahkan!');  
             }
             else{
@@ -38,6 +40,13 @@ class PeminjamanPegawaiController extends Controller
         else{  
             return redirect('/tambahpeminjamanpegawai')->with('error','Data tidak ditemukan');
         }}
+
+        public function kembalikan(Request $request){
+            $pinjam = PeminjamanPegawai::find($request->pinjam_id);
+            $pinjam->status = "Sudah Dikembalikan";
+            $pinjam->save();
+            return redirect('/peminjamanpegawai');
+        }
 
         public function deleteall(){
             \App\PeminjamanPegawai::truncate();       

@@ -24,10 +24,12 @@ class PeminjamanSantriController extends Controller
         $cari_s =  Santri::where('NIST', $request->NIST)->first()->id ?? 0;
         $cari_b =  Buku::where('Kode_BukuInventaris', $request->Kode_BukuInventaris)->first()->id ?? 0;
         if ($cari_s!=0){
-            if ($cari_b!=0){  
-            \App\PeminjamanSantri::create([
-                'psantri_id' => $cari_s,
-                'book_id' => $cari_b,
+            if ($cari_b!=0){ 
+                $status = "Belum Dikembalikan";
+                \App\PeminjamanSantri::create([
+                    'psantri_id' => $cari_s,
+                    'book_id' => $cari_b,
+                    'status' => $status,
             ]);
             return redirect('/peminjamansantri')->with('success','Data Kunjungan berhasil ditambahkan!');  
             }
@@ -38,6 +40,13 @@ class PeminjamanSantriController extends Controller
         else{  
             return redirect('/tambahpeminjamansantri')->with('error','Data tidak ditemukan');
         }
+    }
+
+    public function kembalikan(Request $request){
+        $pinjam = PeminjamanSantri::find($request->pinjam_id);
+        $pinjam->status = "Sudah Dikembalikan";
+        $pinjam->save();
+        return redirect('/peminjamansantri');
     }
 
     public function deleteall(){

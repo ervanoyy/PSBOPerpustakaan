@@ -17,6 +17,7 @@ class CreatePeminjamanSantriTable extends Migration
             $table->id();
             $table->unsignedSmallInteger('psantri_id');
             $table->unsignedSmallInteger('book_id');
+            $table->string('status');
             $table->timestamps();
         });
     }

@@ -49,10 +49,10 @@
 
               <div class="box-footer">
                 <!-- <a href="/confirmpeminjamansiswa" type="submit" class="btn btn-primary">Pinjam</a> -->
-                <button type="submit" class="btn btn-primary">Pinjam</button>
+                <button type="submit" class="btn btn-primary"> Pinjam </button>
               
-              <a href="/peminjamansiswa"
-                <button type="button" class="btn btn-default">Cancel</button>
+              <a href="/peminjamansiswa">
+                <button type="button" class="btn btn-default"> Batal </button>
               </a> 
 
               </div>

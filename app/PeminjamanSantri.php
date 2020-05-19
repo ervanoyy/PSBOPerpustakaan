@@ -9,7 +9,7 @@ class PeminjamanSantri extends Model
     //
     protected $table = "peminjaman_santri";
 
-    protected $fillable = ['psantri_id','book_id'];
+    protected $fillable = ['psantri_id','book_id','status'];
 
     public function Santri(){
         return $this->belongsTo('App\Santri', 'psantri_id');

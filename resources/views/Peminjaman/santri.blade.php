@@ -67,11 +67,23 @@
                     <td>{{$pinjam->Santri->Nama}}</td>
                     <td>{{$pinjam->Buku->Kode_BukuInventaris}}</td>
                     <td>{{$pinjam->Buku->Judul_Buku}}
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td><?php echo $pinjam->created_at->format('d-F-Y')?></td>
+                    <td><?php echo Carbon\Carbon::parse($pinjam->created_at)->addDays(7)->format('d-F-Y');?></td>
+                    
+                    @if($pinjam->created_at==$pinjam->updated_at)
+                    <td><?php echo ' '?></td>
+                    @else
+                    <td><?php echo $pinjam->updated_at->format('d-F-Y')?></td>
+                    @endif
+                    
+                    <td>{{$pinjam->status}}</td>
+
+                    @if($pinjam->status=='Belum Dikembalikan')
+                    <td><button type="button" class="btn btn-block btn-primary btn-sm" data-pinjamid="{{$pinjam->id}}" data-toggle="modal" data-target="#pengembalian">Belum dikembalikan</button></td>
+                    @else
                     <td><button type="button" class="btn btn-block btn-primary btn-sm disabled">Sudah dikembalikan</button></td>
+                    @endif
+                    
                   </tr>
                 @endforeach
                 <!-- <tr>
@@ -250,12 +262,23 @@
             <div class="modal-content">
               <div class="modal-header">
                 <button  type="button" data-dismiss="modal" class="close">&times;</button>
-                <h4 class="modal-title">Ubah status buku menjadi sudah dikembalikan?</h4>
+                <h3 class="modal-title">Pengembalian Buku</h3>
               </div>
+              <div class="modal-body">
+              <form action="/peminjamansantri/kembalikan" method="POST" id="kembaliForm">
+                {{ csrf_field() }}
+                <!-- {{ method_field('DELETE') }} -->
+
+                  <h4> Ubah status buku menjadi sudah dikembalikan? </h4>
+
+                  <!-- <input type="hidden" name="_method" value="DELETE"> -->
+                  <input type="hidden" name="pinjam_id" id="pinjam_id" value="">
+
+                </div>
 
               <div class="modal-footer">
-              <a href="/peminjamansantri" class="btn btn-primary">Ya</a>
-                <button class="btn btn-default"  data-dismiss="modal">Batal</button>
+                <button type="submit" class="btn btn-primary"> Ya </button>
+                <button type="button" class="btn btn-default"  data-dismiss="modal">Batal</button>
               </div>
 
             </div>
@@ -277,7 +300,20 @@
 <script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
 <!-- page script -->
+
+<script>
+
+  $('#pengembalian').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget)
+      var pinjam_id = button.data('pinjamid')
+      var modal = $(this)
+      modal.find('.modal-body #pinjam_id').val(pinjam_id);
+  })
+
+</script>
+
 <script>
   $(function () {
     $('#example1').DataTable()

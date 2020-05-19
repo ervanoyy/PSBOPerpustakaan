@@ -17,6 +17,7 @@ class CreatePeminjamanPegawaiTable extends Migration
             $table->id();
             $table->unsignedSmallInteger('ppegawai_id');
             $table->unsignedSmallInteger('book_id');
+            $table->string('status');
             $table->timestamps();
         });
     }

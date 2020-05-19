@@ -25,10 +25,12 @@ class PeminjamanSiswaController extends Controller
         $cari_s =  Siswa::where('NIS', $request->NIS)->first()->id ?? 0;
         $cari_b =  Buku::where('Kode_BukuInventaris', $request->Kode_BukuInventaris)->first()->id ?? 0;
         if ($cari_s!=0){
-            if ($cari_b!=0){  
-            \App\PeminjamanSiswa::create([
-                'psiswa_id' => $cari_s,
-                'book_id' => $cari_b,
+            if ($cari_b!=0){ 
+                $status = "Belum Dikembalikan";
+                \App\PeminjamanSiswa::create([
+                    'psiswa_id' => $cari_s,
+                    'book_id' => $cari_b,
+                    'status' => $status,
             ]);
             return redirect('/peminjamansiswa')->with('success','Data Kunjungan berhasil ditambahkan!');  
             }
@@ -38,7 +40,15 @@ class PeminjamanSiswaController extends Controller
         }
         else{  
             return redirect('/tambahpeminjamansiswa')->with('error','Data tidak ditemukan');
-        }}
+        }
+    }
+
+    public function kembalikan(Request $request){
+        $pinjam = PeminjamanSiswa::find($request->pinjam_id);
+        $pinjam->status = "Sudah Dikembalikan";
+        $pinjam->save();
+        return redirect('/peminjamansiswa');
+    }
 
     public function deleteall(){
         \App\PeminjamanSiswa::truncate();       

@@ -17,6 +17,7 @@ class CreatePeminjamanSiswaTable extends Migration
             $table->id();
             $table->unsignedSmallInteger('psiswa_id');
             $table->unsignedSmallInteger('book_id');
+            $table->string('status');
             $table->timestamps();
         });
     }
