@@ -38,14 +38,14 @@ class PegawaiController extends Controller
         $pegawai->Tanggal_Masuk = $request->Tanggal_Masuk;
 
         $pegawai->save();
-       return redirect('/pegawai');
+       return redirect('/pegawai')->with('info','Data berhasil diedit!');
     }
 
     public function hapus(Request $request){
 
         $pegawai = Pegawai::find($request->pegawai_id);
         $pegawai->delete();
-        return redirect('/pegawai');
+        return redirect('/pegawai')->with('warning','Data berhasil dihapus!');
 
     }
 
@@ -70,7 +70,7 @@ class PegawaiController extends Controller
  
  
 		// alihkan halaman kembali
-		return redirect('/datapegawai');
+		return redirect('/datapegawai')->with('info','Data berhasil diimport!');
     }
 
 }

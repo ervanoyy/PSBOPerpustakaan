@@ -39,14 +39,14 @@ class SiswaController extends Controller
         $siswa->Kelas = $request->Kelas;
 
         $siswa->save();
-       return redirect('/siswa');
+       return redirect('/siswa')->with('info','Data berhasil diedit!');
     }
 
     public function hapus(Request $request){
 
         $siswa = Siswa::find($request->siswa_id);
         $siswa->delete();
-        return redirect('/siswa');
+        return redirect('/siswa')->with('warning','Data berhasil dihapus!');
 
     }
 
@@ -71,7 +71,7 @@ class SiswaController extends Controller
  
  
 		// alihkan halaman kembali
-		return redirect('/datasiswa');
+		return redirect('/datasiswa')->with('info','Data berhasil diimport!');
     }
 
 }

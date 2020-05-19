@@ -36,7 +36,7 @@ class KunjunganSiswaController extends Controller
 
     public function deleteall(){
         \App\KunjunganSiswa::truncate();       
-        return redirect('/kunjungansiswa');
+        return redirect('/kunjungansiswa')->with('warning','Seluruh data berhasil dihapus!');
 
     }
 

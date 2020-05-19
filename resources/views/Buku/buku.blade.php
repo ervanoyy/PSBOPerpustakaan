@@ -32,8 +32,9 @@
         <div class="col-xs-12">
 
           <!-- /.box -->
-
+          @include('flash-message')
           <div class="box">
+         
             <div class="box-header">
 
               <h3 class="box-title"><a href="/buku/tambahbuku" type="button" class="btn btn-block btn-success" id="tombol">+ Tambah Bahan Pustaka</a></h3>

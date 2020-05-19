@@ -24,13 +24,13 @@ class KunjunganMasyarakatController extends Controller
             'masyarakat_id' => $masyarakat_id,
         ]);
         
-        return redirect('/kunjungantamu')->with('info','Data kunjungan berhasil ditambahkan!');;
+        return redirect('/kunjungantamu')->with('info','Data kunjungan berhasil ditambahkan!');
                 
     }
 
     public function deleteall(){
         \App\KunjunganMasyarakat::truncate();       
-        return redirect('/kunjungantamu');
+        return redirect('/kunjungantamu')->with('warning','Seluruh data berhasil dihapus!');
 
     }
 

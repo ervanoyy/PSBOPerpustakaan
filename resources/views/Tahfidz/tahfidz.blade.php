@@ -24,7 +24,7 @@
             <div class="col-xs-12">
             
             <!-- /.box -->
-
+            @include('flash-message')
             <div class="box">
               <a href="/datasantri">
               <div class="box-header">
