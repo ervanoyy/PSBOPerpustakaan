@@ -8,6 +8,7 @@ use App\PeminjamanSiswa;
 use App\Buku;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\RedirectResponse;
+use App\Exports\PeminjamanSiswaExport;
 
 use Maatwebsite\Excel\Facades\Excel;
 use App\Http\Controllers\Controller;
