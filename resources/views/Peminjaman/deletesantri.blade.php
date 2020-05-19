@@ -1,4 +1,4 @@
-<?php $thisPage="Peminjaman"; ?>
+<?php $thisPage="PeminjamanSantri"; ?>
 @extends ('navbar')
 
 @section('content')

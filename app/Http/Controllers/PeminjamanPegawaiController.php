@@ -69,7 +69,7 @@ class PeminjamanPegawaiController extends Controller
 
         public function deleteall(){
             \App\PeminjamanPegawai::truncate();       
-            return redirect('/kunjungansiswa')->with('warning','Seluruh data berhasil dihapus!');
+            return redirect('/peminjamanpegawai');
     
         }
     

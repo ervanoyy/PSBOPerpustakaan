@@ -45,12 +45,12 @@ class PeminjamanSantriController extends Controller
             }
             else{
                 alert()->error('Error','Data buku tidak ditemukan');
-                return redirect('/tambahpeminjamansantri')->with('error','Data tidak ditemukan');
+                return redirect('/tambahpeminjamansantri');
             }
         }
         else{
             alert()->error('Error','Data NIST tidak ditemukan');    
-            return redirect('/tambahpeminjamansantri')->with('error','Data tidak ditemukan');
+            return redirect('/tambahpeminjamansantri');
         }
     }
 
