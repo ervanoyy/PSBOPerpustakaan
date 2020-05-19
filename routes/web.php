@@ -81,7 +81,7 @@ Route::group(['middleware' => 'auth'], function(){
             
             /* ---------- Buku --------------  */
 
-            Route::get('/buku', 'BukuController@bukuview');
+            Route::get('/buku', 'BukuController@index');
             Route::get('/modul', 'BukuController@modulview');
             Route::get('/jurnal', 'BukuController@jurnalview');
 

@@ -19,19 +19,9 @@ use Alert;
 class BukuController extends Controller
 {
     //
-    public function bukuview(){
-        $buku_buku = Buku::where('JenisPustaka', 'Buku')->get();
+    public function index(){
+        $buku_buku = \App\KunjunganMasyarakat::all();
         return view('/Buku/buku', ['buku_buku' => $buku_buku]);
-    }
-
-    public function modulview(){
-        $buku_buku = Buku::where('JenisPustaka', 'Modul')->get();
-        return view('/Buku/modul', ['buku_buku' => $buku_buku]);
-    }
-
-    public function jurnalview(){
-        $buku_buku = Buku::where('JenisPustaka', 'Jurnal')->get();
-        return view('/Buku/jurnal', ['buku_buku' => $buku_buku]);
     }
 
     public function tambah(){
@@ -103,7 +93,6 @@ class BukuController extends Controller
 
         $messages = [
             'required' => ':attribute wajib diisi ya',
-            'unique' => ':attribute harus unik ya',
             'mimes' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
             'max' => ':attribute maksimal sebesar 2048 ya!',
             'file' => ':attribute -nya tolong pilih salah satu dari jpeg,png,jpg ya!',
@@ -113,7 +102,7 @@ class BukuController extends Controller
         ];
 
         $this->validate($request, [
-            'Kode_BukuInventaris' => 'required|unique:buku',
+            'Kode_BukuInventaris' => 'required',
             'Kode_BukuLemari' => 'required',
             'Judul_Buku' => 'required',
             'Gambar' => 'file|image|mimes:jpeg,png,jpg|max:2048',
