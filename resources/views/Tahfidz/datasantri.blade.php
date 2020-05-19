@@ -24,7 +24,7 @@
             <div class="col-xs-12">
             
             <!-- /.box -->
-
+            @include('flash-message')
             <div class="box">
               <div class="box-header">
                   <h3 class="box-title"><a href="/tahfidz" type="button" class="btn btn-block btn-primary" id="tombol" style="width:130px;">Edit Data Santri</a></h3>

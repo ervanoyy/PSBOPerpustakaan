@@ -36,13 +36,13 @@ class SantriController extends Controller
         $santri->Jenis_Kelamin = $request->Jenis_Kelamin;
 
         $santri->save();
-       return redirect('/tahfidz');
+       return redirect('/tahfidz')->with('info','Data berhasil diedit!');
     }
 
     public function hapus(Request $request){
         $santri = Santri::find($request->santri_id);
         $santri->delete();
-        return redirect('/tahfidz');
+        return redirect('/tahfidz')->with('warning','Data berhasil dihapus!');
     }
 
     public function import_excel(Request $request) 
@@ -66,7 +66,7 @@ class SantriController extends Controller
  
  
 		// alihkan halaman kembali
-		return redirect('/datasantri');
+		return redirect('/datasantri')->with('info','Data berhasil diimport!');
     }
 
 

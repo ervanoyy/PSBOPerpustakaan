@@ -137,7 +137,7 @@ class BukuController extends Controller
         $buku->Keterangan = $request->Keterangan;
         $buku->save();
 
-        return redirect('/buku');
+        return redirect('/buku')->with('info','Data berhasil diedit!');
 
     }
 
@@ -145,7 +145,7 @@ class BukuController extends Controller
 
         $buku = Buku::find($request->buku_id);
         $buku->delete();
-        return redirect('/buku');
+        return redirect('/buku')->with('warning','Data berhasil dihapus!');
 
     }
 
@@ -177,12 +177,12 @@ class BukuController extends Controller
 
 
 		// alihkan halaman kembali
-		return redirect('/buku');
+		return redirect('/buku')->with('info','Data berhasil diimport!');
     }
 
     public function deleteall(){
         Buku::truncate();
-        return redirect('/buku');
+        return redirect('/buku')->with('warning','Seluruh data berhasil dihapus!');
 
     }
 
