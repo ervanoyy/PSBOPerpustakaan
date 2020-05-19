@@ -24,15 +24,20 @@ class PeminjamanSiswaController extends Controller
     public function proses_tambah(Request $request){
         $cari_s =  Siswa::where('NIS', $request->NIS)->first()->id ?? 0;
         $cari_b =  Buku::where('Kode_BukuInventaris', $request->Kode_BukuInventaris)->first()->id ?? 0;
-        if (($cari_s==0) and ($cari_b==0)) {
-        return redirect('/tambahpeminjamansiswa')->with('error','Data tidak ditemukan');
+        if ($cari_s!=0){
+            if ($cari_b!=0){  
+            \App\PeminjamanSiswa::create([
+                'psiswa_id' => $cari_s,
+                'book_id' => $cari_b,
+            ]);
+            return redirect('/peminjamansiswa')->with('success','Data Kunjungan berhasil ditambahkan!');  
+            }
+            else{
+                return redirect('/tambahpeminjamansiswa')->with('error','Data tidak ditemukan');
+            }
         }
-        else{ 
-        \App\PeminjamanSiswa::create([
-            'psiswa_id' => $cari_s,
-            'book_id' => $cari_b,
-        ]);
-        return redirect('/peminjamansiswa')->with('success','Data Kunjungan berhasil ditambahkan!');    
+        else{  
+            return redirect('/tambahpeminjamansiswa')->with('error','Data tidak ditemukan');
         }
 
     }

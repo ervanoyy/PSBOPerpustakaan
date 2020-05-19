@@ -23,15 +23,20 @@ class PeminjamanPegawaiController extends Controller
     public function proses_tambah(Request $request){
         $cari_s =  Pegawai::where('NIP', $request->NIP)->first()->id ?? 0;
         $cari_b =  Buku::where('Kode_BukuInventaris', $request->Kode_BukuInventaris)->first()->id ?? 0;
-        if (($cari_s==0) and ($cari_b==0)) {
-        return redirect('/tambahpeminjamanpegawai')->with('error','Data tidak ditemukan');
+        if ($cari_s!=0){
+            if ($cari_b!=0){  
+            \App\PeminjamanPegawai::create([
+                'ppegawai_id' => $cari_s,
+                'book_id' => $cari_b,
+            ]);
+            return redirect('/peminjamanpegawai')->with('success','Data Kunjungan berhasil ditambahkan!');  
+            }
+            else{
+                return redirect('/tambahpeminjamanpegawai')->with('error','Data tidak ditemukan');
+            }
         }
-        else{ 
-        \App\PeminjamanPegawai::create([
-            'ppegawai_id' => $cari_s,
-            'book_id' => $cari_b,
-        ]);
-        return redirect('/peminjamanpegawai')->with('success','Data Kunjungan berhasil ditambahkan!');    
+        else{  
+            return redirect('/tambahpeminjamanpegawai')->with('error','Data tidak ditemukan');
         }
 
     }
