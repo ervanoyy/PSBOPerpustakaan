@@ -120,7 +120,7 @@ menu peminjaman kita dapat melakukan pencarian menggunakan fitur "search". Untuk
 peminjaman buku kita dapat mengubahnya menggunakan fitur yang berada pada kolom "aksi".
 
 <a>
-<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/Peminjaman.jpg" alt="Use Case", width=900>
+<img src="https://github.com/ervanoyy/PSBOPerpustakaan/blob/master/public/images/peminjaman.JPG" alt="Use Case", width=900>
 </a>
 
 untuk menambah transaksi peminjaman kita bisa menekan tombol "tambah peminjaman buku" lalu terdapat 
