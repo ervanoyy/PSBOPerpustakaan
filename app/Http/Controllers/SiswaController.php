@@ -38,15 +38,29 @@ class SiswaController extends Controller
         $siswa->Nama = $request->Nama;
         $siswa->Kelas = $request->Kelas;
 
-        $siswa->save();
-       return redirect('/siswa')->with('info','Data berhasil diedit!');
+        $editsiswa = $siswa->save();
+        if($editsiswa){
+            alert()->success('Sukses','Data berhasil diupdate!');
+            return redirect('/siswa');
+        }
+        else{
+            alert()->error('Error','Data gagal diupdate!');
+            return redirect('/siswa');
+        }
     }
 
     public function hapus(Request $request){
 
         $siswa = Siswa::find($request->siswa_id);
-        $siswa->delete();
-        return redirect('/siswa')->with('warning','Data berhasil dihapus!');
+        $deletesiswa = $siswa->delete();
+        if($deletesiswa){
+            alert()->success('Sukses','Data berhasil dihapus!');
+            return redirect('/siswa');
+        }
+        else{
+            alert()->error('Error','Data gagal dihapus!');
+            return redirect('/siswa');
+        }
 
     }
 
@@ -70,8 +84,9 @@ class SiswaController extends Controller
 		Excel::import(new SiswaImport, public_path('/file_siswa/'.$nama_file));
  
  
-		// alihkan halaman kembali
-		return redirect('/datasiswa')->with('info','Data berhasil diimport!');
+        // alihkan halaman kembali
+        alert()->success('Sukses','Data berhasil diimport!');
+		return redirect('/datasiswa');
     }
 
 }

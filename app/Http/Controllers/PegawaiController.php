@@ -37,15 +37,31 @@ class PegawaiController extends Controller
         $pegawai->Alamat = $request->Alamat;
         $pegawai->Tanggal_Masuk = $request->Tanggal_Masuk;
 
-        $pegawai->save();
-       return redirect('/pegawai')->with('info','Data berhasil diedit!');
+        
+        $editpegawai = $pegawai->save();
+        if($editpegawai){
+            alert()->success('Sukses','Data berhasil diupdate!');
+            return redirect('/pegawai');
+        }
+        else{
+            alert()->error('Error','Data gagal diupdate!');
+            return redirect('/pegawai');
+        }
     }
 
     public function hapus(Request $request){
 
         $pegawai = Pegawai::find($request->pegawai_id);
-        $pegawai->delete();
-        return redirect('/pegawai')->with('warning','Data berhasil dihapus!');
+        
+        $deletepegawai = $pegawai->delete();
+        if($deletepegawai){
+            alert()->success('Sukses','Data berhasil dihapus!');
+            return redirect('/pegawai');
+        }
+        else{
+            alert()->error('Error','Data gagal dihapus!');
+            return redirect('/pegawai');
+        }
 
     }
 
@@ -69,8 +85,9 @@ class PegawaiController extends Controller
 		Excel::import(new PegawaiImport, public_path('/file_pegawai/'.$nama_file));
  
  
-		// alihkan halaman kembali
-		return redirect('/datapegawai')->with('info','Data berhasil diimport!');
+        // alihkan halaman kembali
+        alert()->success('Sukses','Data berhasil diimport!');
+		return redirect('/datapegawai');
     }
 
 }

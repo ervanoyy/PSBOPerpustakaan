@@ -193,8 +193,9 @@ class BukuController extends Controller
 		Excel::import(new BukuImport, public_path('/file_buku/'.$nama_file));
 
 
-		// alihkan halaman kembali
-		return redirect('/buku')->with('info','Data berhasil diimport!');
+        // alihkan halaman kembali
+        alert()->success('Sukses','Data berhasil diimport!');
+		return redirect('/buku');
     }
 
     public function deleteall(){

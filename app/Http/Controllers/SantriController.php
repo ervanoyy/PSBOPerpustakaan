@@ -35,14 +35,28 @@ class SantriController extends Controller
         $santri->Nama = $request->Nama;
         $santri->Jenis_Kelamin = $request->Jenis_Kelamin;
 
-        $santri->save();
-       return redirect('/tahfidz')->with('info','Data berhasil diedit!');
+        $editsantri = $santri->save();
+        if($editsantri){
+            alert()->success('Sukses','Data berhasil diupdate!');
+            return redirect('/tahfidz');
+        }
+        else{
+            alert()->error('Error','Data gagal diupdate!');
+            return redirect('/tahfidz');
+        }
     }
 
     public function hapus(Request $request){
         $santri = Santri::find($request->santri_id);
-        $santri->delete();
-        return redirect('/tahfidz')->with('warning','Data berhasil dihapus!');
+        $deletesantri = $santri->delete();
+        if($deletesantri){
+            alert()->success('Sukses','Data berhasil dihapus!');
+            return redirect('/tahfidz');
+        }
+        else{
+            alert()->error('Error','Data gagal dihapus!');
+            return redirect('/tahfidz');
+        }
     }
 
     public function import_excel(Request $request) 
@@ -65,8 +79,9 @@ class SantriController extends Controller
 		Excel::import(new SantriImport, public_path('/file_santri/'.$nama_file));
  
  
-		// alihkan halaman kembali
-		return redirect('/datasantri')->with('info','Data berhasil diimport!');
+        // alihkan halaman kembali
+        alert()->success('Sukses','Data berhasil diimport!');
+		return redirect('/datasantri');
     }
 
 
