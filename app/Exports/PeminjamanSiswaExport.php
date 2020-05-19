@@ -19,6 +19,12 @@ class PeminjamanSiswaExport implements FromCollection, WithMapping, ShouldAutoSi
     }
 
     public function map($peminjaman) : array {
+        if($peminjaman->status == 'Belum Dikembalikan'){
+            $tanggal=$peminjaman->status;
+        }elseif($peminjaman->status == 'Sudah Dikembalikan'){
+            $tanggal=Carbon::parse($peminjaman->update_at)->toFormattedDateString();
+        }
+        $batas=Carbon::parse($peminjaman->created_at)->addDays(7)->toFormattedDateString();
         return [
             $peminjaman->id,
             $peminjaman->Siswa->NIS,
@@ -26,7 +32,8 @@ class PeminjamanSiswaExport implements FromCollection, WithMapping, ShouldAutoSi
             $peminjaman->Buku->Kode_BukuInventaris,
             $peminjaman->Buku->Judul_Buku,
             Carbon::parse($peminjaman->created_at)->toFormattedDateString(),
-            Carbon::parse($peminjaman->update_at)->toFormattedDateString(),
+            $batas,
+            $tanggal,
             $peminjaman->status
         ] ;
  
@@ -40,6 +47,7 @@ class PeminjamanSiswaExport implements FromCollection, WithMapping, ShouldAutoSi
             'Kode Buku',
             'Judul Buku',
             'Tanggal Peminjaman',
+            'Batas Pengembalian',
             'Tanggal Pengembalian',
             'Status'
         ] ;
