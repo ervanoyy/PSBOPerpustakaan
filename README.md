@@ -86,8 +86,7 @@ Nomor induk siswa saja.
 
 ### 4. Pengelolaan Data Pustaka
 
-Pada menu bahan pustaka terdapat 3 sub menu antara lain buku, modul, dan jurnal. Menu bahan pustaka berfungsi 
-untuk mengelola pendataan bahan pustaka yang ada di perpustakaan. "Tambah Buku" berfungsi untuk menambahkan 
+Menu bahan pustaka berfungsi untuk mengelola pendataan bahan pustaka yang ada di perpustakaan. "Tambah Buku" berfungsi untuk menambahkan 
 buku yang yang baru masuk ke ke perpustakaan. Selain itu pada menu bahan pustaka kita juga dapat mengimpor data
 dari luar database menggunakan fitur "Import" dan mengekspor data buku dalam bentuk Excel menggunakan fitur 
 "Export". Selain itu juga terdapat fitur untuk menghapus data buku, dan fitur edit buku yang berfungsi untuk 
