@@ -15,7 +15,7 @@ class CreateSantriTable extends Migration
     {
         Schema::create('santri', function (Blueprint $table) {
             $table->id();
-            $table->string('NIST');
+            $table->string('NIST')->unique();
             $table->string('Nama'); 
             $table->string('Jenis_Kelamin');
             $table->timestamps();
