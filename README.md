@@ -238,11 +238,11 @@ Auth controller digunakan untuk mengatur autentikasi saat login sehingga hanya y
 
 ## Developer
 
-# Project Manager 
+### Project Manager 
 
 | Zaki Muttaqin        | G64170012     |
 
-# Frontend Developer
+### Frontend Developer
 
 | Nama                 | NIM           | Job Desk                     |
 | -------------------- |:-------------:| :----------------------------|
@@ -253,7 +253,7 @@ Auth controller digunakan untuk mengatur autentikasi saat login sehingga hanya y
 | Ervan Sadhaly        | G64170072     | Form Peminjaman, Form Kunjungan |
 | Nadhir Dhanu Dwinanda| G64170083     | Buku |
 
-# Backend Developer
+### Backend Developer
 
 | Nama                 | NIM           | Job Desk                     |
 | -------------------- |:-------------:| :----------------------------|
