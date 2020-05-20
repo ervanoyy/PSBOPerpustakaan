@@ -237,14 +237,27 @@ Auth controller digunakan untuk mengatur autentikasi saat login sehingga hanya y
 
 
 ## Developer
+
+Project Manager
+Zaki Muttaqin (G64170012)
+
+Frontend Developer
+
 | Nama                 | NIM           | Job Desk                     |
 | -------------------- |:-------------:| :----------------------------|
-| Ryvan Arnandha Putra | G64170007     | Front end Developer          |
-| Fathiya              | G64170010     | Project Manager (front end), Front end Developer |
-| Zaki Muttaqin        | G64170012     | Project Manager (main), Back end Developer |
-| Dina Fadila          | G64170021     | Front end Developer |
-| Siti Nur Hasanah     | G64170036     | Front end Developer |
-| Ervan Sadhaly        | G64170072     | Front end Developer |
-| Hedianto Agus Widodo | G64170081     | Back end Developer |
-| Nadhir Dhanu Dwinanda| G64170083     | Front end Developer |
+| Ryvan Arnandha Putra | G64170007     | Peminjaman, Santri          |
+| Fathiya              | G64170010     | Buku, Peminjaman, Pegawai |
+| Dina Fadila          | G64170021     | Login, Dashboard, Main Layout, Siswa, Form Buku |
+| Siti Nur Hasanah     | G64170036     | Data Kunjungan, Peminjaman |
+| Ervan Sadhaly        | G64170072     | Form Peminjaman, Form Kunjungan |
+| Nadhir Dhanu Dwinanda| G64170083     | Buku |
+
+Backend Developer
+| Nama                 | NIM           | Job Desk                     |
+| -------------------- |:-------------:| :----------------------------|
+| Ryvan Arnandha Putra | G64170007     | Santri          |
+| Fathiya              | G64170010     | Kunjungan Siswa, Admin, Export dan Import Excel |
+| Hedianto Agus Widodo | G64170081     | Peminjaman, Buku, Kunjungan Masyarakat |
+| Nadhir Dhanu Dwinanda| G64170083     | Buku |
+| Zaki Muttaqin        | G64170012     | Siswa, Pegawai, Santri, Peminjaman |
 
