@@ -249,10 +249,10 @@ Auth controller digunakan untuk mengatur autentikasi saat login sehingga hanya y
 | Nama                 | NIM           | Job Desk                     |
 | -------------------- |:-------------:| :----------------------------|
 | Ryvan Arnandha Putra | G64170007     | Peminjaman, Santri          |
-| Fathiya              | G64170010     | Buku, Peminjaman, Pegawai |
+| Fathiya              | G64170010     | Buku, Peminjaman, Pegawai, Form Kunjungan Siswa |
 | Dina Fadila          | G64170021     | Login, Dashboard, Main Layout, Siswa, Form Buku, Alert |
 | Siti Nur Hasanah     | G64170036     | Data Kunjungan, Peminjaman |
-| Ervan Sadhaly        | G64170072     | Form Peminjaman, Form Kunjungan |
+| Ervan Sadhaly        | G64170072     | Form Peminjaman, Form Kunjungan Masyarakat|
 | Nadhir Dhanu Dwinanda| G64170083     | Buku |
 
 ### Backend Developer
