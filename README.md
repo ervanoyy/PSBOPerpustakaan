@@ -260,5 +260,5 @@ Backend Developer
 | Fathiya              | G64170010     | Kunjungan Siswa, Admin, Export dan Import Excel |
 | Hedianto Agus Widodo | G64170081     | Peminjaman, Buku, Kunjungan Masyarakat |
 | Nadhir Dhanu Dwinanda| G64170083     | Buku |
-| Zaki Muttaqin        | G64170012     | Siswa, Pegawai, Santri, Peminjaman |
+| Zaki Muttaqin        | G64170012     | Siswa, Pegawai, Santri, Peminjaman, Kunjungan Siswa |
 
