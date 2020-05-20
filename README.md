@@ -240,6 +240,8 @@ Auth controller digunakan untuk mengatur autentikasi saat login sehingga hanya y
 
 ### Project Manager 
 
+| Nama                 | NIM           |
+| -------------------- |:-------------:| 
 | Zaki Muttaqin        | G64170012     |
 
 ### Frontend Developer
